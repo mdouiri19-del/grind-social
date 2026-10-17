@@ -46,8 +46,8 @@ def main(out, dur, seed=0):
     loop = loops[seed % len(loops)]
     beat = 60 / bpm
     N = int(dur * SR)
-    mix = np.zeros(N + SR * 2)
     bar = int(4 * beat * SR)
+    mix = np.zeros(N + bar * 2 + SR)
     i = 0
     pos = 0
     while pos < N:
