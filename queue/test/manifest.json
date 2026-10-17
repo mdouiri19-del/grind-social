@@ -1,7 +1,7 @@
 {
  "date": "test",
- "reel_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/reel.mp4",
- "reel_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/reel.mp4",
+ "reel_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/reel.mp4",
+ "reel_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/reel.mp4",
  "reel_caption": "Reading week is a trap. 🪤\n\nYou plan to catch up on everything. You catch up on nothing.\n\nDo this instead:\n1. Pick the 2 deadlines worth the most.\n2. Give each day one job.\n3. Take one day fully off. On purpose.\n\nFree planner for students, link in bio.\n\n#readingweek #studytips #universitylife #midterms",
  "post_caption": "Your semester, a little more under control. 📚\n\nUpload your syllabus. GRIND. sorts every deadline, grade and study session.\n\nFree for students, link in bio.\n\nWorst deadline this week? 👇\n\n#studytips #universitylife #studentlife #midterms",
  "pillars": {
@@ -12,18 +12,19 @@
   "reel": "Reading week is a trap.",
   "post": "Your semester. A little more under control."
  },
- "cover_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/cover.jpg",
- "cover_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/cover.jpg",
- "post_1": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_01.jpg",
- "post_1_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_01.jpg",
- "post_2": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_02.jpg",
- "post_2_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_02.jpg",
- "post_3": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_03.jpg",
- "post_3_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_03.jpg",
- "post_4": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_04.jpg",
- "post_4_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_04.jpg",
- "post_5": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_05.jpg",
- "post_5_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_05.jpg",
- "post_6": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_06.jpg",
- "post_6_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/eed95d7996ccb2f93683c2c4291718aa5e5b0a05/queue/test/post_06.jpg"
+ "cover_ms": 1900,
+ "cover_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/cover.jpg",
+ "cover_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/cover.jpg",
+ "post_1": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/post_01.jpg",
+ "post_1_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/post_01.jpg",
+ "post_2": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/post_02.jpg",
+ "post_2_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/post_02.jpg",
+ "post_3": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/post_03.jpg",
+ "post_3_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/post_03.jpg",
+ "post_4": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/post_04.jpg",
+ "post_4_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/post_04.jpg",
+ "post_5": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/post_05.jpg",
+ "post_5_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/post_05.jpg",
+ "post_6": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b919a3709e95c15c5285419186145493b22772d4/queue/test/post_06.jpg",
+ "post_6_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b919a3709e95c15c5285419186145493b22772d4/queue/test/post_06.jpg"
 }
