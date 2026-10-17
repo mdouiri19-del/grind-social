@@ -79,6 +79,7 @@ Mix target per week: 2 grade math, 1 deadline reality, 2 study systems, 1 GRIND 
 ## 9. Daily output package (see RUNBOOK.md)
 Folder `queue/YYYY-MM-DD/` in this repo (mdouiri19-del/grind-social, public):
 - `reel.mp4` (H.264 + AAC, 1080x1920, 30 fps, 15 to 25 s, under 19 MB)
+- `cover.jpg` (reel thumbnail 1080x1920, hook readable in the center)
 - `reel_caption.txt`, `post_caption.txt`
 - `post_01.jpg ... post_06.jpg` (1080x1350). Carousel is ALWAYS exactly 6 slides (Make.com maps 6 fixed slots).
 - `meta.json`: {"pillars":{"reel":..,"post":..},"hooks":{"reel":..,"post":..}}
