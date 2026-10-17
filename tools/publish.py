@@ -26,7 +26,8 @@ def main(day):
     sh("git", "config", "user.email", "bot@grindstudent.com")
     sh("git", "pull", "--rebase", "-q", "origin", "main")
     sh("git", "add", d)
-    sh("git", "commit", "-qm", f"Media {day}{TRAILER}")
+    if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode != 0:
+        sh("git", "commit", "-qm", f"Media {day}{TRAILER}")
     sh("git", "push", "-q", "origin", "HEAD:main")
     sha = sh("git", "rev-parse", "HEAD")
     raw = f"https://raw.githubusercontent.com/{REPO}/{sha}/{d}/"
