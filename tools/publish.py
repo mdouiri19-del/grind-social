@@ -41,6 +41,7 @@ def main(day):
         "post_caption": open(f"{d}/post_caption.txt").read().strip(),
         **meta,
     }
+    m.setdefault("cover_ms", 1900)
     if os.path.exists(f"{d}/cover.jpg"):
         m["cover_url"] = cdn + "cover.jpg"
         m["cover_url_raw"] = raw + "cover.jpg"
