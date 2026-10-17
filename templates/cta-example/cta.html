@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(../../assets/fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../../assets/fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../../assets/fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--sage:#E8EFDF;--border:#DFE5D8}
+*{box-sizing:border-box;margin:0}
+body{background:#999;font-family:Inter,sans-serif}
+#s1{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--brand);color:var(--cream);padding:110px 90px}
+.logo{font-weight:700;font-size:44px;letter-spacing:-1.5px}.logo b{color:var(--lime)}
+h1{font-size:116px;line-height:.98;letter-spacing:-5px;font-weight:700;margin-top:90px}
+.hl{background:var(--lime);color:var(--ink);padding:0 16px;border-radius:18px}
+p{font-size:40px;line-height:1.35;color:#C9D8B8;font-weight:500;margin-top:40px;max-width:840px}
+.card{position:absolute;left:90px;right:90px;bottom:250px;background:#fff;color:var(--ink);border-radius:30px;box-shadow:0 30px 70px rgba(0,0,0,.25);overflow:hidden}
+.row{display:flex;align-items:center;gap:26px;padding:28px 34px;border-bottom:2px solid var(--border);font-size:34px;font-weight:600}
+.row:last-child{border-bottom:0}
+.d{font-weight:700;font-size:24px;color:var(--brand);background:var(--sage);border-radius:12px;padding:10px 14px;min-width:120px;text-align:center}
+.t{flex:1}.t small{display:block;font-size:24px;color:var(--sec);font-weight:500;margin-top:2px}
+.w{font-weight:700;font-size:30px;background:var(--lime);border-radius:999px;padding:8px 20px}
+.cta{position:absolute;left:90px;right:90px;bottom:100px;display:flex;justify-content:space-between;align-items:center}
+.btn{background:var(--lime);color:var(--ink);font-size:40px;font-weight:700;border-radius:999px;padding:24px 44px}
+.cta span{font-size:30px;font-weight:600;color:#C9D8B8}
+</style></head><body>
+<section id="s1">
+ <div class="logo">GRIND<b>.</b></div>
+ <h1>Stop guessing what's <span class="hl">due.</span></h1>
+ <p>Upload your syllabus. Every deadline and weight, sorted for you. Free for students.</p>
+ <div class="card">
+  <div class="row"><span class="d">OCT 21</span><span class="t">Midterm exam<small>PSY 100 · sample</small></span><span class="w">25%</span></div>
+  <div class="row"><span class="d">OCT 24</span><span class="t">Research proposal<small>ENV 201 · sample</small></span><span class="w">15%</span></div>
+ </div>
+ <div class="cta"><div class="btn">Sign up free</div><span>Link in bio ↗</span></div>
+</section>
+</body></html>

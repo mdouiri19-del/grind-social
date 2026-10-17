@@ -45,6 +45,10 @@ def main(day):
     if os.path.exists(f"{d}/cover.jpg"):
         m["cover_url"] = cdn + "cover.jpg"
         m["cover_url_raw"] = raw + "cover.jpg"
+    if os.path.exists(f"{d}/cta.jpg"):
+        m["cta_url"] = cdn + "cta.jpg"
+        m["cta_url_raw"] = raw + "cta.jpg"
+        m["cta_caption"] = open(f"{d}/cta_caption.txt").read().strip() if os.path.exists(f"{d}/cta_caption.txt") else ""
     for i in range(1, 7):
         m[f"post_{i}"] = cdn + f"post_0{i}.jpg"
         m[f"post_{i}_raw"] = raw + f"post_0{i}.jpg"
