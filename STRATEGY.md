@@ -80,13 +80,13 @@ Mix target per week: 2 grade math, 1 deadline reality, 2 study systems, 1 GRIND 
 Folder `queue/YYYY-MM-DD/` in this repo (mdouiri19-del/grind-social, public):
 - `reel.mp4` (H.264 + AAC, 1080x1920, 30 fps, 15 to 25 s, under 19 MB)
 - `cta.jpg` + `cta_caption.txt` (single-image sign-up post, posted Mon/Wed/Fri 08:45; one real feature per post)
-- `linkedin.txt` (+ optional `linkedin.jpg`): GRIND. LinkedIn page post, Tue/Wed/Thu only, posted 12:45 with the carousel
+- `linkedin.txt` (+ optional `linkedin.jpg`): GRIND. LinkedIn page post, Tue/Wed/Thu only, posted 08:30
 - `cover.jpg` (reel thumbnail 1080x1920, hook readable in the center)
 - `reel_caption.txt`, `post_caption.txt`
 - `post_01.jpg ... post_06.jpg` (1080x1350). Carousel is ALWAYS exactly 6 slides (Make.com maps 6 fixed slots).
 - `meta.json`: {"pillars":{"reel":..,"post":..},"hooks":{"reel":..,"post":..}}
 - `manifest.json` written LAST by `tools/publish.py` (URLs pinned to the media commit).
-Make.com reads `queue/<today Toronto>/manifest.json`: carousel 12:45, reel 19:30 (daily). Sign-up photo: PAUSED (Make free plan = 2 scenarios).
+Make.com reads `queue/<today Toronto>/manifest.json`: carousel 12:45 and reel 19:30 (daily), sign-up photo 08:45 (Mon/Wed/Fri), LinkedIn 08:30 (Tue/Wed/Thu).
 
 ## 10. Learning loop
 - Log each day in `log.md` (this repo): date, pillar, hook, format.

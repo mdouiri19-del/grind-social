@@ -1,6 +1,6 @@
 # Daily run (for the scheduled Claude agent)
 
-Goal: every day, publish ONE reel and ONE 6-slide carousel for GRIND. into `queue/<date>/`. Make.com posts them to Instagram, Toronto time: carousel 12:45, reel 19:30 (sign-up photo paused, see 3b). Nobody reviews the output before it goes live, so quality and brand rules are on you.
+Goal: every day, publish ONE reel and ONE 6-slide carousel for GRIND. into `queue/<date>/`. Make.com posts them to Instagram, Toronto time: carousel 12:45 and reel 19:30 daily, sign-up photo 08:45 Mon/Wed/Fri, LinkedIn page post 08:30 Tue/Wed/Thu. Nobody reviews the output before it goes live, so quality and brand rules are on you.
 
 ## 0. Setup (fresh container every run)
 ```bash
@@ -39,14 +39,14 @@ Network: only GitHub and package registries work. No CDNs, no web fonts, no stoc
 2. Render: `python3 tools/render_carousel.py $PWD/work/carousel.html $PWD/work` then `ffmpeg -i work/png_N.png -q:v 2 queue/$DAY/post_0N.jpg` for N=1..6.
 3. Look at every slide. Text must not overflow cards or hit the footer. Fix and re-render.
 
-## 3b. Sign-up post (single image, 1080x1350): PAUSED, skip this step
-Not posted for now (Make free plan allows 2 scenarios). Keep the tooling; only produce it if this section says ACTIVE again.
+## 3b. Sign-up post (single image, 1080x1350): ACTIVE, every day
+Make posts it Mon, Wed, Fri at 08:45, but make it daily anyway (cheap, keeps the pipeline uniform).
 1. Write `work/cta.html` (one `<section id="s1">`) styled like `templates/cta-example/cta.html`. Brand green background, one strong headline about ONE real GRIND. feature (rotate: syllabus import, 14-day priority list, weighted average, Study Studio quiz, mock exam, revision notes, assignment plan, calendar export, EN/FR), a small UI card with sample data labeled "sample", a lime "Sign up free" pill and "Link in bio".
 2. `python3 tools/render_cta.py $PWD/work/cta.html $PWD/work/cta.png` then `ffmpeg -i work/cta.png -q:v 2 queue/$DAY/cta.jpg`. Look at it.
 3. `queue/$DAY/cta_caption.txt`: 3 to 5 short lines, direct invite to sign up, "Free for students, link in bio", 3 to 5 hashtags.
 
 ## 3c. LinkedIn post for the GRIND. company page: ACTIVE on Tuesday, Wednesday, Thursday only
-Make posts it at 12:45 Toronto with the carousel. Skip on other days (no linkedin.txt file means nothing posts).
+Make posts it at 08:30 Toronto (own scenario). Skip on other days (no linkedin.txt file means nothing posts).
 1. Load and follow the li-post skill, then the li-human skill (both clone github.com/Jakeschincariol/linkedin-agent-skill for hooks.json, humanize.py, detect.py; GitHub is reachable).
 2. Voice: the GRIND. brand voice from STRATEGY.md (calm, smart senior student; plain words), written as the GRIND. team ("we"), English. Audience: students, parents, educators, early adopters. Rotate topics: why we built GRIND. (one real student problem), a study or grade-math insight, a real product feature or update (only what exists in STRATEGY section 0), a semester-moment tip.
 3. Unattended run overrides two li-post defaults, by owner decision: no approval step (ship the strongest of the 3 hooks yourself), and the text IS published automatically. Every other li-post and li-human rule stays: 900 to 1,300 characters, one idea, no engagement bait, max 3 hashtags at the bottom, no fabricated numbers or outcomes (if a number is unknown, rewrite so it is not needed; never leave {{placeholders}}), no URL in the body (LinkedIn buries posts with links): say "link on our page" instead.
