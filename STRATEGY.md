@@ -80,6 +80,7 @@ Mix target per week: 2 grade math, 1 deadline reality, 2 study systems, 1 GRIND 
 Folder `queue/YYYY-MM-DD/` in this repo (mdouiri19-del/grind-social, public):
 - `reel.mp4` (H.264 + AAC, 1080x1920, 30 fps, 15 to 25 s, under 19 MB)
 - `cta.jpg` + `cta_caption.txt` (single-image sign-up post, posted Mon/Wed/Fri 08:45; one real feature per post)
+- `linkedin.txt` (+ optional `linkedin.jpg`): GRIND. LinkedIn page post, Tue/Wed/Thu only, posted 12:45 with the carousel
 - `cover.jpg` (reel thumbnail 1080x1920, hook readable in the center)
 - `reel_caption.txt`, `post_caption.txt`
 - `post_01.jpg ... post_06.jpg` (1080x1350). Carousel is ALWAYS exactly 6 slides (Make.com maps 6 fixed slots).

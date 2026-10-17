@@ -45,6 +45,14 @@ Not posted for now (Make free plan allows 2 scenarios). Keep the tooling; only p
 2. `python3 tools/render_cta.py $PWD/work/cta.html $PWD/work/cta.png` then `ffmpeg -i work/cta.png -q:v 2 queue/$DAY/cta.jpg`. Look at it.
 3. `queue/$DAY/cta_caption.txt`: 3 to 5 short lines, direct invite to sign up, "Free for students, link in bio", 3 to 5 hashtags.
 
+## 3c. LinkedIn post for the GRIND. company page: ACTIVE on Tuesday, Wednesday, Thursday only
+Make posts it at 12:45 Toronto with the carousel. Skip on other days (no linkedin.txt file means nothing posts).
+1. Load and follow the li-post skill, then the li-human skill (both clone github.com/Jakeschincariol/linkedin-agent-skill for hooks.json, humanize.py, detect.py; GitHub is reachable).
+2. Voice: the GRIND. brand voice from STRATEGY.md (calm, smart senior student; plain words), written as the GRIND. team ("we"), English. Audience: students, parents, educators, early adopters. Rotate topics: why we built GRIND. (one real student problem), a study or grade-math insight, a real product feature or update (only what exists in STRATEGY section 0), a semester-moment tip.
+3. Unattended run overrides two li-post defaults, by owner decision: no approval step (ship the strongest of the 3 hooks yourself), and the text IS published automatically. Every other li-post and li-human rule stays: 900 to 1,300 characters, one idea, no engagement bait, max 3 hashtags at the bottom, no fabricated numbers or outcomes (if a number is unknown, rewrite so it is not needed; never leave {{placeholders}}), no URL in the body (LinkedIn buries posts with links): say "link on our page" instead.
+4. Run humanize.py then detect.py on the draft. It must reach PASS. If not after 2 rewrites, write a different draft.
+5. Save the final text to `queue/$DAY/linkedin.txt` (plain text, no markdown). Optional `queue/$DAY/linkedin.jpg` (1080x1350) if a custom visual helps; otherwise the carousel cover post_01.jpg is used.
+
 ## 4. Captions + meta
 - `queue/$DAY/reel_caption.txt` and `post_caption.txt` per STRATEGY section 7. Short. No em dashes. End with 3 to 6 hashtags.
 - `queue/$DAY/meta.json`: {"pillars":{"reel":"...","post":"..."},"hooks":{"reel":"...","post":"..."}}
