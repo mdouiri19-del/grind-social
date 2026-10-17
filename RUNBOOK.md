@@ -30,7 +30,7 @@ Network: only GitHub and package registries work. No CDNs, no web fonts, no stoc
    npx hyperframes render --quality high --fps 30 --output ../reel_video.mp4
    ```
 3. Music: `python3 tools/beat.py work/beat.wav <duration> <day-of-year>` (or a file from `assets/music/` if present).
-4. Mux: `ffmpeg -y -i work/reel_video.mp4 -i work/beat.wav -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -c:a aac -b:a 160k -af "volume=0.55" -shortest -movflags +faststart queue/$DAY/reel.mp4`
+4. Mux: `ffmpeg -y -i work/reel_video.mp4 -i work/beat.wav -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -ac 2 -af "volume=0.55" -shortest -movflags +faststart queue/$DAY/reel.mp4`
 5. Check with ffprobe: 1080x1920, h264, aac, duration 15 to 25 s, under 19 MB. Extract 3 frames and look at them.
 
 ## 3. Carousel (6 slides, 1080x1350)
