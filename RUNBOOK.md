@@ -19,9 +19,10 @@ Network: only GitHub and package registries work. No CDNs, no web fonts, no stoc
 2. Pick today's reel pillar and carousel pillar from the weekly rotation (Toronto day of week) and the seasonal calendar.
 3. Pick hooks. Never reuse a hook that appears in `log.md` within the last 30 days. Remix the hook bank or write new ones in the same spirit.
 4. Reel and carousel cover DIFFERENT ideas the same day.
+5. Pick a reel STYLE and a carousel LAYOUT from STRATEGY section 12 that were not used in the last 3 days of log.md. Apply every intrigue rule. Record both in meta.json as "styles": {"reel": ..., "carousel": ...} and in the log row.
 
 ## 2. Reel (HyperFrames, 1080x1920, 15 to 25 s)
-1. Write `work/reel/index.html` as a fresh HyperFrames composition. Use `templates/reel-example/index.html` for mechanics only (root attrs, clips, one paused GSAP timeline on `window.__timelines["main"]`, local gsap.js and fonts). Vary layout and motion day to day so the feed doesn't look templated.
+1. Write `work/reel/index.html` as a fresh HyperFrames composition. Use `templates/reel-example/index.html` for mechanics only (root attrs, clips, one paused GSAP timeline on `window.__timelines["main"]`, local gsap.js and fonts). Vary layout and motion day to day so the feed doesn't look templated: the chosen style from STRATEGY section 12 decides the whole composition, the example is only a mechanics reference, never a look to copy.
    Rules: hook in first 1.5 s with motion from frame 0; one idea; 3 beats max; final 2 to 3 s CTA on brand green "Your semester. A little more under control." + GRIND. + "Free · link in bio". Text inside y 250 to 1520. No `<br>` except display titles split into block spans. Animate only opacity/transform/colors. No CSS transform on elements GSAP transforms.
 2. Copy `work/gsap.js` and `assets/fonts` next to it (or fix paths). Then:
    ```bash

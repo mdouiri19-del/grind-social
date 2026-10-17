@@ -96,3 +96,30 @@ Make.com reads `queue/<today Toronto>/manifest.json`: carousel 12:45 and reel 19
 - INSTAGRAM (reels, carousels, sign-up post): light and playful. Cream #F6F7F1 backgrounds (sign-up post on brand green), lime highlight blocks on words, white UI cards (deadline rows, weight pills, checklists), blush touches, motion, emoji allowed in captions. Formats 1080x1920 and 1080x1350.
 - LINKEDIN (GRIND. page): editorial and calm. Deep ink background #16261E with a faint 100px grid, white Inter type, muted sage #9DB09A body text, ONE lime accent (short rule + kicker), uppercase letter-spaced labels "GRIND. Notes" + day theme, optional stats row with true figures only, footer "From the GRIND. team". No UI cards, no blush, no emoji, no highlight blocks. Format 1200x1500. Template: templates/linkedin-example/linkedin.html.
 
+## 12. Instagram variety system (same identity, never the same look twice in a row)
+Constants that NEVER change: Inter, the palette, GRIND. wordmark, lime as the highlight color, plain friendly copy.
+Everything else rotates. Never reuse a reel style or carousel layout used in the previous 3 days (check log.md).
+
+### Reel styles (rotate)
+1. KINETIC SLAM: words hit the screen one by one, scale and shake, hard cuts on the beat.
+2. FAKE UI DEMO: a GRIND.-like dashboard built in HTML, cursor moves, clicks, rows sort themselves, zooms into one number.
+3. COUNTDOWN: a huge ticking timer or "days left" counter drives the whole reel, urgency, red-free (use ink + lime).
+4. PLAN VS REALITY: split screen, left "the plan" neat, right "reality" chaotic, then GRIND. fixes the right side.
+5. NOTIFICATION PILE-UP: POV phone screen, reminders and "due 11:59 PM" banners stack and overflow, then calm.
+6. MATH REVEAL: an equation builds live (weights, averages), numbers count up, the answer lands big.
+7. MYTH / FACT: a claim appears, gets stamped MYTH, flips to the fact with a check.
+8. SPEEDRUN LIST: 5 tips in 12 seconds, numbered stamps, one cut per tip.
+9. SYLLABUS ZOOM: a PDF-like page, camera dives through it to the one buried line that matters.
+
+### Intrigue rules (every reel)
+- Open loop in the first second: the hook raises a question the viewer needs answered ("Nobody reads line 3 of their syllabus."). Never state the answer in the hook.
+- Something moves every 0.5 s, the scene changes every 1 to 2.5 s, no static frame longer than 1.2 s. Move the whole stage too (slow push-in, pan, tilt), not just the text.
+- At least one pattern interrupt mid-reel (color flip to green or blush, a zoom punch, a freeze-frame).
+- Partial reveals: blur or mask a key number and reveal it late.
+- Max 6 words on screen at once. Cuts land on the beat (tools/beat.py tempo).
+- Loop ending: the last frame visually leads back into the first so replays feel seamless.
+- Vary background dominance per reel: cream, brand green, blush, or lime-forward.
+
+### Carousel layouts (rotate)
+checklist, big-number cover, step-by-step guide, myth vs fact, before / after, mistakes list ("5 things that cost you marks"), timeline of a week, quote-style truth bomb, mini-quiz (answer on last slide). Alternate cover background between cream, green and blush.
+
