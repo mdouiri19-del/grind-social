@@ -48,10 +48,15 @@ Make posts it Mon, Wed, Fri at 08:45, but make it daily anyway (cheap, keeps the
 ## 3c. LinkedIn post for the GRIND. company page: ACTIVE on Tuesday, Wednesday, Thursday only
 Make posts it at 08:30 Toronto (own scenario). Skip on other days (no linkedin.txt file means nothing posts).
 1. Load and follow the li-post skill, then the li-human skill (both clone github.com/Jakeschincariol/linkedin-agent-skill for hooks.json, humanize.py, detect.py; GitHub is reachable).
-2. Voice: the GRIND. brand voice from STRATEGY.md (calm, smart senior student; plain words), written as the GRIND. team ("we"), English. Audience: students, parents, educators, early adopters. Rotate topics: why we built GRIND. (one real student problem), a study or grade-math insight, a real product feature or update (only what exists in STRATEGY section 0), a semester-moment tip.
+2. Voice: the GRIND. brand voice from STRATEGY.md (calm, smart senior student; plain words), written as the GRIND. team ("we"), English. Audience: students, parents, educators, early adopters. Topic by day:
+   - Tuesday, WHY: one real student problem and why it matters (deadlines buried in PDFs, misunderstood weights, last-minute panic). Story-led, ends with the angle GRIND. takes.
+   - Wednesday, INSIGHT: a useful study or grade-math lesson anyone can apply today (weighted averages, the 14-day rule, active recall, planning a 30% paper). Value first, product at most one line.
+   - Thursday, BUILD: build in public, one real feature or how it works (syllabus import, priority list, Study Studio, EN/FR, calendar export), or what we're working on next. Only what exists or is stated as planned in STRATEGY.
+   Avoid repeating a topic used in the last 4 weeks of LinkedIn posts (check log.md).
 3. Unattended run overrides two li-post defaults, by owner decision: no approval step (ship the strongest of the 3 hooks yourself), and the text IS published automatically. Every other li-post and li-human rule stays: 900 to 1,300 characters, one idea, no engagement bait, max 3 hashtags at the bottom, no fabricated numbers or outcomes (if a number is unknown, rewrite so it is not needed; never leave {{placeholders}}), no URL in the body (LinkedIn buries posts with links): say "link on our page" instead.
 4. Run humanize.py then detect.py on the draft. It must reach PASS. If not after 2 rewrites, write a different draft.
-5. Save the final text to `queue/$DAY/linkedin.txt` (plain text, no markdown). Optional `queue/$DAY/linkedin.jpg` (1080x1350) if a custom visual helps; otherwise the carousel cover post_01.jpg is used.
+5. Log the LinkedIn hook in log.md (add "LI: <hook>" to the day's row).
+6. Save the final text to `queue/$DAY/linkedin.txt` (plain text, no markdown). Optional `queue/$DAY/linkedin.jpg` (1080x1350) if a custom visual helps; otherwise the carousel cover post_01.jpg is used.
 
 ## 4. Captions + meta
 - `queue/$DAY/reel_caption.txt` and `post_caption.txt` per STRATEGY section 7. Short. No em dashes. End with 3 to 6 hashtags.
