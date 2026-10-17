@@ -1,0 +1,168 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(../../assets/fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../../assets/fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../../assets/fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--rose:#875267;--sage:#E8EFDF;--border:#DFE5D8}
+*{box-sizing:border-box;margin:0}
+body{background:#999;font-family:Inter,sans-serif}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--cream);color:var(--ink);padding:96px 88px}
+.dark{background:var(--brand);color:var(--cream)}
+.top{position:absolute;top:64px;left:88px;right:88px;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:28px}
+.logo{font-weight:700;font-size:40px;letter-spacing:-1.5px}
+.logo b{color:#80A258}.dark .logo b{color:var(--lime)}
+.num{color:var(--sec);font-size:26px}.dark .num{color:#C9D8B8}
+.foot{position:absolute;bottom:64px;left:88px;right:88px;display:flex;justify-content:space-between;font-size:28px;font-weight:600;color:var(--sec)}
+.dark .foot{color:#C9D8B8}
+h1{font-size:118px;line-height:1;letter-spacing:-5px;font-weight:600}
+h2{font-size:92px;line-height:1.02;letter-spacing:-3.5px;font-weight:600}
+.hl{background:var(--lime);color:var(--ink);padding:0 14px;border-radius:14px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+p.lead{font-size:40px;line-height:1.35;color:var(--sec);font-weight:500;margin-top:40px;max-width:820px}
+.dark p.lead{color:#C9D8B8}
+.card{background:#fff;border:2px solid var(--border);border-radius:28px;box-shadow:0 4px 10px rgba(32,58,45,.06),0 30px 60px rgba(37,77,59,.12)}
+.row{display:flex;align-items:center;gap:28px;padding:30px 36px;border-bottom:2px solid var(--border);font-size:32px}
+.row:last-child{border-bottom:0}
+.date{font-weight:700;font-size:24px;color:var(--brand);background:var(--sage);border-radius:12px;padding:10px 14px;min-width:120px;text-align:center}
+.t{flex:1;font-weight:600}.t small{display:block;font-weight:500;font-size:24px;color:var(--sec);margin-top:4px}
+.w{font-weight:700;font-size:30px;background:var(--lime);border-radius:999px;padding:8px 20px}
+.tag{display:inline-block;font-size:26px;font-weight:600;color:var(--brand);background:var(--sage);border-radius:999px;padding:10px 22px;margin-bottom:36px}
+.dark .tag{background:rgba(217,248,141,.15);color:var(--lime)}
+.sample{font-size:22px;color:var(--sec);margin-top:18px}
+/* slide 2 scattered */
+.scatter{position:absolute;left:0;right:0;bottom:130px;height:400px}
+.sc{position:absolute;background:#fff;border:2px solid var(--border);border-radius:22px;padding:22px 28px;font-size:28px;font-weight:600;box-shadow:0 20px 40px rgba(37,77,59,.10)}
+.sc small{display:block;font-size:22px;color:var(--sec);font-weight:500}
+/* slide 3 flow */
+.flow{display:flex;align-items:center;gap:36px;margin-top:90px}
+.pdf{width:330px;height:430px;background:#fff;border:2px solid var(--border);border-radius:24px;padding:36px;box-shadow:0 30px 60px rgba(37,77,59,.12);position:relative}
+.pdf .bar{height:16px;background:var(--border);border-radius:8px;margin-bottom:22px}
+.pdf .lbl{position:absolute;top:-22px;left:30px;background:var(--rose);color:#fff;font-size:22px;font-weight:700;border-radius:10px;padding:6px 14px}
+.arrow{font-size:80px;color:var(--brand);font-weight:700}
+.mini{flex:1}
+.mini .row{padding:22px 24px;font-size:26px;gap:16px}
+.mini .date{min-width:96px;font-size:20px;padding:8px 10px}
+.mini .w{font-size:24px;padding:6px 14px}
+/* slide 5 studio */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.tile{background:#fff;border:2px solid var(--border);border-radius:28px;padding:30px 34px;min-height:0;box-shadow:0 20px 40px rgba(37,77,59,.08)}
+.tile .ic{width:60px;height:60px;border-radius:18px;background:var(--lime);display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:20px}
+.tile h3{font-size:40px;letter-spacing:-1px;font-weight:600}
+.tile p{font-size:26px;color:var(--sec);margin-top:10px;line-height:1.35}
+.tile.b .ic{background:var(--blush)}
+/* slide 4 avg */
+.avg{display:flex;gap:28px;margin-top:32px}
+.avg .card{flex:1;padding:34px 36px}
+.avg .k{font-size:24px;color:var(--sec);font-weight:600}
+.avg .v{font-size:76px;font-weight:700;letter-spacing:-3px;margin-top:6px}
+.prog{height:18px;background:var(--sage);border-radius:9px;margin-top:18px;overflow:hidden}.prog i{display:block;height:100%;width:62%;background:var(--brand);border-radius:9px}
+.s4c .row{padding:20px 36px}.avg .v{font-size:64px}.avg .card{padding:26px 32px}
+/* cta */
+.url{display:inline-block;margin-top:56px;background:var(--lime);color:var(--ink);font-size:46px;font-weight:700;border-radius:24px;padding:28px 40px;letter-spacing:-1px}
+.free{margin-top:120px;display:flex;gap:20px;flex-wrap:wrap}
+.free span{font-size:30px;font-weight:600;border:2px solid rgba(201,216,184,.4);border-radius:999px;padding:14px 28px;color:var(--cream)}
+</style></head><body>
+
+<!-- 1 HOOK -->
+<section class="s" id="s1">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="num">1/6</span></div>
+ <div style="margin-top:170px">
+  <span class="tag">New for students</span>
+  <h1>Your semester.<br>A little more<br><span class="hl">under control.</span></h1>
+  <p class="lead">Meet GRIND. Every deadline, every grade, one screen.</p>
+ </div>
+ <div class="card" style="position:absolute;left:88px;right:88px;bottom:170px">
+  <div class="row"><span class="date">OCT 21</span><span class="t">Midterm exam<small>PSY 100</small></span><span class="w">25%</span></div>
+  <div class="row"><span class="date">OCT 24</span><span class="t">Research proposal<small>ENV 201</small></span><span class="w">15%</span></div>
+ </div>
+ <div class="foot"><span>Sample courses</span><span>Swipe →</span></div>
+</section>
+
+<!-- 2 PROBLEM -->
+<section class="s" id="s2">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="num">2/6</span></div>
+ <div style="margin-top:170px">
+  <h2>5 courses.<br>5 syllabus.<br>Deadlines <span class="hl">everywhere.</span></h2>
+  <p class="lead">And that one quiz you only find out about the night before.</p>
+ </div>
+ <div class="scatter">
+  <div class="sc" style="left:90px;top:20px;transform:rotate(-6deg)">Lab report<small>due ??</small></div>
+  <div class="sc" style="left:460px;top:0;transform:rotate(4deg)">Quiz 3<small>10% · Week 7?</small></div>
+  <div class="sc" style="left:700px;top:110px;transform:rotate(-3deg)">Essay draft<small>check syllabus</small></div>
+  <div class="sc" style="left:200px;top:150px;transform:rotate(3deg)">Midterm<small>25% · Oct ?</small></div>
+  <div class="sc" style="left:540px;top:270px;transform:rotate(-5deg);background:var(--blush);border-color:#E9C9D5">“Wait, that's due tomorrow?”</div>
+  <div class="sc" style="left:60px;top:300px;transform:rotate(-2deg)">Reading response<small>somewhere in PDF</small></div>
+ </div>
+ <div class="foot"><span></span><span>Swipe →</span></div>
+</section>
+
+<!-- 3 UPLOAD -->
+<section class="s" id="s3">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="num">3/6</span></div>
+ <div style="margin-top:170px">
+  <span class="tag">Step 1</span>
+  <h2>Upload your syllabus.<br><span class="hl">That's it.</span></h2>
+  <p class="lead">GRIND. pulls out every date and every weight. You review, then add.</p>
+ </div>
+ <div class="flow">
+  <div class="pdf"><span class="lbl">PDF</span><div class="bar" style="width:70%"></div><div class="bar"></div><div class="bar" style="width:85%"></div><div class="bar" style="width:60%"></div><div class="bar"></div><div class="bar" style="width:75%"></div><div class="bar" style="width:50%"></div></div>
+  <span class="arrow">→</span>
+  <div class="card mini">
+   <div class="row"><span class="date">SEP 30</span><span class="t">Quiz 1</span><span class="w">5%</span></div>
+   <div class="row"><span class="date">OCT 21</span><span class="t">Midterm</span><span class="w">25%</span></div>
+   <div class="row"><span class="date">NOV 18</span><span class="t">Paper</span><span class="w">30%</span></div>
+   <div class="row"><span class="date">DEC 12</span><span class="t">Final</span><span class="w">40%</span></div>
+  </div>
+ </div>
+ <div class="foot"><span>Sample syllabus</span><span>Swipe →</span></div>
+</section>
+
+<!-- 4 NEXT MOVE + AVG -->
+<section class="s" id="s4">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="num">4/6</span></div>
+ <div style="margin-top:170px">
+  <span class="tag">Step 2</span>
+  <h2 style="font-size:80px">Know what's next.<br>Know where you <span class="hl">stand.</span></h2>
+ </div>
+ <div class="card s4c" style="margin-top:40px">
+  <div class="row" style="font-size:24px;font-weight:700;color:var(--sec);letter-spacing:1px;padding:22px 36px">DUE IN THE NEXT 14 DAYS</div>
+  <div class="row"><span class="date">OCT 21</span><span class="t">Midterm exam<small>PSY 100</small></span><span class="w">25%</span></div>
+  <div class="row"><span class="date">OCT 24</span><span class="t">Research proposal<small>ENV 201</small></span><span class="w">15%</span></div>
+  <div class="row"><span class="date">OCT 28</span><span class="t">Reading response<small>SOC 101</small></span><span class="w">10%</span></div>
+ </div>
+ <div class="avg">
+  <div class="card"><div class="k">Current average · ENV 201</div><div class="v">81%</div></div>
+  <div class="card"><div class="k">Course graded so far</div><div class="v">38%</div><div class="prog"><i style="width:38%"></i></div></div>
+ </div>
+ <div class="foot"><span>Sample data</span><span>Swipe →</span></div>
+</section>
+
+<!-- 5 STUDY STUDIO -->
+<section class="s" id="s5">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="num">5/6</span></div>
+ <div style="margin-top:170px">
+  <span class="tag">Step 3</span>
+  <h2>Then actually<br><span class="hl">study.</span></h2>
+  <p class="lead">Study Studio: pick a course and the weeks. GRIND. builds the rest.</p>
+ </div>
+ <div class="grid">
+  <div class="tile"><div class="ic">⏱</div><h3>Timed quiz</h3><p>From the weeks you pick</p></div>
+  <div class="tile b"><div class="ic">📝</div><h3>Mock exam</h3><p>Practice before the real one</p></div>
+  <div class="tile b"><div class="ic">📚</div><h3>Revision notes</h3><p>The key ideas, sorted</p></div>
+  <div class="tile"><div class="ic">✓</div><h3>Assignment plan</h3><p>Big task, small steps</p></div>
+ </div>
+ <div class="foot"><span></span><span>Swipe →</span></div>
+</section>
+
+<!-- 6 CTA -->
+<section class="s dark" id="s6">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="num">6/6</span></div>
+ <div style="margin-top:250px">
+  <h1>Free for<br><span class="hl">students.</span></h1>
+  <p class="lead">Set up your semester in a few minutes. Look around first, no account needed.</p>
+  <div class="url">grindstudent.com/welcome</div>
+  <div class="free"><span>Link in bio</span><span>EN / FR</span><span>Private by design</span></div>
+ </div>
+ <div class="foot"><span>Follow for a study tip every day</span><span>Save this ✓</span></div>
+</section>
+</body></html>

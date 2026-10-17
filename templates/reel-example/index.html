@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>GRIND reel: Reading week is a trap</title>
+<script src="gsap.js"></script>
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(../../assets/fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../../assets/fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../../assets/fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--rose:#875267;--sage:#E8EFDF;--border:#DFE5D8}
+*{box-sizing:border-box;margin:0}
+body{margin:0;background:var(--cream);font-family:Inter,sans-serif;color:var(--ink)}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden}
+.bg{position:absolute;inset:0;background:var(--cream)}
+.clip{position:absolute;inset:0;padding:300px 90px 420px;display:flex;flex-direction:column;justify-content:center}
+.big{font-size:150px;line-height:.98;letter-spacing:-7px;font-weight:700}
+.mid{font-size:108px;line-height:1.02;letter-spacing:-4.5px;font-weight:700}
+.line{display:block}
+.hl{display:inline-block;background:var(--lime);border-radius:20px;padding:0 18px;margin-left:-6px}
+.sub{font-size:48px;line-height:1.3;color:var(--sec);font-weight:500;margin-top:44px}
+.num{display:inline-flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:28px;background:var(--brand);color:var(--lime);font-size:56px;font-weight:700;margin-bottom:40px}
+.card{background:#fff;border:3px solid var(--border);border-radius:34px;box-shadow:0 30px 60px rgba(37,77,59,.12);margin-top:56px;overflow:hidden}
+.row{display:flex;align-items:center;gap:28px;padding:32px 38px;border-bottom:3px solid var(--border);font-size:40px;font-weight:600;position:relative}
+.row:last-child{border-bottom:0}
+.row .t{flex:1}
+.row .t small{display:block;font-size:28px;color:var(--sec);font-weight:500;margin-top:4px}
+.w{font-weight:700;font-size:36px;background:var(--sage);border-radius:999px;padding:10px 24px}
+.pick{position:absolute;inset:0;background:var(--lime);opacity:0}
+.row>*{position:relative}
+.row>.pick{position:absolute;inset:0}
+.days{display:grid;grid-template-columns:1fr;gap:20px;margin-top:56px}
+.day{display:flex;align-items:center;gap:28px;background:#fff;border:3px solid var(--border);border-radius:28px;padding:26px 34px;font-size:40px;font-weight:600}
+.day b{font-size:30px;color:var(--brand);background:var(--sage);border-radius:14px;padding:10px 16px;min-width:110px;text-align:center}
+.day.off{background:var(--blush);border-color:#E9C9D5}
+.day.off b{background:#fff;color:var(--rose)}
+.chaos{position:relative;height:520px;margin-top:40px}
+.cc{position:absolute;background:#fff;border:3px solid var(--border);border-radius:26px;padding:24px 32px;font-size:38px;font-weight:600;box-shadow:0 20px 40px rgba(37,77,59,.10)}
+.dark{position:absolute;inset:0;background:var(--brand)}
+.cta{color:var(--cream)}
+.cta .sub{color:#C9D8B8}
+.logo{font-size:96px;font-weight:700;letter-spacing:-4px;color:var(--cream);margin-top:90px}
+.logo i{font-style:normal;color:var(--lime)}
+.pill{display:inline-block;margin-top:40px;background:var(--lime);color:var(--ink);font-size:46px;font-weight:700;border-radius:999px;padding:22px 44px}
+#prog{position:absolute;top:262px;left:90px;right:90px;height:10px;border-radius:5px;background:rgba(37,77,59,.12);overflow:hidden}
+#progfill{display:block;width:100%;height:100%;background:var(--brand);transform-origin:left center}
+#tag{position:absolute;top:196px;left:90px;font-size:34px;font-weight:700;letter-spacing:-1px;color:var(--ink)}
+#tag i{font-style:normal;color:#80A258}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-duration="19">
+ <div class="bg"></div>
+ <div id="tag">GRIND<i>.</i></div>
+ <div id="prog"><span id="progfill"></span></div>
+
+ <!-- 1 HOOK -->
+ <section id="s1" class="clip" data-start="0" data-duration="2.4" data-track-index="1">
+  <div class="big">
+   <span class="line" id="h1a">Reading</span>
+   <span class="line" id="h1b">week is</span>
+   <span class="line" id="h1c">a <span class="hl" id="h1d">trap.</span></span>
+  </div>
+ </section>
+
+ <!-- 2 TENSION -->
+ <section id="s2" class="clip" data-start="2.4" data-duration="3" data-track-index="1">
+  <div class="mid" id="s2t">The plan: catch up on everything.</div>
+  <div class="chaos">
+   <div class="cc" id="c1" style="left:0;top:20px">Lab report</div>
+   <div class="cc" id="c2" style="left:420px;top:0">Midterm review</div>
+   <div class="cc" id="c3" style="left:120px;top:150px">Readings × 6</div>
+   <div class="cc" id="c4" style="left:520px;top:170px">Essay draft</div>
+   <div class="cc" id="c5" style="left:30px;top:300px">Problem set</div>
+   <div class="cc" id="c6" style="left:440px;top:330px">Notes cleanup</div>
+  </div>
+  <div class="sub" id="s2s" style="font-size:60px;color:var(--rose);font-weight:700">Reality: you do none of it.</div>
+ </section>
+
+ <!-- 3 TIP 1 -->
+ <section id="s3" class="clip" data-start="5.4" data-duration="3.6" data-track-index="1">
+  <div><span class="num" id="n1">1</span></div>
+  <div class="mid" id="s3t">Pick the 2 deadlines worth the most.</div>
+  <div class="card" id="s3c">
+   <div class="row" id="r1"><span class="pick" id="p1"></span><span class="t">Midterm<small>PSY 100</small></span><span class="w">25%</span></div>
+   <div class="row" id="r2"><span class="t">Reading quiz<small>SOC 101</small></span><span class="w">5%</span></div>
+   <div class="row" id="r3"><span class="pick" id="p3"></span><span class="t">Research paper<small>ENV 201</small></span><span class="w">30%</span></div>
+   <div class="row" id="r4"><span class="t">Discussion post<small>HIS 120</small></span><span class="w">2%</span></div>
+  </div>
+ </section>
+
+ <!-- 4 TIP 2 -->
+ <section id="s4" class="clip" data-start="9" data-duration="3.6" data-track-index="1">
+  <div><span class="num" id="n2">2</span></div>
+  <div class="mid" id="s4t">Give each day one job.</div>
+  <div class="days">
+   <div class="day" id="d1"><b>MON</b>Midterm: chapters 1 to 4</div>
+   <div class="day" id="d2"><b>TUE</b>Midterm: practice test</div>
+   <div class="day" id="d3"><b>WED</b>Paper: outline</div>
+   <div class="day" id="d4"><b>THU</b>Paper: first 1,000 words</div>
+  </div>
+ </section>
+
+ <!-- 5 TIP 3 -->
+ <section id="s5" class="clip" data-start="12.6" data-duration="3" data-track-index="1">
+  <div><span class="num" id="n3">3</span></div>
+  <div class="mid" id="s5t">Take one day fully off. On purpose.</div>
+  <div class="days">
+   <div class="day off" id="d5"><b>FRI</b>Off. No guilt. 🌿</div>
+  </div>
+  <div class="sub" id="s5s">Rest you planned beats rest you stole.</div>
+ </section>
+
+ <!-- 6 CTA -->
+ <section id="s6" class="clip cta" data-start="15.6" data-duration="3.4" data-track-index="1">
+  <div class="dark" id="s6bg"></div>
+  <div style="position:relative">
+   <div class="mid" id="s6t" style="color:var(--cream)"><span class="line">Your semester.</span><span class="line">A little more</span><span class="line"><span class="hl" style="color:var(--ink)">under control.</span></span></div>
+   <div class="logo" id="s6l">GRIND<i>.</i></div>
+   <div class="pill" id="s6p">Free · link in bio</div>
+  </div>
+ </section>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const E = "power3.out";
+// progress bar across whole video
+tl.fromTo("#progfill", { scaleX: 0 }, { scaleX: 1, duration: 19, ease: "none" }, 0);
+// 1 hook: slam words
+tl.from("#h1a", { y: 140, opacity: 0, duration: 0.35, ease: "back.out(2)" }, 0.0);
+tl.from("#h1b", { y: 140, opacity: 0, duration: 0.35, ease: "back.out(2)" }, 0.25);
+tl.from("#h1c", { y: 140, opacity: 0, duration: 0.35, ease: "back.out(2)" }, 0.5);
+tl.from("#h1d", { scale: 0.4, rotation: -8, duration: 0.45, ease: "back.out(3)" }, 0.75);
+tl.to("#h1d", { rotation: 3, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 1.25);
+// 2 tension
+tl.from("#s2t", { y: 60, opacity: 0, duration: 0.4, ease: E }, 2.45);
+["#c1","#c2","#c3","#c4","#c5","#c6"].forEach((s, i) => {
+  tl.from(s, { y: -500, rotation: (i % 2 ? 14 : -12), opacity: 0, duration: 0.45, ease: "bounce.out" }, 2.75 + i * 0.12);
+});
+tl.from("#s2s", { scale: 0.8, opacity: 0, duration: 0.35, ease: "back.out(2)" }, 4.15);
+tl.to(["#c1","#c2","#c3","#c4","#c5","#c6"], { opacity: 0.35, duration: 0.3 }, 4.15);
+// 3 tip 1
+tl.from("#n1", { scale: 0, rotation: -30, duration: 0.4, ease: "back.out(2.5)" }, 5.45);
+tl.from("#s3t", { y: 60, opacity: 0, duration: 0.4, ease: E }, 5.6);
+tl.from("#s3c", { y: 120, opacity: 0, duration: 0.45, ease: E }, 5.95);
+tl.to("#p1", { opacity: 1, duration: 0.25 }, 6.9);
+tl.to("#p3", { opacity: 1, duration: 0.25 }, 7.2);
+tl.to(["#r2","#r4"], { opacity: 0.35, duration: 0.3 }, 7.5);
+tl.fromTo("#r1", { scale: 1 }, { scale: 1.04, duration: 0.2, yoyo: true, repeat: 1 }, 6.9);
+tl.fromTo("#r3", { scale: 1 }, { scale: 1.04, duration: 0.2, yoyo: true, repeat: 1 }, 7.2);
+// 4 tip 2
+tl.from("#n2", { scale: 0, rotation: -30, duration: 0.4, ease: "back.out(2.5)" }, 9.05);
+tl.from("#s4t", { y: 60, opacity: 0, duration: 0.4, ease: E }, 9.2);
+["#d1","#d2","#d3","#d4"].forEach((s, i) => {
+  tl.from(s, { x: 700, opacity: 0, duration: 0.4, ease: E }, 9.6 + i * 0.28);
+});
+// 5 tip 3
+tl.from("#n3", { scale: 0, rotation: -30, duration: 0.4, ease: "back.out(2.5)" }, 12.65);
+tl.from("#s5t", { y: 60, opacity: 0, duration: 0.4, ease: E }, 12.8);
+tl.from("#d5", { scale: 0.6, opacity: 0, duration: 0.5, ease: "back.out(2)" }, 13.3);
+tl.from("#s5s", { y: 40, opacity: 0, duration: 0.4, ease: E }, 14.0);
+// 6 cta
+tl.from("#s6bg", { yPercent: 100, duration: 0.5, ease: "power4.out" }, 15.6);
+tl.from("#s6t", { y: 80, opacity: 0, duration: 0.45, ease: E }, 15.95);
+tl.from("#s6l", { scale: 0.7, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 16.5);
+tl.from("#s6p", { y: 40, opacity: 0, duration: 0.4, ease: E }, 16.85);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
