@@ -1,6 +1,6 @@
 # Daily run (for the scheduled Claude agent)
 
-Goal: every day, publish ONE reel and ONE 6-slide carousel for GRIND. into `queue/<date>/`. Make.com posts them to Instagram, Toronto time: carousel 12:15, reel 19:30, sign-up photo 08:45 on Mon/Wed/Fri. Nobody reviews the output before it goes live, so quality and brand rules are on you.
+Goal: every day, publish ONE reel and ONE 6-slide carousel for GRIND. into `queue/<date>/`. Make.com posts them to Instagram, Toronto time: carousel 12:45, reel 19:30 (sign-up photo paused, see 3b). Nobody reviews the output before it goes live, so quality and brand rules are on you.
 
 ## 0. Setup (fresh container every run)
 ```bash
@@ -39,8 +39,8 @@ Network: only GitHub and package registries work. No CDNs, no web fonts, no stoc
 2. Render: `python3 tools/render_carousel.py $PWD/work/carousel.html $PWD/work` then `ffmpeg -i work/png_N.png -q:v 2 queue/$DAY/post_0N.jpg` for N=1..6.
 3. Look at every slide. Text must not overflow cards or hit the footer. Fix and re-render.
 
-## 3b. Sign-up post (single image, 1080x1350), EVERY day
-Make posts it Mon, Wed, Fri at 08:45, but make it daily anyway (cheap, keeps the pipeline uniform).
+## 3b. Sign-up post (single image, 1080x1350): PAUSED, skip this step
+Not posted for now (Make free plan allows 2 scenarios). Keep the tooling; only produce it if this section says ACTIVE again.
 1. Write `work/cta.html` (one `<section id="s1">`) styled like `templates/cta-example/cta.html`. Brand green background, one strong headline about ONE real GRIND. feature (rotate: syllabus import, 14-day priority list, weighted average, Study Studio quiz, mock exam, revision notes, assignment plan, calendar export, EN/FR), a small UI card with sample data labeled "sample", a lime "Sign up free" pill and "Link in bio".
 2. `python3 tools/render_cta.py $PWD/work/cta.html $PWD/work/cta.png` then `ffmpeg -i work/cta.png -q:v 2 queue/$DAY/cta.jpg`. Look at it.
 3. `queue/$DAY/cta_caption.txt`: 3 to 5 short lines, direct invite to sign up, "Free for students, link in bio", 3 to 5 hashtags.

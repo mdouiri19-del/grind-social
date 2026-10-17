@@ -85,7 +85,7 @@ Folder `queue/YYYY-MM-DD/` in this repo (mdouiri19-del/grind-social, public):
 - `post_01.jpg ... post_06.jpg` (1080x1350). Carousel is ALWAYS exactly 6 slides (Make.com maps 6 fixed slots).
 - `meta.json`: {"pillars":{"reel":..,"post":..},"hooks":{"reel":..,"post":..}}
 - `manifest.json` written LAST by `tools/publish.py` (URLs pinned to the media commit).
-Make.com reads `queue/<today Toronto>/manifest.json`: carousel 12:15, reel 19:30 (daily), sign-up photo 08:45 (Mon/Wed/Fri).
+Make.com reads `queue/<today Toronto>/manifest.json`: carousel 12:45, reel 19:30 (daily). Sign-up photo: PAUSED (Make free plan = 2 scenarios).
 
 ## 10. Learning loop
 - Log each day in `log.md` (this repo): date, pillar, hook, format.
