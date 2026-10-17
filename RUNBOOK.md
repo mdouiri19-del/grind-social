@@ -36,6 +36,13 @@ Network: only GitHub and package registries work. No CDNs, no web fonts, no stoc
 5. Cover: Make only supports a cover FRAME (milliseconds into the reel). Put `"cover_ms": <int>` in meta.json at a moment where the hook is fully on screen and still (default 1900). Also save that frame as `queue/$DAY/cover.jpg`, 1080x1920 JPEG. (`ffmpeg -ss <seconds> -i queue/$DAY/reel.mp4 -frames:v 1 -q:v 2 queue/$DAY/cover.jpg`) and LOOK at it: hook fully visible, big, centered (the profile grid crops covers to 4:5, keep text in the middle). If no frame works as a cover, redesign the hook scene so one does.
 6. Check with ffprobe: 1080x1920, h264, aac, duration 15 to 25 s, under 19 MB. Extract 3 frames and look at them.
 
+## 2b. Grindy reels (mascot, about 3 per week, see STRATEGY section 13)
+When today's reel style uses Grindy:
+1. `(cd assets/grindy && npm i three@0.169.0 --silent)` and serve the repo: `(python3 -m http.server 8766 --directory $PWD >/dev/null 2>&1 &)`.
+2. Copy `assets/grindy/reel_grindy_midterm.html` to `assets/grindy/work_reel.html` and rewrite the story: DOM text beats on a paused GSAP timeline + `window.renderAt(t)` posing Grindy with `g.pose({...})` and moving the camera. Everything must be a pure function of t (no clocks, no random). Vary camera moves, poses and props every time.
+3. Render: `python3 tools/render_threejs_reel.py http://localhost:8766/assets/grindy/work_reel.html <seconds> work/reel_video.mp4 30` (takes several minutes). Then continue with music + mux from section 2 (step 3 onwards). Delete work_reel.html after, do not commit it.
+4. Check frames like any reel: text inside the safe zone, Grindy never hidden behind text cards at key beats.
+
 ## 3. Carousel (6 slides, 1080x1350)
 1. Write `work/carousel.html` with 6 `<section class="s" id="s1..s6">`, styled from `templates/carousel-example/carousel.html` (fonts path `../assets/fonts/`).
 2. Render: `python3 tools/render_carousel.py $PWD/work/carousel.html $PWD/work` then `ffmpeg -i work/png_N.png -q:v 2 queue/$DAY/post_0N.jpg` for N=1..6.

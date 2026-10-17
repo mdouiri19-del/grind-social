@@ -123,3 +123,11 @@ Everything else rotates. Never reuse a reel style or carousel layout used in the
 ### Carousel layouts (rotate)
 checklist, big-number cover, step-by-step guide, myth vs fact, before / after, mistakes list ("5 things that cost you marks"), timeline of a week, quote-style truth bomb, mini-quiz (answer on last slide). Alternate cover background between cream, green and blush.
 
+## 13. Mascot: Grindy (Instagram only, never LinkedIn)
+- Who: GRIND.'s study-buddy robot. Dark green vinyl body, cream visor with big ink eyes, lime smile, lime antenna bulb that GLOWS/FLASHES when a deadline is close. Calm, smart, a little deadpan, never mean, never cringe. He never talks in first-person ads; he reacts.
+- He is a clearly fictional brand character: never present him as a real student, never give him testimonials or fake usage numbers.
+- Expressions: happy, alert (blush visor + flashing antenna), focused (brows down, optional glasses), sleepy (eyes almost closed, coffee), proud (grin, grad cap), shocked, sad.
+- Props: glasses, coffee, grad cap.
+- Use: in about 3 of 7 reels per week (rotate with the other styles in section 12), as the emotional reaction layer on top of the story (relatable moment, then GRIND. fixes it). Reaction beats: sleepy -> deadpan stare -> panic jump with flashing antenna -> focused with glasses -> proud with cap.
+- Engine: assets/grindy/grindy.js (three.js). Example reel: assets/grindy/reel_grindy_midterm.html, rendered with tools/render_threejs_reel.py. Can also appear in carousel covers (render a still with assets/grindy/sheet.html?p=<pose json>).
+

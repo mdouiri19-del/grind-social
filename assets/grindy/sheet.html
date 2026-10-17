@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#E8EFDF}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body><script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { createGrindy, setupStage } from './grindy.js';
+const q = new URLSearchParams(location.search);
+const W = +(q.get('w') || 700), H = +(q.get('h') || 700);
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, alpha: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H); document.body.appendChild(renderer.domElement);
+const scene = setupStage(THREE, RoomEnvironment, renderer, {});
+const cam = new THREE.PerspectiveCamera(30, W / H, 0.1, 100);
+cam.position.set(0, 2.9, 13.5); cam.lookAt(0, 2.2, 0);
+const g = createGrindy(THREE, RoundedBoxGeometry); scene.add(g.root);
+const P = JSON.parse(q.get('p') || '{}');
+g.pose(P);
+renderer.render(scene, cam);
+window.__done = true;
+</script></body></html>

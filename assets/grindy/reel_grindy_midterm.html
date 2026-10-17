@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(../fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--sage:#E8EFDF;--border:#DFE5D8}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:var(--sage);font-family:Inter,sans-serif;color:var(--ink)}
+#gl{position:absolute;inset:0}
+.ov{position:absolute;left:80px;right:80px;opacity:0}
+.big{font-size:118px;line-height:1;letter-spacing:-5px;font-weight:700}
+.mid{font-size:84px;line-height:1.04;letter-spacing:-3.5px;font-weight:700}
+.hl{display:inline-block;background:var(--lime);border-radius:20px;padding:0 16px}
+.top{top:250px}
+.card{position:absolute;left:90px;right:90px;top:250px;background:#fff;border:3px solid var(--border);border-radius:34px;box-shadow:0 30px 60px rgba(37,77,59,.14);overflow:hidden;opacity:0}
+.row{display:flex;align-items:center;gap:24px;padding:28px 36px;border-bottom:3px solid var(--border);font-size:40px;font-weight:600;position:relative}
+.row:last-child{border-bottom:0}
+.row .t{flex:1}.row .t small{display:block;font-size:26px;color:var(--sec);font-weight:500}
+.d{font-weight:700;font-size:26px;color:var(--brand);background:var(--sage);border-radius:12px;padding:10px 14px;min-width:120px;text-align:center}
+.w{font-weight:700;font-size:34px;background:var(--lime);border-radius:999px;padding:8px 22px}
+.head{padding:22px 36px;font-size:26px;font-weight:700;letter-spacing:2px;color:var(--sec);border-bottom:3px solid var(--border)}
+#cta{position:absolute;inset:0;background:var(--brand);opacity:0}
+#ctaT{position:absolute;left:80px;right:80px;top:300px;color:var(--cream);opacity:0}
+#ctaT .logo{font-size:110px;font-weight:700;letter-spacing:-5px;margin-top:70px}
+#ctaT .logo i{font-style:normal;color:var(--lime)}
+#ctaT .pill{display:inline-block;margin-top:40px;background:var(--lime);color:var(--ink);font-size:46px;font-weight:700;border-radius:999px;padding:22px 44px}
+#tag{position:absolute;top:150px;left:80px;font-size:34px;font-weight:700;letter-spacing:-1px}
+#tag i{font-style:normal;color:#80A258}
+</style>
+<script src="gsap.min.js"></script>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<div id="tag">GRIND<i>.</i></div>
+<div class="ov top big" id="t1">Your midterm is worth <span class="hl">25%.</span></div>
+<div class="ov top big" id="t2">You've studied <span class="hl">0 hours.</span></div>
+<div class="ov top mid" id="t3">Grindy's antenna doesn't lie.</div>
+<div class="card" id="card">
+ <div class="head">DUE IN THE NEXT 14 DAYS</div>
+ <div class="row" id="r1"><span class="d">OCT 21</span><span class="t">Midterm exam<small>PSY 100 · sample</small></span><span class="w">25%</span></div>
+ <div class="row" id="r2"><span class="d">OCT 24</span><span class="t">Research paper<small>ENV 201 · sample</small></span><span class="w">30%</span></div>
+ <div class="row" id="r3"><span class="d">OCT 28</span><span class="t">Reading quiz<small>SOC 101 · sample</small></span><span class="w">5%</span></div>
+</div>
+<div class="ov top mid" id="t4">3 days. <span class="hl">1 plan.</span></div>
+<div id="cta"></div>
+<div id="ctaT"><div class="mid">Your semester. A little more <span class="hl" style="color:var(--ink)">under control.</span></div><div class="logo">GRIND<i>.</i></div><div class="pill">Free · link in bio</div></div>
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { createGrindy, setupStage } from './grindy.js';
+
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('gl'), antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false);
+const scene = setupStage(THREE, RoomEnvironment, renderer, {});
+const cam = new THREE.PerspectiveCamera(30, 1080 / 1920, 0.1, 100);
+const g = createGrindy(THREE, RoundedBoxGeometry); scene.add(g.root);
+
+// DOM timeline (seeked, never played)
+const tl = gsap.timeline({ paused: true });
+const inn = (s, at, d = 0.35) => tl.fromTo(s, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: d, ease: 'back.out(2)' }, at);
+const out = (s, at) => tl.to(s, { opacity: 0, y: -40, duration: 0.25, ease: 'power2.in' }, at);
+inn('#t1', 0.05); out('#t1', 2.0);
+inn('#t2', 2.15); out('#t2', 3.9);
+inn('#t3', 4.05); out('#t3', 6.4);
+tl.fromTo('#card', { opacity: 0, y: -300, rotation: -4 }, { opacity: 1, y: 0, rotation: 0, duration: 0.5, ease: 'back.out(1.6)' }, 6.6);
+tl.fromTo(['#r1', '#r2', '#r3'], { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.25, ease: 'power3.out' }, 7.0);
+tl.to('#r3', { opacity: 0.35, duration: 0.3 }, 8.6);
+tl.fromTo('#r2', { backgroundColor: '#ffffff' }, { backgroundColor: '#EEF8D6', duration: 0.3 }, 8.6);
+tl.fromTo('#r1', { backgroundColor: '#ffffff' }, { backgroundColor: '#EEF8D6', duration: 0.3 }, 8.9);
+out('#card', 10.6);
+inn('#t4', 10.85); out('#t4', 13.6);
+tl.fromTo('#cta', { opacity: 0 }, { opacity: 1, duration: 0.4 }, 14.6);
+tl.fromTo('#ctaT', { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 14.9);
+tl.to('#tag', { color: '#F6F7F1', duration: 0.3 }, 14.6);
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = x => 1 - Math.pow(1 - clamp(x), 3);
+const lerp = (a, b, k) => a + (b - a) * k;
+
+window.renderAt = (t) => {
+  tl.seek(t, false);
+  // camera: slow push-in, punch on alert, pull back for card
+  let camZ = lerp(17, 15.5, clamp(t / 4));
+  let camY = 3.2, lookY = 4.2;
+  if (t > 4 && t < 6.5) camZ -= 1.2 * Math.sin(clamp((t - 4) / 0.3) * Math.PI / 2);
+  if (t >= 6.5 && t < 10.7) { camZ = lerp(14.3, 19, ease((t - 6.5) / 0.5)); lookY = lerp(4.2, 5.6, ease((t - 6.5) / 0.5)); }
+  if (t >= 10.7) { camZ = lerp(19, 15.5, ease((t - 10.7) / 0.6)); lookY = lerp(5.6, 4.2, ease((t - 10.7) / 0.6)); }
+  cam.position.set(Math.sin(t * 0.4) * 0.6, camY, camZ); cam.lookAt(0, lookY, 0);
+
+  const blink = (Math.abs(((t * 1000) % 3100) - 120) < 120) ? 1 : 0;
+  const breathe = Math.sin(t * 3) * 0.03;
+  let p = { expression: 'sleepy', armL: 0.1, armR: 0.35, props: { coffee: true }, tilt: 0.12 + Math.sin(t * 1.5) * 0.04, yaw: 0.2, squash: 0.97 + breathe, bounce: 0, glow: 0.1 };
+  if (t >= 2.0 && t < 4.0) { // deadpan reveal: eyes open, look at camera
+    p = { expression: 'focused', armL: 0.1, armR: 0.35, props: { coffee: true }, tilt: 0, yaw: 0.05, squash: 1 + breathe, glow: 0.4, blink };
+  }
+  if (t >= 4.0 && t < 6.6) { // panic: jump, antenna flashing
+    const k = t - 4.0;
+    const hop = Math.abs(Math.sin(k * 7)) * 0.7;
+    p = { expression: 'alert', armL: 2.6 + Math.sin(k * 14) * 0.25, armR: 2.6 + Math.cos(k * 14) * 0.25, tilt: Math.sin(k * 9) * 0.1, yaw: 0,
+          bounce: hop, squash: hop < 0.08 ? 0.85 : 1.06, glow: (Math.floor(k * 6) % 2) ? 2.4 : 0.3, antenna: Math.sin(k * 20) * 0.25 };
+  }
+  if (t >= 6.6 && t < 10.7) { // focused with glasses, looking up at card
+    const k = t - 6.6;
+    p = { expression: 'focused', armL: 0.3, armR: 1.1 + Math.sin(k * 2) * 0.15, props: { glasses: true }, look: [0.2, 1], yaw: -0.15, tilt: Math.sin(k * 1.4) * 0.05, squash: 1 + breathe, glow: 0.8, blink };
+  }
+  if (t >= 10.7) { // proud
+    const k = t - 10.7;
+    const hop = k < 1.2 ? Math.abs(Math.sin(k * 5)) * 0.5 : 0;
+    p = { expression: 'proud', armL: 2.4, armR: 2.4, props: { cap: k > 0.4 }, bounce: hop, squash: hop < 0.06 && k < 1.2 ? 0.9 : 1 + breathe, yaw: Math.sin(k * 1.2) * 0.2, glow: 0.9 };
+  }
+  g.pose(p);
+  // Grindy hides under CTA anyway; keep rendering for continuity
+  renderer.render(scene, cam);
+};
+window.renderAt(0);
+window.__ready = true;
+</script></body></html>
