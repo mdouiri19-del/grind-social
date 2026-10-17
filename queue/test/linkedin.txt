@@ -1,0 +1,15 @@
+Most students don't miss deadlines because they're lazy. They miss them because the deadline lived on page 7 of a PDF they read once in September.
+
+That's the problem we built GRIND. to fix.
+
+A typical semester means 5 courses, 5 syllabi, and dozens of dated assessments spread across files, course pages and emails. Each one has a weight. A 10% quiz and a 40% final don't deserve the same attention, but in a to-do list they look identical.
+
+So we started with one move: upload a syllabus, and GRIND. pulls out every date and every weight. You review it, fix anything odd, and it's on one screen.
+
+From there it gets practical. What's due in the next 14 days, ranked by weight. Your real weighted average, not a guess. And when it's time to study, Study Studio builds a timed quiz, a mock exam or revision notes from the weeks you pick.
+
+It's free for students, in English or French.
+
+We're early, and we're building this with students, not for them. If you teach, advise or parent a university student: what's the one thing they always find out too late?
+
+#students #highereducation #edtech
