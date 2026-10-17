@@ -1,0 +1,27 @@
+{
+ "date": "test",
+ "reel_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/reel.mp4",
+ "reel_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/reel.mp4",
+ "reel_caption": "(test reel caption)",
+ "post_caption": "Your semester, a little more under control. 📚\n\nUpload your syllabus. GRIND. sorts every deadline, grade and study session.\n\nFree for students, link in bio.\n\nWorst deadline this week? 👇\n\n#studytips #universitylife #studentlife #midterms",
+ "pillars": {
+  "reel": "test",
+  "post": "intro"
+ },
+ "hooks": {
+  "reel": "",
+  "post": "Your semester. A little more under control."
+ },
+ "post_1": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_01.jpg",
+ "post_1_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_01.jpg",
+ "post_2": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_02.jpg",
+ "post_2_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_02.jpg",
+ "post_3": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_03.jpg",
+ "post_3_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_03.jpg",
+ "post_4": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_04.jpg",
+ "post_4_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_04.jpg",
+ "post_5": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_05.jpg",
+ "post_5_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_05.jpg",
+ "post_6": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_06.jpg",
+ "post_6_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/d1d4146f1a13e80130f2c2adb45b8a52f564a96d/queue/test/post_06.jpg"
+}
