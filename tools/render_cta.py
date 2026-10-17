@@ -4,7 +4,7 @@ from playwright.async_api import async_playwright
 async def main():
     async with async_playwright() as p:
         b = await p.chromium.launch()
-        pg = await b.new_page(viewport={'width': 1080, 'height': 1350})
+        pg = await b.new_page(viewport={'width': int(sys.argv[3]) if len(sys.argv)>3 else 1080, 'height': int(sys.argv[4]) if len(sys.argv)>4 else 1350})
         await pg.goto('file://' + sys.argv[1]); await pg.wait_for_timeout(600)
         await pg.locator('#s1').screenshot(path=sys.argv[2])
         await b.close()

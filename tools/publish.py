@@ -47,8 +47,9 @@ def main(day):
         m["cover_url_raw"] = raw + "cover.jpg"
     if os.path.exists(f"{d}/linkedin.txt"):
         m["linkedin_text"] = open(f"{d}/linkedin.txt").read().strip()
-        img = "linkedin.jpg" if os.path.exists(f"{d}/linkedin.jpg") else "post_01.jpg"
-        m["linkedin_image_url"] = raw + img
+        if not os.path.exists(f"{d}/linkedin.jpg"):
+            sys.exit("linkedin.txt without linkedin.jpg: LinkedIn needs its own visual")
+        m["linkedin_image_url"] = raw + "linkedin.jpg"
     if os.path.exists(f"{d}/cta.jpg"):
         m["cta_url"] = cdn + "cta.jpg"
         m["cta_url_raw"] = raw + "cta.jpg"

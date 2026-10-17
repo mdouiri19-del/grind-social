@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(../../assets/fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../../assets/fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../../assets/fonts/inter-latin-700-normal.woff2)}
+/* LinkedIn editorial system: deep ink background, white type, one lime accent rule, grid lines. No UI cards, no emoji, no blush. */
+:root{--ink:#16261E;--ink2:#203A2D;--paper:#F6F7F1;--muted:#9DB09A;--lime:#D9F88D;--line:rgba(246,247,241,.14)}
+*{box-sizing:border-box;margin:0}
+body{background:#999;font-family:Inter,sans-serif}
+#s1{width:1200px;height:1500px;position:relative;overflow:hidden;background:var(--ink);color:var(--paper);padding:110px 100px}
+.grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:100px 100px;opacity:.5}
+.top{position:relative;display:flex;justify-content:space-between;font-size:26px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.kicker{position:relative;margin-top:200px;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--lime)}
+.rule{position:relative;width:120px;height:8px;background:var(--lime);margin:36px 0 48px}
+h1{position:relative;font-size:104px;line-height:1.02;letter-spacing:-4px;font-weight:700;max-width:960px}
+p{position:relative;font-size:38px;line-height:1.4;color:var(--muted);font-weight:500;margin-top:56px;max-width:900px}
+.stat{position:absolute;left:100px;right:100px;bottom:200px;display:flex;gap:0;border-top:2px solid var(--line);padding-top:40px}
+.stat div{flex:1}
+.stat b{display:block;font-size:72px;letter-spacing:-3px;font-weight:700;color:var(--paper)}
+.stat span{font-size:24px;color:var(--muted);font-weight:500}
+.foot{position:absolute;left:100px;right:100px;bottom:100px;display:flex;justify-content:space-between;font-size:26px;font-weight:600;color:var(--muted)}
+.foot i{font-style:normal;color:var(--lime)}
+</style></head><body>
+<section id="s1">
+ <div class="grid"></div>
+ <div class="top"><span>GRIND<i style="font-style:normal;color:var(--lime)">.</i> Notes</span><span>Why we build</span></div>
+ <div class="kicker">The student problem</div>
+ <div class="rule"></div>
+ <h1>The deadline was on page 7.</h1>
+ <p>Students rarely miss work because they're lazy. They miss it because it was buried in a PDF they read once in September.</p>
+ <div class="stat">
+  <div><b>5</b><span>courses per semester, typical</span></div>
+  <div><b>1</b><span>screen with every date and weight</span></div>
+ </div>
+ <div class="foot"><span>From the GRIND<i>.</i> team</span><span>grindstudent.com</span></div>
+</section>
+</body></html>

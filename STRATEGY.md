@@ -91,3 +91,8 @@ Make.com reads `queue/<today Toronto>/manifest.json`: carousel 12:45 and reel 19
 ## 10. Learning loop
 - Log each day in `log.md` (this repo): date, pillar, hook, format.
 - Every Sunday: if the person pastes stats (views, saves, shares, follows), keep hooks with best 3 s hold and saves, drop the bottom 20%.
+
+## 11. Platform visual identities (keep them clearly different)
+- INSTAGRAM (reels, carousels, sign-up post): light and playful. Cream #F6F7F1 backgrounds (sign-up post on brand green), lime highlight blocks on words, white UI cards (deadline rows, weight pills, checklists), blush touches, motion, emoji allowed in captions. Formats 1080x1920 and 1080x1350.
+- LINKEDIN (GRIND. page): editorial and calm. Deep ink background #16261E with a faint 100px grid, white Inter type, muted sage #9DB09A body text, ONE lime accent (short rule + kicker), uppercase letter-spaced labels "GRIND. Notes" + day theme, optional stats row with true figures only, footer "From the GRIND. team". No UI cards, no blush, no emoji, no highlight blocks. Format 1200x1500. Template: templates/linkedin-example/linkedin.html.
+

@@ -56,7 +56,8 @@ Make posts it at 08:30 Toronto (own scenario). Skip on other days (no linkedin.t
 3. Unattended run overrides two li-post defaults, by owner decision: no approval step (ship the strongest of the 3 hooks yourself), and the text IS published automatically. Every other li-post and li-human rule stays: 900 to 1,300 characters, one idea, no engagement bait, max 3 hashtags at the bottom, no fabricated numbers or outcomes (if a number is unknown, rewrite so it is not needed; never leave {{placeholders}}), no URL in the body (LinkedIn buries posts with links): say "link on our page" instead.
 4. Run humanize.py then detect.py on the draft. It must reach PASS. If not after 2 rewrites, write a different draft.
 5. Log the LinkedIn hook in log.md (add "LI: <hook>" to the day's row).
-6. Save the final text to `queue/$DAY/linkedin.txt` (plain text, no markdown). Optional `queue/$DAY/linkedin.jpg` (1080x1350) if a custom visual helps; otherwise the carousel cover post_01.jpg is used.
+6. Save the final text to `queue/$DAY/linkedin.txt` (plain text, no markdown).
+7. REQUIRED visual `queue/$DAY/linkedin.jpg`, 1200x1500, in the LinkedIn editorial system (STRATEGY section 11), never a reused Instagram slide. Write `work/linkedin.html` from `templates/linkedin-example/linkedin.html`, then `python3 tools/render_cta.py $PWD/work/linkedin.html $PWD/work/linkedin.png 1200 1500` and `ffmpeg -i work/linkedin.png -q:v 2 queue/$DAY/linkedin.jpg`. Top-right label = the day's theme (Why we build / Study insight / Build notes). Headline = the post's core idea in under 10 words. Stats row only with true, non-invented figures (structural facts like "1 screen", "14 days", "6 slides"); otherwise drop the stats row. Look at it.
 
 ## 4. Captions + meta
 - `queue/$DAY/reel_caption.txt` and `post_caption.txt` per STRATEGY section 7. Short. No em dashes. End with 3 to 6 hashtags.
