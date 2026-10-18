@@ -68,6 +68,17 @@ Make posts it at 08:30 Toronto (own scenario). Skip on other days (no linkedin.t
 6. Save the final text to `queue/$DAY/linkedin.txt` (plain text, no markdown).
 7. REQUIRED visual `queue/$DAY/linkedin.jpg`, 1200x1500, in the LinkedIn editorial system (STRATEGY section 11), never a reused Instagram slide. Write `work/linkedin.html` from `templates/linkedin-example/linkedin.html`, then `python3 tools/render_cta.py $PWD/work/linkedin.html $PWD/work/linkedin.png 1200 1500` and `ffmpeg -i work/linkedin.png -q:v 2 queue/$DAY/linkedin.jpg`. Top-right label = the day's theme (Why we build / Study insight / Build notes). Headline = the post's core idea in under 10 words. Stats row only with true, non-invented figures (structural facts like "1 screen", "14 days", "6 slides"); otherwise drop the stats row. Look at it.
 
+## 3d. TikTok pack (3 posts per day): ACTIVE, every day
+The owner posts TikTok manually and plans all 3 posts each morning in TikTok Studio. Nothing here goes through Make; it only has to be ready in the repo and listed in the final notification.
+1. Make ONE extra TikTok-only reel `queue/$DAY/tiktok/tiktok_3.mp4` with HyperFrames (work in `work/reel3/`, same rules and checks as section 2: 1080x1920, h264 + aac 128k, 15 to 25 s, under 19 MB, lint 0 errors, look at the snapshot sheet and 3 frames). It must cover a DIFFERENT idea, pillar and reel style than today's Instagram reel (prefer grade math or deadline reality when the reel is study systems, etc.). Hook rules, intrigue rules, brand rules and the CTA ending are the same. Keep the hook fully readable at 2.0 s (TikTok cover).
+2. Music for both reels: prefer `python3 tools/beat_pop.py work/beat.wav <dur> --bpm <bpm> --seed <day-of-year> --cuts <scene cut times> --impacts <stamp/reveal/logo times> [--brk start,end] --end <dur-0.6>`, with `--bpm` matching the timeline beat (B = 60/bpm), and mux with `-af "volume=0.47"` (about -18 LUFS). Use a different seed for tiktok_3 (day-of-year + 1000). Animate cuts on the beat.
+3. Write `queue/$DAY/tiktok/plan.txt` (plain text, no em dashes) with 3 slots in Toronto time, each: time, what to post (file names), and a TikTok caption (hook line, 1 to 2 value lines, one question, 4 to 5 hashtags starting with #studytok, "link in bio" at most, never a URL). Photo posts also get a "Title:" line under 90 characters and the note "add a calm trending sound". First line: the settings reminder "Everyone, comments on, Disclose post content > Your brand, AI-generated off, no extra sound on videos".
+   Slots (starting points, adjust from TikTok results in insights.md):
+   - Mon to Fri: 12:30 carousel as PHOTOS (post_01..06), 16:30 tiktok_3.mp4, 20:30 reel.mp4
+   - Sat, Sun: 11:00 carousel as PHOTOS, 15:30 tiktok_3.mp4, 20:00 reel.mp4
+4. Log the TikTok-only hook in log.md (add "TT: <hook>" to the day's row) and never reuse it within 30 days.
+5. If tiktok_3 fails and can't be fixed, still publish the Instagram package; write plan.txt with the two remaining posts and say "TikTok: 2 posts" in the final message.
+
 ## 4. Captions + meta
 - `queue/$DAY/reel_caption.txt` and `post_caption.txt` per STRATEGY section 7. Short. No em dashes. End with 3 to 6 hashtags.
 - `queue/$DAY/meta.json`: {"pillars":{"reel":"...","post":"..."},"hooks":{"reel":"...","post":"..."}}
