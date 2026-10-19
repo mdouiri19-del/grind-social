@@ -35,7 +35,7 @@ Mix target per week: 2 grade math, 1 deadline reality, 2 study systems, 1 GRIND 
 - 0.0 to 1.5 s HOOK: big text, 6 words max, motion from frame 1. No logo, no intro.
 - 1.5 to 5 s TENSION: the problem in one line.
 - 5 to 20 s PAYOFF: 3 beats max, one idea per screen, numbers on screen.
-- Last 2 to 3 s: soft CTA "Your semester, a little more under control. GRIND. link in bio".
+- Last 2 to 3 s: clean end card. A payoff line specific to the reel (e.g. "Skip the math next time."), GRIND. wordmark, "Free · link in bio". Change the line every reel; the old "Your semester, a little more under control." line is retired from reels.
 - All text burned in, safe zone: keep text away from top 250 px and bottom 400 px (IG UI).
 - Audio: instrumental, royalty free, from `assets/music/` if tracks exist (rotate, never same track 2 days in a row), else generate an original beat with `tools/beat.py` (seed = day of year). Music at about -18 LUFS, under the visuals. No voiceover by default.
 - Visual style: kinetic typography on cream/green, lime highlights, UI-card motifs (deadline rows, weight %, progress bars) that echo the GRIND. dashboard. Motion every 0.5 to 1 s.

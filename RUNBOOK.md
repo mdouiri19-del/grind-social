@@ -24,7 +24,7 @@ Network: only GitHub and package registries work. No CDNs, no web fonts, no stoc
 
 ## 2. Reel (HyperFrames, 1080x1920, 15 to 25 s)
 1. Write `work/reel/index.html` as a fresh HyperFrames composition. Use `templates/reel-example/index.html` for mechanics only (root attrs, clips, one paused GSAP timeline on `window.__timelines["main"]`, local gsap.js and fonts). Vary layout and motion day to day so the feed doesn't look templated: the chosen style from STRATEGY section 12 decides the whole composition, the example is only a mechanics reference, never a look to copy.
-   Rules: hook in first 1.5 s with motion from frame 0; one idea; 3 beats max; final 2 to 3 s CTA on brand green "Your semester. A little more under control." + GRIND. + "Free · link in bio". Text inside y 250 to 1520. No `<br>` except display titles split into block spans. Animate only opacity/transform/colors. No CSS transform on elements GSAP transforms.
+   Rules: hook in first 1.5 s with motion from frame 0; one idea; 3 beats max; final 2 to 3 s end card: a short payoff line written for THIS reel's idea (max 6 words, never the same line as the last 7 days, NEVER "Your semester. A little more under control."), the GRIND. wordmark and a "Free · link in bio" pill. Keep it clean: few elements, lots of space, header/progress UI hidden, and pick a background that loops back into the hook (the reel-example template's green ending is retired, do not copy it). Text inside y 250 to 1520. No `<br>` except display titles split into block spans. Animate only opacity/transform/colors. No CSS transform on elements GSAP transforms.
 2. Copy `work/gsap.js` and `assets/fonts` next to it (or fix paths). Then:
    ```bash
    cd work/reel && npx hyperframes lint --json   # errorCount must be 0
