@@ -35,7 +35,7 @@ The Instagram run starts at 05:53 and is usually done by 06:30. If `queue/$DAY/m
 ## 4. plan.txt
 Write `tiktok/$DAY/plan.txt` (plain text, no em dashes):
 - Line 1: "Settings for every post: Everyone, comments on, Disclose post content > Your brand, AI-generated off, no extra sound on videos."
-- Per slot: time, type and file paths, then the caption: hook line + 1 to 2 value lines + one question, then 4 to 5 hashtags starting with #studytok. Photo posts also get a "Title:" line (under 90 characters) and "add a calm trending sound". Videos get "(cover at 2 s)".
+- Per slot: time, type and file paths, then the caption: hook line + 1 to 2 value lines + one question, then 4 to 5 hashtags starting with #studytok, always followed by #fyp #foryou #foryoupage. Photo posts also get a "Title:" line (under 90 characters) and "add a calm trending sound". Videos get "(cover at 2 s)".
 
 ## 5. Publish and deliver
 - Append a row to `tiktok/log.md`: date | slot A | slot B | slot C (time + hook each).
