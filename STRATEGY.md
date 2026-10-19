@@ -37,7 +37,7 @@ Mix target per week: 2 grade math, 1 deadline reality, 2 study systems, 1 GRIND 
 - 5 to 20 s PAYOFF: 3 beats max, one idea per screen, numbers on screen.
 - Last 2 to 3 s: clean end card. A payoff line specific to the reel (e.g. "Skip the math next time."), GRIND. wordmark, "Free · link in bio". Change the line every reel; the old "Your semester, a little more under control." line is retired from reels.
 - All text burned in, safe zone: keep text away from top 250 px and bottom 400 px (IG UI).
-- Audio: instrumental, royalty free, from `assets/music/` if tracks exist (rotate, never same track 2 days in a row), else generate an original beat with `tools/beat.py` (seed = day of year). Music at about -18 LUFS, under the visuals. No voiceover by default.
+- Audio: instrumental, original, royalty free, generated FRESH for every reel with `tools/music.py` (8 genres: house, futurebass, trap, synthpop, afro, dnb, boombap, electro; genre never the same as the last 3 reels, signature never reused; sections change at each cut so it never sounds like one loop). Energetic, synced to the cuts. Music at about -17 LUFS, under the visuals. No voiceover by default.
 - Visual style: kinetic typography on cream/green, lime highlights, UI-card motifs (deadline rows, weight %, progress bars) that echo the GRIND. dashboard. Motion every 0.5 to 1 s.
 - One reel = one idea. If it needs two, it's two reels.
 
@@ -116,7 +116,7 @@ Everything else rotates. Never reuse a reel style or carousel layout used in the
 - Something moves every 0.5 s, the scene changes every 1 to 2.5 s, no static frame longer than 1.2 s. Move the whole stage too (slow push-in, pan, tilt), not just the text.
 - At least one pattern interrupt mid-reel (color flip to green or blush, a zoom punch, a freeze-frame).
 - Partial reveals: blur or mask a key number and reveal it late.
-- Max 6 words on screen at once. Cuts land on the beat (tools/beat.py tempo).
+- Max 6 words on screen at once. Cuts land on the beat (tools/music.py tempo).
 - Loop ending: the last frame visually leads back into the first so replays feel seamless.
 - Vary background dominance per reel: cream, brand green, blush, or lime-forward.
 

@@ -8,4 +8,4 @@
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
-Styles used (reel / carousel): 2026-10-19 math reveal / step-by-step guide (sign-up: syllabus import)
+Styles used (reel / carousel): 2026-10-19 math reveal / step-by-step guide (sign-up: syllabus import) music: futurebass/D#m/p4/144bpm/s20261019
