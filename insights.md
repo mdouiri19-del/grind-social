@@ -23,3 +23,8 @@ Steering for this week
 - About 60%: contrarian open-loop hooks ("Your X is lying to you", "X is a trap", "Nobody tells you...") on reels.
 - About 40%: experiment with formats not tried yet (myth/fact, math reveal, timeline carousels).
 - Watch saves and shares: none yet, so push save-worthy carousels (plans, checklists) with a clear "Save this" ask.
+
+## 2026-10-20: Owner feedback (standing)
+- Too much grade weights / average math lately (10-18 to 10-20). Don't do weights or grade calculations more than about once a week across reels and carousels, even on grade math days. Swap in other angles instead.
+- Show Study Studio more often, with concrete screens: practice quizzes from course files, assignment plans broken into dated steps, mock exams, revision notes.
+- Keep topics varied day to day so the feed doesn't get repetitive.
