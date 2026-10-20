@@ -3,4 +3,4 @@
 |---|---|---|---|
 | 2026-10-18 | 10:45 IG reel: Your highlighter is lying to you. | 12:45 carousel: Plan your week before it plans you. | 16:30 Your average isn't what you think. |
 | 2026-10-19 | 12:30 carousel: 3 days until the exam? Here's the real plan. | 16:30 Wait. That's due tonight? | 20:30 IG reel: Your average isn't what you think. | outro: "Know what's due before it's due." |
-| 2026-10-20 | 12:30 carousel: Which mark costs you more? | 16:30 7 days out. Most waste 5. | 20:30 IG reel: 11:59 PM is a trap. | outro: "Seven days beats one night." music: electro/Em/p3/120bpm/s20262020 |
+| 2026-10-20 | 12:30 carousel: The hardest part is the blank page. | 16:30 7 days out. Most waste 5. | 20:30 IG reel: 11:59 PM is a trap. | outro: "Seven days beats one night." music: electro/Em/p3/120bpm/s20262020 |
