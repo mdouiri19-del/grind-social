@@ -41,11 +41,13 @@ Mix target per week: 2 grade math, 1 deadline reality, 2 study systems, 1 GRIND 
 - Visual style: kinetic typography on cream/green, lime highlights, UI-card motifs (deadline rows, weight %, progress bars) that echo the GRIND. dashboard. Motion every 0.5 to 1 s.
 - One reel = one idea. If it needs two, it's two reels.
 
-## 5. Carousel formula (6 slides, 1080x1350)
-- Exactly 6 slides.
-- Slide 1: hook headline (same hook rules), cream background, ink text, lime highlight on 1 to 2 words.
-- Slides 2 to 5: one point per slide, max 25 words, big type.
-- Last slide: "Save this for midterms" + "GRIND. organizes all of it from your syllabus. grindstudent.com/welcome".
+## 5. Carousel formula (6 slides, 1080x1350) (updated 2026-10-21, owner feedback: more structured, use the signature effects, never the same last slide)
+- Exactly 6 slides, told as one story: 1 hook, 2 to 5 one step each (the trap, the fix, the loop or proof, the tip), 6 save.
+- One layout system on every slide: top bar (GRIND. wordmark left, 6-segment progress bar right, current segments filled), a numbered kicker ("01 · The trap"), the headline under it (max about 8 words, lime highlight on 1 to 2 words), ONE visual in the middle zone (y 400 to 1130), a one-line caption at y 1150 (bold the key phrase), small footer (sample label left, "Swipe →" right). Nothing else floating around.
+- Use the signature effects (templates/effects/gx.js) as the main visual on at least 3 slides, each where it means something: LCD screen push for the hook or a big number, liquid glass as a magnifier over the one line that matters (GX.glassPanel, frost 0, zoomBehind about 1.1) or a glass card over a busy scene, glass graph for a sample progress number, over-the-shoulder still for before / after (cards beside a central phone, an arrow labelled with what GRIND. does; never frozen light streaks in a still).
+- Slides 2 to 5: max 25 words each, one point per slide.
+- Slide 6 (save) ROTATES, never the same design as the last 3 carousels (log it): (a) glass card over a collage of this carousel's own visuals; (b) LCD screen with a short save line plus a URL pill; (c) recap checklist of the 4 steps with a save icon; (d) a phone showing the GRIND. list with the save line above; (e) big number or date on blush with the save line. The words change too, always with a save ask that fits the topic ("Save this before midterms.", "Save it for your next paper.", "Keep this for finals week.") and "GRIND. organizes all of it from your syllabus. grindstudent.com/welcome" (or a close variant).
+- Reference: templates/carousel-effects-example/carousel.html.
 
 ## 6. Hook bank (reuse, remix, never repeat the exact same hook within 30 days)
 - "Your syllabus is lying to you about one thing."

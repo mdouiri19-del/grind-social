@@ -198,6 +198,7 @@
         for (const c of [L, R]) { c.d.style.display = "block"; c.d.style.opacity = 1; c.d.style.transform = `rotate(${c.side === "l" ? -4 : 4}deg)`;
           c.d.style.boxShadow = `0 22px 50px rgba(32,58,45,0.22), 0 0 40px rgba(${rgb(C.lime)},0.6)`; c.cv.style.opacity = 1; }
         const ctx = streak.getContext("2d"); ctx.clearRect(0, 0, W, H); ctx.lineCap = "round";
+        if (!o.stillStreaks) return;
         const glow = new Path2D(), core = new Path2D();
         for (const p of ps) {
           const e0 = 0.18 + 0.5 * p.r, e1 = e0 + 0.18, bulge = (e) => Math.sin(Math.PI * e) * (p.r - 0.5) * 110;
@@ -253,9 +254,12 @@
       const qx = Math.abs(x + 0.5 - cx0) - (cx0 - R), qy = Math.abs(y + 0.5 - cy0) - (cy0 - R);
       const out = Math.hypot(Math.max(qx, 0), Math.max(qy, 0)) + Math.min(Math.max(qx, qy), 0) - R, d = Math.max(-out, 0);
       const nx = (x + 0.5 - cx0) / cx0, ny = (y + 0.5 - cy0) / cy0, len = Math.hypot(nx, ny) || 1;
-      const px = o.bend * 1920 * (0.045 * Math.exp(-0.05 * d) + 0.06 * Math.exp(-0.35 * d) + 0.012 * (1 - Math.exp(-0.1 * d)));
+      // edge band + rim push outward along the unit direction; the soft lens across the middle scales with the distance
+      // from the centre, so it is continuous there (no tear through crisp text)
+      const edge = o.bend * 1920 * (0.045 * Math.exp(-0.05 * d) + 0.06 * Math.exp(-0.35 * d)), mid = o.bend * 1920 * 0.012 * (1 - Math.exp(-0.1 * d));
+      const ox = (edge * nx) / len + mid * nx, oy = (edge * ny) / len + mid * ny;
       const i = (y * CW + x) * 4;
-      img.data[i] = Math.round(255 * clamp01(0.5 + (px * nx) / len / MAP)); img.data[i + 1] = Math.round(255 * clamp01(0.5 + (px * ny) / len / MAP));
+      img.data[i] = Math.round(255 * clamp01(0.5 + ox / MAP)); img.data[i + 1] = Math.round(255 * clamp01(0.5 + oy / MAP));
       img.data[i + 2] = 128; img.data[i + 3] = 255;
     }
     ctx.putImageData(img, 0, 0);
@@ -325,8 +329,66 @@
     });
   }
 
+
+  // ================================================================== 4. GLASS PANEL (any content on liquid glass)
+  // GX.glassPanel({ source, x, y, w, h, html, at, until, still, tint, tintColor, frost, bend, radius, zoomBehind })
+  // A liquid glass card at (x, y, w, h) that refracts the live `source` scene behind it (frosted, lens-bent edges, colour
+  // split) and shows `html` on top. Reels: rises at `at`, sinks at `until`. Carousels: `still: true`.
+  // zoomBehind > 1 magnifies what is behind the glass (a magnifier over a page).
+  let panelN = 0;
+  function GX_glassPanel(opts) {
+    const o = Object.assign({ zIndex: 35, tint: 0.35, tintColor: C.brand, frost: 4, bend: 1.0, radius: 34, zoomBehind: 1, at: 0, until: 1e9, still: false }, opts);
+    const W = o.w0 || 1080, H = o.h0 || 1920, root = rootOf(o), id = `gx-panel-${panelN++}`, CW = Math.round(o.w), HC = Math.round(o.h), R = o.radius, MAP = 400;
+    const c = document.createElement("canvas"); c.width = CW; c.height = HC;
+    const ctx = c.getContext("2d"), img = ctx.createImageData(CW, HC), cx0 = CW / 2, cy0 = HC / 2;
+    for (let y = 0; y < HC; y++) for (let x = 0; x < CW; x++) {
+      const qx = Math.abs(x + 0.5 - cx0) - (cx0 - R), qy = Math.abs(y + 0.5 - cy0) - (cy0 - R);
+      const out = Math.hypot(Math.max(qx, 0), Math.max(qy, 0)) + Math.min(Math.max(qx, qy), 0) - R, d = Math.max(-out, 0);
+      const nx = (x + 0.5 - cx0) / cx0, ny = (y + 0.5 - cy0) / cy0, len = Math.hypot(nx, ny) || 1;
+      const k = o.bend * 1920 * Math.min(1, CW / 900);
+      const edge = k * (0.045 * Math.exp(-0.05 * d) + 0.06 * Math.exp(-0.35 * d)), mid = k * 0.012 * (1 - Math.exp(-0.1 * d));
+      const ox = (edge * nx) / len + mid * nx, oy = (edge * ny) / len + mid * ny;
+      const i = (y * CW + x) * 4;
+      img.data[i] = Math.round(255 * clamp01(0.5 + ox / MAP)); img.data[i + 1] = Math.round(255 * clamp01(0.5 + oy / MAP));
+      img.data[i + 2] = 128; img.data[i + 3] = 255;
+    }
+    ctx.putImageData(img, 0, 0);
+    el("div", "position:absolute;width:0;height:0;overflow:hidden", root,
+      `<svg width="0" height="0"><filter id="${id}" filterUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}" color-interpolation-filters="sRGB">
+        <feImage href="${c.toDataURL("image/png")}" x="${o.x}" y="${o.y}" width="${CW}" height="${HC}" preserveAspectRatio="none" result="map"/>
+        <feGaussianBlur in="SourceGraphic" stdDeviation="${o.frost}" result="frost"/>
+        <feDisplacementMap in="frost" in2="map" scale="${MAP}" xChannelSelector="R" yChannelSelector="G" result="dR"/>
+        <feDisplacementMap in="frost" in2="map" scale="${MAP * 0.96}" xChannelSelector="R" yChannelSelector="G" result="dG"/>
+        <feDisplacementMap in="frost" in2="map" scale="${MAP * 0.92}" xChannelSelector="R" yChannelSelector="G" result="dB"/>
+        <feColorMatrix in="dR" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
+        <feColorMatrix in="dG" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
+        <feColorMatrix in="dB" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
+        <feComposite in="r" in2="g" operator="arithmetic" k2="1" k3="1" result="rg"/>
+        <feComposite in="rg" in2="b" operator="arithmetic" k2="1" k3="1"/></filter></svg>`);
+    const refr = el("div", `position:absolute;inset:0;display:none;z-index:${o.zIndex};clip-path:inset(${o.y}px ${W - o.x - CW}px ${H - o.y - HC}px ${o.x}px round ${R}px)`, root);
+    const refrIn = el("div", `position:absolute;inset:0;filter:url(#${id})`, refr);
+    const zoomWrap = el("div", `position:absolute;inset:0;transform-origin:${o.x + CW / 2}px ${o.y + HC / 2}px;transform:scale(${o.zoomBehind})`, refrIn);
+    const card = el("div", `position:absolute;left:${o.x}px;top:${o.y}px;width:${CW}px;height:${HC}px;border-radius:${R}px;display:none;z-index:${o.zIndex + 1};transform-origin:50% 50%;
+      background:linear-gradient(180deg, rgba(${rgb(o.tintColor)},${o.tint}), rgba(${rgb(o.tintColor)},${o.tint * 0.7}) 60%, rgba(${rgb(o.tintColor)},${Math.min(1, o.tint * 1.2)}));box-shadow:0 30px 70px rgba(32,58,45,0.3)`, root);
+    el("div", `position:absolute;inset:0;border-radius:${R}px;padding:2px;background:linear-gradient(140deg, rgba(255,255,255,0.85), rgba(255,255,255,0.12) 32%, rgba(255,255,255,0.05) 62%, rgba(255,255,255,0.45));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude`, card);
+    el("div", `position:absolute;inset:0;border-radius:${R}px;background:radial-gradient(120% 70% at 12% -10%, rgba(255,255,255,0.25), rgba(255,255,255,0) 50%);box-shadow:inset 0 1.5px 1px rgba(255,255,255,0.5)`, card);
+    el("div", "position:relative;width:100%;height:100%", card, o.html || "");
+    const src = () => (typeof o.source === "string" ? document.querySelector(o.source) : o.source);
+    const eRise = bezier(0.16, 1, 0.3, 1), eExit = bezier(0.5, 0, 0.9, 0.4);
+    FX.push((t) => {
+      const rise = o.still ? 1 : lerpT(t, o.at, o.at + 0.25, 0, 1, eRise), exit = o.still ? 0 : lerpT(t, o.until, o.until + 0.3, 0, 1, eExit);
+      const vis = o.still || (t >= o.at && exit < 1);
+      refr.style.display = card.style.display = vis ? "block" : "none";
+      if (!vis) return;
+      const sc = src(); refrIn.firstChild && (zoomWrap.textContent = "");
+      if (sc) { const cl = sc.cloneNode(true); cl.removeAttribute("id"); cl.querySelectorAll("[id]").forEach((n) => n.removeAttribute("id")); zoomWrap.appendChild(cl); }
+      const op = rise * (1 - exit), dy = (1 - rise) * 60 + exit * 40, s = 0.96 + 0.04 * rise;
+      refr.style.opacity = op; card.style.opacity = op;
+      card.style.transform = `translateY(${dy}px) scale(${s})`; refr.style.transform = `translateY(${dy}px)`;
+    });
+  }
   window.GX = {
-    screenPush: GX_screenPush, shoulderZoom: GX_shoulderZoom, glassGraph: GX_glassGraph,
+    screenPush: GX_screenPush, shoulderZoom: GX_shoulderZoom, glassGraph: GX_glassGraph, glassPanel: GX_glassPanel,
     render: (t) => { for (const f of FX) f(t); },
     // HyperFrames: one driver tween over the whole reel, so every effect is redrawn from the timeline's own time on every seek.
     attach: (tl, duration) => { const d = { v: 0 }; tl.fromTo(d, { v: 0 }, { v: 1, duration, ease: "none", immediateRender: false, onUpdate: () => GX.render(tl.time()) }, 0); GX.render(0); },

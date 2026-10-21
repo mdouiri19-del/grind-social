@@ -55,11 +55,10 @@ When today's reel style uses Grindy:
 4. Check frames like any reel: text inside the safe zone, Grindy never hidden behind text cards at key beats.
 
 ## 3. Carousel (6 slides, 1080x1350)
-1. Write `work/carousel.html` with 6 `<section class="s" id="s1..s6">`, styled from `templates/carousel-example/carousel.html` (fonts path `../assets/fonts/`).
+1. Write `work/carousel.html` with 6 `<section class="s" id="s1..s6">` following STRATEGY section 5 (one layout system, numbered kickers, progress bar, captions, at least 3 slides built on the signature effects, a rotating save slide). Start from `templates/carousel-effects-example/carousel.html` for the layout system and the effect calls (copy its mechanics, never its words or the same arrangement two days running). Load `../templates/effects/gx.js`, pass `w: 1080, h: 1350` and `root: "#sN"` (glass panels: `w0: 1080, h0: 1350`), and call `GX.render(T)` after the fonts load, as the example does.
 2. Render: `python3 tools/render_carousel.py $PWD/work/carousel.html $PWD/work` then `ffmpeg -i work/png_N.png -q:v 2 queue/$DAY/post_0N.jpg` for N=1..6.
-3. Look at every slide. Text must not overflow cards or hit the footer. Fix and re-render.
-
-Optional (owner asked for an example, 2026-10-21): carousels can use the same signature effects as stills. Reference: `templates/carousel-effects-example/carousel.html` (LCD cover with GX.screenPush, before/after with GX.shoulderZoom `still: true`, payoff with GX.glassGraph over a busy scene; pass `w: 1080, h: 1350` and `root: "#sN"`, call GX.render(T) after the fonts load). Same honesty rules: sample data labelled, structural numbers only.
+3. Look at every slide. Text must not overflow cards or hit the footer; no torn or warped text inside glass (lower bend or zoomBehind, widen the lens); nothing unexplained in the middle of a slide. Fix and re-render.
+4. Log the save-slide design letter in the day's Styles line ("save: a").
 
 ## 3b. Sign-up post (single image, 1080x1350): ACTIVE, every day
 Make posts it Mon, Wed, Fri at 08:45, but make it daily anyway (cheap, keeps the pipeline uniform).
