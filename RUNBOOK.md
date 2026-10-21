@@ -61,6 +61,8 @@ When today's reel style uses Grindy:
 3. Look at every slide. Text must not overflow cards or hit the footer; no torn or warped text inside glass (lower bend or zoomBehind, widen the lens); nothing unexplained in the middle of a slide. Fix and re-render.
 4. Log the save-slide design letter in the day's Styles line ("save: a").
 
+GRIND. Glass (STRATEGY section 14): use `GX.glassPanel({ variant: "ink" | "lime" | "frost" | "lens", ... })` and keep to its rules (one glass element per slide, always over content, short type).
+
 ## 3b. Sign-up post (single image, 1080x1350): ACTIVE, every day
 Make posts it Mon, Wed, Fri at 08:45, but make it daily anyway (cheap, keeps the pipeline uniform).
 1. Write `work/cta.html` (one `<section id="s1">`) styled like `templates/cta-example/cta.html`. Brand green background, one strong headline about ONE real GRIND. feature (rotate: syllabus import, 14-day priority list, weighted average, Study Studio quiz, mock exam, revision notes, assignment plan, calendar export, EN/FR), a small UI card with sample data labeled "sample", a lime "Sign up free" pill and "Link in bio".

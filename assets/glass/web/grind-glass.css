@@ -1,0 +1,26 @@
+/* GRIND. Glass for the web (grindstudent.com / app). Drop-in, no dependencies.
+   <div class="grind-glass" data-variant="ink">...</div>   variants: ink (default), lime, frost, lens
+   This CSS alone is the shipped GRIND. Glass (frost, tint, rim light, corner highlight). grind-glass.js adds an
+   EXPERIMENTAL lens refraction in Chromium only for elements with data-refract; test before using it in production. */
+.grind-glass{
+  --gg-tint: 37,77,59; --gg-alpha: .62; --gg-blur: 8px; --gg-radius: 28px; --gg-text: #F6F7F1;
+  position: relative; isolation: isolate; border-radius: var(--gg-radius); color: var(--gg-text);
+  background: linear-gradient(180deg, rgba(var(--gg-tint), var(--gg-alpha)), rgba(var(--gg-tint), calc(var(--gg-alpha) * .72)) 60%, rgba(var(--gg-tint), calc(var(--gg-alpha) * 1.15)));
+  -webkit-backdrop-filter: blur(var(--gg-blur)) saturate(1.25); backdrop-filter: blur(var(--gg-blur)) saturate(1.25);
+  box-shadow: 0 24px 60px rgba(32,58,45,.28), inset 0 1.5px 1px rgba(255,255,255,.5);
+  font-family: Inter, system-ui, sans-serif;
+}
+.grind-glass::before{ /* the rim of light, strongest top left */
+  content:""; position:absolute; inset:0; border-radius:inherit; padding:2px; pointer-events:none; z-index:1;
+  background: linear-gradient(140deg, rgba(255,255,255,.85), rgba(255,255,255,.12) 32%, rgba(255,255,255,.05) 62%, rgba(255,255,255,.45));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+.grind-glass::after{ /* soft highlight in the top-left corner */
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:1;
+  background: radial-gradient(120% 70% at 12% -10%, rgba(255,255,255,.24), rgba(255,255,255,0) 50%);
+}
+.grind-glass > *{ position: relative; z-index: 2; }
+.grind-glass[data-variant="lime"]{ --gg-tint: 217,248,141; --gg-alpha: .55; --gg-text: #203A2D; }
+.grind-glass[data-variant="frost"]{ --gg-tint: 246,247,241; --gg-alpha: .55; --gg-blur: 12px; --gg-text: #203A2D; }
+.grind-glass[data-variant="lens"]{ --gg-tint: 246,247,241; --gg-alpha: .04; --gg-blur: 0px; --gg-text: #203A2D; --gg-radius: 999px; }
+@media (prefers-reduced-transparency: reduce){ .grind-glass{ --gg-alpha: .92; -webkit-backdrop-filter:none; backdrop-filter:none; } }

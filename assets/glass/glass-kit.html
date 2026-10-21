@@ -1,0 +1,136 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- GRIND. Glass kit: brand swatches, story and post templates, highlight covers.
+     Render: python3 tools/render_sections.py $PWD/assets/glass/glass-kit.html $PWD/assets/glass/out -->
+<script src="../../templates/effects/gx.js"></script>
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(../fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--rose:#875267;--sage:#E8EFDF;--border:#DFE5D8}
+*{box-sizing:border-box;margin:0}body{background:#888;font-family:Inter,sans-serif;display:flex;flex-wrap:wrap;gap:20px;padding:20px}
+section{position:relative;overflow:hidden;flex:none}
+.p{width:1080px;height:1350px}.st{width:1080px;height:1920px}
+.full{position:absolute;inset:0}
+.dots{position:absolute;inset:-60px;background-image:radial-gradient(circle,rgba(37,77,59,.15) 3px,transparent 3.5px);background-size:60px 60px}
+.blob{position:absolute;border-radius:50%}
+.row{position:absolute;display:flex;align-items:center;gap:22px;background:#fff;border:3px solid var(--border);border-radius:26px;padding:22px 28px;font-size:34px;font-weight:600;white-space:nowrap;box-shadow:0 18px 40px rgba(37,77,59,.10)}
+.row b{background:var(--sage);color:var(--brand);border-radius:12px;padding:6px 12px;font-size:22px}
+.row em{font-style:normal;border-radius:99px;padding:4px 14px;font-size:24px;font-weight:700;background:var(--lime);margin-left:20px}
+.wm{position:absolute;z-index:50;font-weight:700;letter-spacing:-1.5px;font-size:40px}.wm b{color:#80A258}
+.lab{position:absolute;z-index:50;left:88px;bottom:70px;font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase}
+.big{font-size:84px;font-weight:700;letter-spacing:-3.5px;line-height:1.04}
+.sm{font-size:30px;font-weight:500;line-height:1.35;margin-top:18px;opacity:.85}
+.pill{display:inline-block;margin-top:26px;font-size:32px;font-weight:700;border-radius:999px;padding:16px 30px}
+.ico{position:absolute;z-index:60;left:50%;top:50%;transform:translate(-50%,-50%)}
+</style></head><body>
+
+<!-- ============ 1. THE FOUR BRAND VARIANTS (swatches) ============ -->
+<section class="p" id="v1" data-out="variant_ink.png">
+ <div class="full" id="v1s"><div class="full" style="background:var(--cream)"></div><div class="dots"></div>
+  <div class="blob" style="left:-120px;top:520px;width:520px;height:520px;background:var(--lime)"></div>
+  <div class="blob" style="left:640px;top:640px;width:560px;height:560px;background:var(--blush)"></div>
+  <div class="row" style="left:90px;top:380px"><b>TUE</b>Midterm<em>25%</em></div>
+  <div class="row" style="left:420px;top:1010px"><b>THU</b>Lab report<em>10%</em></div></div>
+ <div class="wm" style="left:88px;top:64px;color:var(--ink)">GRIND<b>.</b></div>
+ <div class="lab" style="color:var(--ink)">Ink glass · default</div>
+</section>
+<section class="p" id="v2" data-out="variant_lens.png">
+ <div class="full" id="v2s"><div class="full" style="background:var(--cream)"></div><div class="dots"></div>
+  <div style="position:absolute;left:140px;top:300px;width:800px;height:820px;background:#fff;border-radius:28px;box-shadow:0 40px 90px rgba(37,77,59,.16);padding:56px">
+   <div style="font-size:22px;font-weight:700;letter-spacing:2px;color:var(--sec);margin-bottom:28px">COURSE SCHEDULE</div>
+   <i style="display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px;width:70%"></i><i style="display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px"></i>
+   <i style="display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px;width:85%"></i><i style="display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px;width:60%"></i>
+   <div style="font-size:34px;font-weight:700;padding:12px 18px;margin:6px -18px 26px;border-radius:12px;background:var(--lime)">Paper due Nov 25 · 30%</div>
+   <i style="display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px"></i><i style="display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px;width:55%"></i>
+   <i style="display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px;width:75%"></i></div></div>
+ <div class="wm" style="left:88px;top:64px;color:var(--ink)">GRIND<b>.</b></div>
+ <div class="lab" style="color:var(--ink)">Lens · the line that matters</div>
+</section>
+<section class="p" id="v3" data-out="variant_lime.png">
+ <div class="full" id="v3s"><div class="full" style="background:var(--brand)"></div>
+  <div class="blob" style="left:-100px;top:420px;width:480px;height:480px;background:#3E6B52"></div>
+  <div class="blob" style="left:620px;top:720px;width:540px;height:540px;background:var(--blush)"></div>
+  <div class="row" style="left:90px;top:380px"><b>MON</b>Essay<em>20%</em></div>
+  <div class="row" style="left:460px;top:1000px"><b>FRI</b>Quiz 4<em>5%</em></div></div>
+ <div class="wm" style="left:88px;top:64px;color:var(--cream)">GRIND<b style="color:var(--lime)">.</b></div>
+ <div class="lab" style="color:var(--lime)">Lime glass · on dark green</div>
+</section>
+<section class="p" id="v4" data-out="variant_frost.png">
+ <div class="full" id="v4s"><div class="full" style="background:var(--blush)"></div>
+  <div class="blob" style="left:-120px;top:440px;width:560px;height:560px;background:var(--lime)"></div>
+  <div class="blob" style="left:600px;top:700px;width:560px;height:560px;background:#254D3B"></div>
+  <div class="row" style="left:90px;top:380px"><b>WED</b>Reading<em>2%</em></div></div>
+ <div class="wm" style="left:88px;top:64px;color:var(--ink)">GRIND<b>.</b></div>
+ <div class="lab" style="color:var(--rose)">Frost glass · over bold colour</div>
+</section>
+
+<!-- ============ 2. STORY TEMPLATES (empty glass card, add your text in Instagram) ============ -->
+<section class="st" id="t1" data-out="story_template_ink.png">
+ <div class="full" id="t1s"><div class="full" style="background:var(--cream)"></div><div class="dots"></div>
+  <div class="blob" style="left:-160px;top:620px;width:640px;height:640px;background:var(--lime)"></div>
+  <div class="blob" style="left:560px;top:900px;width:700px;height:700px;background:var(--blush)"></div>
+  <div class="row" style="left:90px;top:420px"><b>TUE</b>Midterm<em>25%</em></div>
+  <div class="row" style="left:430px;top:1380px"><b>NOV 25</b>Paper<em>30%</em></div></div>
+ <div class="wm" style="left:90px;top:170px;color:var(--ink)">GRIND<b>.</b></div>
+</section>
+<section class="st" id="t2" data-out="story_template_lime.png">
+ <div class="full" id="t2s"><div class="full" style="background:var(--brand)"></div>
+  <div class="blob" style="left:-160px;top:560px;width:620px;height:620px;background:#3E6B52"></div>
+  <div class="blob" style="left:560px;top:960px;width:680px;height:680px;background:var(--blush)"></div>
+  <div class="row" style="left:90px;top:420px"><b>THU</b>Quiz 3<em>5%</em></div></div>
+ <div class="wm" style="left:90px;top:170px;color:var(--cream)">GRIND<b style="color:var(--lime)">.</b></div>
+</section>
+<section class="st" id="t3" data-out="story_template_frost.png">
+ <div class="full" id="t3s"><div class="full" style="background:var(--blush)"></div>
+  <div class="blob" style="left:-140px;top:600px;width:620px;height:620px;background:var(--lime)"></div>
+  <div class="blob" style="left:560px;top:960px;width:680px;height:680px;background:#254D3B"></div></div>
+ <div class="wm" style="left:90px;top:170px;color:var(--ink)">GRIND<b>.</b></div>
+</section>
+
+<!-- ============ 3. POST TEMPLATE (quote / announcement on ink glass) ============ -->
+<section class="p" id="q1" data-out="post_template_ink.png">
+ <div class="full" id="q1s"><div class="full" style="background:var(--sage)"></div><div class="dots"></div>
+  <div class="blob" style="left:-120px;top:500px;width:560px;height:560px;background:var(--lime)"></div>
+  <div class="blob" style="left:620px;top:640px;width:600px;height:600px;background:var(--blush)"></div>
+  <div class="row" style="left:90px;top:330px"><b>OCT 30</b>Lab report<em>10%</em></div></div>
+ <div class="wm" style="left:88px;top:64px;color:var(--ink)">GRIND<b>.</b></div>
+</section>
+
+<!-- ============ 4. HIGHLIGHT COVERS (glass disc, icon centred for the circle crop) ============ -->
+<script>
+const covers = [
+  ["hl_study_studio.png", "#D9F88D", "#F2DEE5", '<rect x="20" y="14" width="52" height="68" rx="9" fill="none" stroke="#F6F7F1" stroke-width="6"/><path d="M31 32h30M31 44h22" stroke="#F6F7F1" stroke-width="6" stroke-linecap="round"/><circle cx="70" cy="70" r="18" fill="#D9F88D"/><path d="M62 70.5l6 6L79 65" stroke="#203A2D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'],
+  ["hl_deadlines.png", "#F2DEE5", "#D9F88D", '<rect x="16" y="22" width="68" height="60" rx="10" fill="none" stroke="#F6F7F1" stroke-width="6"/><path d="M16 40h68M34 14v16M66 14v16" stroke="#F6F7F1" stroke-width="6" stroke-linecap="round"/><circle cx="58" cy="62" r="7" fill="#D9F88D"/>'],
+  ["hl_grades.png", "#D9F88D", "#254D3B", '<path d="M18 78V50M40 78V36M62 78V54M84 78V24" stroke="#F6F7F1" stroke-width="9" stroke-linecap="round"/><circle cx="84" cy="24" r="8" fill="#D9F88D"/>'],
+  ["hl_tips.png", "#F2DEE5", "#254D3B", '<path d="M50 14a24 24 0 0 0-14 43c3 2 5 6 5 10h18c0-4 2-8 5-10a24 24 0 0 0-14-43z" fill="none" stroke="#F6F7F1" stroke-width="6" stroke-linejoin="round"/><path d="M42 80h16M44 88h12" stroke="#D9F88D" stroke-width="6" stroke-linecap="round"/>'],
+  ["hl_how_it_works.png", "#D9F88D", "#F2DEE5", '<rect x="30" y="10" width="40" height="80" rx="10" fill="none" stroke="#F6F7F1" stroke-width="6"/><path d="M40 30h20M40 44h20M40 58h12" stroke="#D9F88D" stroke-width="6" stroke-linecap="round"/>'],
+];
+document.write(covers.map(([out, a, b, icon], i) => `<section class="st" id="c${i}" data-out="${out}">
+ <div class="full" id="c${i}s"><div class="full" style="background:#254D3B"></div>
+  <div class="blob" style="left:180px;top:620px;width:440px;height:440px;background:${a}"></div>
+  <div class="blob" style="left:470px;top:860px;width:420px;height:420px;background:${b}"></div></div>
+ <svg class="ico" width="300" height="300" viewBox="0 0 100 100">${icon}</svg></section>`).join(""));
+</script>
+
+<script>
+const S = (id, h) => ({ root: "#" + id, source: "#" + id + "s", w0: 1080, h0: h, still: true });
+// variants
+GX.glassPanel({ ...S("v1", 1350), variant: "ink", x: 120, y: 520, w: 840, h: 420,
+  html: `<div style="padding:52px 56px"><div class="big">Ink glass.</div><div class="sm">Brand green, cream type. The default for cards over light or busy scenes.</div><span class="pill" style="background:#D9F88D;color:#203A2D">tint 0.62 · frost 8</span></div>` });
+GX.glassPanel({ ...S("v2", 1350), variant: "lens", x: 70, y: 538, w: 940, h: 150 });
+GX.glassPanel({ ...S("v3", 1350), variant: "lime", x: 120, y: 520, w: 840, h: 420,
+  html: `<div style="padding:52px 56px"><div class="big">Lime glass.</div><div class="sm">For highlights on dark green. Ink type.</div><span class="pill" style="background:#203A2D;color:#D9F88D">tint 0.55 · frost 8</span></div>` });
+GX.glassPanel({ ...S("v4", 1350), variant: "frost", x: 120, y: 520, w: 840, h: 420,
+  html: `<div style="padding:52px 56px"><div class="big">Frost glass.</div><div class="sm">Milky cream over bold colour. Ink type.</div><span class="pill" style="background:#203A2D;color:#D9F88D">tint 0.55 · frost 12</span></div>` });
+// story templates: empty card in the safe zone (y 300 to 1500)
+GX.glassPanel({ ...S("t1", 1920), variant: "ink", x: 90, y: 560, w: 900, h: 760 });
+GX.glassPanel({ ...S("t2", 1920), variant: "lime", x: 90, y: 560, w: 900, h: 760 });
+GX.glassPanel({ ...S("t3", 1920), variant: "frost", x: 90, y: 560, w: 900, h: 760 });
+GX.glassPanel({ ...S("q1", 1350), variant: "ink", x: 88, y: 440, w: 904, h: 640 });
+// highlight covers: a glass disc, the icon sits on top
+for (let i = 0; i < 5; i++) GX.glassPanel({ ...S("c" + i, 1920), variant: "ink", tint: 0.35, x: 240, y: 660, w: 600, h: 600, radius: 300, frost: 14 });
+const go = () => { GX.render(10); GX.render(10); window.__ready = true; };
+document.fonts.load("700 84px Inter").then(go);
+</script>
+</body></html>

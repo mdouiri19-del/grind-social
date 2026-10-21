@@ -5,6 +5,7 @@
 - Link: always https://grindstudent.com/welcome ("link in bio" in reels, URL in caption).
 - Language: English. Tone: a calm, smart senior student. Warm, a bit funny, never cringe, never corporate. Short lines.
 - Colors: cream #F6F7F1, ink #203A2D, brand green #254D3B, lime #D9F88D (highlights, progress), blush #F2DEE5 (human touch). Font: Inter only (500/600/700). NEVER Instrument Serif or any italic serif headline.
+- Signature material: GRIND. Glass (section 14). Part of the identity on Instagram, stories and the website; never on LinkedIn.
 - No real people, no university logos or trademarks, no copyrighted characters or music with lyrics. No fake reviews, no fake stats, no invented testimonials. Never name the founder's family.
 - Never promise grades. Never claim features GRIND does not have. Real features only: syllabus PDF import (dates + weights), weighted current average, "what's due in 14 days" priority, schedule, files, practice quizzes, Study Studio, calendar .ics export, EN/FR.
 
@@ -132,4 +133,19 @@ checklist, big-number cover, step-by-step guide, myth vs fact, before / after, m
 - Props: glasses, coffee, grad cap.
 - Use: in about 3 of 7 reels per week (rotate with the other styles in section 12), as the emotional reaction layer on top of the story (relatable moment, then GRIND. fixes it). Reaction beats: sleepy -> deadpan stare -> panic jump with flashing antenna -> focused with glasses -> proud with cap.
 - Engine: assets/grindy/grindy.js (three.js). Example reel: assets/grindy/reel_grindy_midterm.html, rendered with tools/render_threejs_reel.py. Can also appear in carousel covers (render a still with assets/grindy/sheet.html?p=<pose json>).
+
+## 14. GRIND. Glass (brand material, adopted 2026-10-21)
+GRIND. Glass is liquid glass in the brand colours: a rounded card that frosts and gently bends what is behind it, with a bright rim of light (strongest top left), a soft corner highlight and a soft shadow. It is how GRIND. puts "the one thing that matters" on top of the chaos.
+- Four variants, nothing else (presets in templates/effects/gx.js `GX.GLASS`, web in assets/glass/web/grind-glass.css):
+  - ink (default): brand green tint 0.62, frost 8, cream text. Over cream, sage or busy scenes.
+  - lime: lime tint 0.55, frost 8, ink text. Over dark green scenes only.
+  - frost: cream tint 0.55, frost 12, ink text. Over bold colour (blush, lime, blobs).
+  - lens: clear (tint about 0), no frost, light bend, magnifies about 1.08x. Over the ONE line that matters (a date in a syllabus, a row in a list). Centre it on that line and make it wider than the text, so text never warps.
+- Glass needs something behind it: always place it over content or colour (rows, a page, a calendar, blobs). Never over a flat empty background.
+- One glass element per frame or slide (two only in a collage). Radius 34 to 40 for cards, full pill for lens, a circle for highlight covers.
+- Type on glass: Inter 600/700, big and short (a headline, a number, one line). No paragraphs on glass.
+- Numbers on glass follow the honesty rules: true structural figures or data labelled "sample".
+- Every reel has at least one glass moment (glass graph or glass panel); every carousel at least one glass slide; stories and sign-up images use the glass templates in assets/glass/out when they fit.
+- LinkedIn keeps its flat editorial system (section 11): no glass there, so the two identities stay distinct.
+- Brand kit and ready assets: assets/glass/ (glass-kit.html renders the variant swatches, story and post templates and highlight covers into assets/glass/out).
 

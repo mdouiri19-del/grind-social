@@ -336,8 +336,15 @@
   // split) and shows `html` on top. Reels: rises at `at`, sinks at `until`. Carousels: `still: true`.
   // zoomBehind > 1 magnifies what is behind the glass (a magnifier over a page).
   let panelN = 0;
+  // GRIND. Glass, the four brand variants (STRATEGY section 14). Pick one with `variant`; explicit options still win.
+  const GLASS = {
+    ink:   { tint: 0.62, tintColor: C.brand, frost: 8,  bend: 1.0, radius: 36, text: C.cream },  // default: green glass, cream type, over light or busy scenes
+    lens:  { tint: 0.03, tintColor: C.cream, frost: 0,  bend: 0.3, radius: 80, zoomBehind: 1.08, text: C.ink },  // clear magnifier over the one line that matters
+    lime:  { tint: 0.55, tintColor: C.lime,  frost: 8,  bend: 1.0, radius: 36, text: C.ink },    // highlight glass over dark green scenes
+    frost: { tint: 0.55, tintColor: C.cream, frost: 12, bend: 0.8, radius: 36, text: C.ink },    // milky cream glass over busy colour (blush, lime)
+  };
   function GX_glassPanel(opts) {
-    const o = Object.assign({ zIndex: 35, tint: 0.35, tintColor: C.brand, frost: 4, bend: 1.0, radius: 34, zoomBehind: 1, at: 0, until: 1e9, still: false }, opts);
+    const o = Object.assign({ zIndex: 35, tint: 0.35, tintColor: C.brand, frost: 4, bend: 1.0, radius: 34, zoomBehind: 1, at: 0, until: 1e9, still: false }, GLASS[opts.variant] || {}, opts);
     const W = o.w0 || 1080, H = o.h0 || 1920, root = rootOf(o), id = `gx-panel-${panelN++}`, CW = Math.round(o.w), HC = Math.round(o.h), R = o.radius, MAP = 400;
     const c = document.createElement("canvas"); c.width = CW; c.height = HC;
     const ctx = c.getContext("2d"), img = ctx.createImageData(CW, HC), cx0 = CW / 2, cy0 = HC / 2;
@@ -368,7 +375,7 @@
     const refr = el("div", `position:absolute;inset:0;display:none;z-index:${o.zIndex};clip-path:inset(${o.y}px ${W - o.x - CW}px ${H - o.y - HC}px ${o.x}px round ${R}px)`, root);
     const refrIn = el("div", `position:absolute;inset:0;filter:url(#${id})`, refr);
     const zoomWrap = el("div", `position:absolute;inset:0;transform-origin:${o.x + CW / 2}px ${o.y + HC / 2}px;transform:scale(${o.zoomBehind})`, refrIn);
-    const card = el("div", `position:absolute;left:${o.x}px;top:${o.y}px;width:${CW}px;height:${HC}px;border-radius:${R}px;display:none;z-index:${o.zIndex + 1};transform-origin:50% 50%;
+    const card = el("div", `position:absolute;left:${o.x}px;top:${o.y}px;width:${CW}px;height:${HC}px;border-radius:${R}px;display:none;z-index:${o.zIndex + 1};transform-origin:50% 50%;color:${o.text || C.cream};font-family:Inter,sans-serif;
       background:linear-gradient(180deg, rgba(${rgb(o.tintColor)},${o.tint}), rgba(${rgb(o.tintColor)},${o.tint * 0.7}) 60%, rgba(${rgb(o.tintColor)},${Math.min(1, o.tint * 1.2)}));box-shadow:0 30px 70px rgba(32,58,45,0.3)`, root);
     el("div", `position:absolute;inset:0;border-radius:${R}px;padding:2px;background:linear-gradient(140deg, rgba(255,255,255,0.85), rgba(255,255,255,0.12) 32%, rgba(255,255,255,0.05) 62%, rgba(255,255,255,0.45));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude`, card);
     el("div", `position:absolute;inset:0;border-radius:${R}px;background:radial-gradient(120% 70% at 12% -10%, rgba(255,255,255,0.25), rgba(255,255,255,0) 50%);box-shadow:inset 0 1.5px 1px rgba(255,255,255,0.5)`, card);
@@ -388,7 +395,7 @@
     });
   }
   window.GX = {
-    screenPush: GX_screenPush, shoulderZoom: GX_shoulderZoom, glassGraph: GX_glassGraph, glassPanel: GX_glassPanel,
+    screenPush: GX_screenPush, shoulderZoom: GX_shoulderZoom, glassGraph: GX_glassGraph, glassPanel: GX_glassPanel, GLASS,
     render: (t) => { for (const f of FX) f(t); },
     // HyperFrames: one driver tween over the whole reel, so every effect is redrawn from the timeline's own time on every seek.
     attach: (tl, duration) => { const d = { v: 0 }; tl.fromTo(d, { v: 0 }, { v: 1, duration, ease: "none", immediateRender: false, onUpdate: () => GX.render(tl.time()) }, 0); GX.render(0); },
