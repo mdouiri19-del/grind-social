@@ -45,7 +45,7 @@
   const fontsReady = () => !document.fonts || FONT_Q.every((f) => document.fonts.check(f));
 
   // ================================================================== 1. SCREEN PUSH
-  GX_screenPush.defaults = { zIndex: 40, color: C.lime, screen: "#1E2B24", zoom: 3.1, pixel: 10, fringe: 3, glow: 0.85, focus: 5 };
+  GX_screenPush.defaults = { drift: 0.07, zIndex: 40, color: C.lime, screen: "#1E2B24", zoom: 3.1, pixel: 10, fringe: 3, glow: 0.85, focus: 5 };
   function GX_screenPush(opts) {
     const o = Object.assign({}, GX_screenPush.defaults, opts);
     const SIZE = 150, PAD = 1400, ROWX = 1200, P = o.pixel, k = P / 10;
@@ -83,7 +83,11 @@
       const z = Math.min(o.zoom, (0.84 * W) / Math.max(cur.w, 1));
       const half = W / 2 / z + 4 * P, L = Math.floor((cx - half) / P) * P, span = Math.ceil((2 * half) / P + 2) * P;
       for (const pl of [A, B]) { pl.plane.style.left = L + "px"; pl.plane.style.width = span + "px"; pl.inner.style.left = -L + "px"; }
-      cam.style.transform = `scale(${z}) translate(${-cx}px, ${-cy}px)`;
+      // inside each word the camera keeps creeping in (no slide between words: every new word is still a hard cut)
+      const nextT = i < placed.length - 1 ? placed[i + 1].t : o.end, u = clamp01((t - cur.t) / Math.max(0.05, nextT - cur.t));
+      const zz = z * (1 + o.drift * (1 - Math.pow(1 - u, 2)));
+      cam.style.transform = `scale(${zz}) translate(${-cx}px, ${-cy}px)`;
+      layer.style.filter = t - cur.t < 0.05 ? "brightness(1.35)" : "none";   // a one-frame flash on every cut
     });
   }
 
@@ -213,7 +217,7 @@
   // ================================================================== 3. LIQUID GLASS GRAPH
   let glassN = 0;
   GX_glassGraph.defaults = { zIndex: 35, title: "SAMPLE", startValue: 18, endValue: 82, prefix: "", suffix: "%", decimals: 0,
-    line: C.lime, node: C.cream, text: C.cream, tint: 0.5, shape: [0.18, 0.22, 0.26, 0.34, 0.4, 0.52, 0.64, 0.78, 0.92],
+    line: C.lime, node: C.cream, text: C.cream, tint: 0.62, tintColor: C.brand, shape: [0.18, 0.22, 0.26, 0.34, 0.4, 0.52, 0.64, 0.78, 0.92],
     draw: 1.16, hold: 1.5, top: 760, frost: 7, bend: 1.0 };
   function GX_glassGraph(opts) {
     const o = Object.assign({}, GX_glassGraph.defaults, opts);
@@ -252,7 +256,7 @@
     const refr = el("div", `position:absolute;inset:0;display:none;z-index:${o.zIndex}`, root);
     const refrIn = el("div", `position:absolute;inset:0;filter:url(#${id})`, refr);
     const card = el("div", `position:absolute;left:${(W - CW) / 2}px;top:${o.top}px;width:${CW}px;height:${HC}px;border-radius:${R}px;display:none;z-index:${o.zIndex + 1};transform-origin:50% 50%;
-      background:linear-gradient(180deg, rgba(${rgb(C.ink)},${o.tint}), rgba(${rgb(C.ink)},${o.tint * 0.75}) 60%, rgba(${rgb(C.ink)},${Math.min(1, o.tint * 1.25)}));box-shadow:0 30px 70px rgba(32,58,45,0.35)`, root);
+      background:linear-gradient(180deg, rgba(${rgb(o.tintColor)},${o.tint}), rgba(${rgb(o.tintColor)},${o.tint * 0.8}) 60%, rgba(${rgb(o.tintColor)},${Math.min(1, o.tint * 1.2)}));box-shadow:0 30px 70px rgba(32,58,45,0.35)`, root);
     el("div", `position:absolute;inset:0;border-radius:${R}px;padding:2px;background:linear-gradient(140deg, rgba(255,255,255,0.8), rgba(255,255,255,0.12) 32%, rgba(255,255,255,0.05) 62%, rgba(255,255,255,0.4));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude`, card);
     el("div", `position:absolute;inset:0;border-radius:${R}px;background:radial-gradient(120% 70% at 12% -10%, rgba(255,255,255,0.22), rgba(255,255,255,0) 50%);box-shadow:inset 0 1.5px 1px rgba(255,255,255,0.45), inset 0 -18px 40px rgba(255,255,255,0.05)`, card);
     const body = el("div", "position:relative;padding:34px 0 0", card);

@@ -16,69 +16,190 @@ body{margin:0;font-family:Inter,sans-serif;color:var(--ink)}
 #root{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cream)}
 .clip{position:absolute;inset:0;overflow:hidden}
 .bgc{position:absolute;inset:0}
-.mid{font-size:96px;line-height:1.04;letter-spacing:-4px;font-weight:700}
-.hl{display:inline-block;background:var(--lime);border-radius:18px;padding:0 16px 4px}
-.phone{position:absolute;left:390px;top:560px;width:300px;height:600px;border-radius:48px;background:#fff;border:10px solid var(--ink);box-shadow:0 40px 80px rgba(37,77,59,.18);overflow:hidden;padding:56px 18px 18px}
-.phone .r{display:flex;gap:10px;align-items:center;background:var(--sage);border-radius:16px;padding:14px 12px;margin-bottom:12px;font-size:20px;font-weight:600}
-.phone .r b{background:#fff;border-radius:8px;padding:4px 6px;font-size:14px;color:var(--brand)}
-.phone .r i{font-style:normal;margin-left:auto;background:var(--lime);border-radius:99px;padding:2px 8px;font-size:16px;font-weight:700}
-.phone h4{font-size:24px;letter-spacing:-.5px;margin:0 4px 16px}
-.rows{position:absolute;left:90px;right:90px;top:330px}
-.row{display:flex;align-items:center;gap:24px;background:#fff;border:3px solid var(--border);border-radius:28px;padding:26px 30px;margin-bottom:20px;font-size:38px;font-weight:600}
+.full{position:absolute;inset:0}
+.dots{position:absolute;left:-120px;top:-120px;width:1320px;height:2160px;background-image:radial-gradient(circle,rgba(37,77,59,.16) 3px,transparent 3.5px);background-size:60px 60px}
+.big{font-size:132px;line-height:1;letter-spacing:-6px;font-weight:700}
+.mid{font-size:100px;line-height:1.04;letter-spacing:-4.5px;font-weight:700}
+.w{display:inline-block}
+.hl{display:inline-block;background:var(--lime);border-radius:20px;padding:0 18px 6px}
+.hlk{display:inline-block;background:var(--ink);color:var(--lime);border-radius:20px;padding:0 18px 6px}
+/* scene 2: syllabus page */
+.page{position:absolute;left:150px;top:520px;width:780px;height:900px;background:#fff;border-radius:28px;box-shadow:0 40px 90px rgba(37,77,59,.18);padding:60px 56px}
+.page i{display:block;height:20px;border-radius:10px;background:#E4E9DE;margin-bottom:26px}
+.page .line{position:relative;font-size:38px;font-weight:700;padding:14px 18px;margin:10px -18px 30px;border-radius:14px}
+.page .line .sw{position:absolute;inset:0;background:var(--lime);border-radius:14px;transform-origin:left center}
+.page .line span{position:relative}
+.ptag{position:absolute;right:40px;top:40px;background:var(--blush);color:var(--rose);font-weight:700;font-size:26px;border-radius:12px;padding:8px 14px}
+/* scene 3: phone */
+.chip{position:absolute;background:#fff;border:3px solid var(--border);border-radius:26px;padding:22px 30px;font-size:36px;font-weight:600;box-shadow:0 18px 40px rgba(37,77,59,.10);white-space:nowrap}
+.chip b{color:var(--rose)}
+.phone{position:absolute;left:390px;top:540px;width:300px;height:620px;border-radius:50px;background:#fff;border:10px solid var(--ink);box-shadow:0 40px 90px rgba(37,77,59,.25);overflow:hidden;padding:46px 16px 16px}
+.phone .notch{position:absolute;left:90px;top:10px;width:80px;height:18px;border-radius:9px;background:var(--ink)}
+.phone h4{font-size:22px;letter-spacing:-.5px;margin:0 6px 4px;display:flex;justify-content:space-between}
+.phone h4 i{font-style:normal;color:#80A258}
+.phone small{display:block;font-size:15px;color:var(--sec);margin:0 6px 14px;font-weight:600}
+.phone .r{position:relative;display:flex;gap:8px;align-items:center;background:var(--sage);border-radius:14px;padding:12px 10px;margin-bottom:10px;font-size:18px;font-weight:600}
+.phone .r b{background:#fff;border-radius:7px;padding:3px 5px;font-size:13px;color:var(--brand)}
+.phone .r em{font-style:normal;margin-left:auto;background:var(--lime);border-radius:99px;padding:2px 8px;font-size:14px;font-weight:700}
+.phone .bar{position:absolute;left:12px;right:12px;height:50px;border-radius:16px;border:3px solid var(--brand);box-shadow:0 0 0 6px rgba(217,248,141,.6)}
+/* scene 4 */
+.stamp{display:inline-block;background:var(--ink);color:var(--lime);font-size:64px;font-weight:700;border-radius:24px;padding:20px 34px;margin-top:50px}
+/* scene 5: scrolling rows */
+.feed{position:absolute;left:90px;right:90px;top:0}
+.row{display:flex;align-items:center;gap:24px;background:#fff;border:3px solid var(--border);border-radius:28px;padding:26px 30px;margin-bottom:22px;font-size:38px;font-weight:600}
 .row b{background:var(--sage);color:var(--brand);border-radius:12px;padding:8px 12px;font-size:26px}
-.row i{font-style:normal;margin-left:auto;border-radius:99px;padding:6px 18px;font-size:28px;font-weight:700}
+.row em{font-style:normal;margin-left:auto;border-radius:99px;padding:6px 18px;font-size:28px;font-weight:700}
+.blob{position:absolute;border-radius:50%;filter:blur(2px)}
 .logo{font-size:110px;font-weight:700;letter-spacing:-5px;margin-top:70px}.logo i{font-style:normal;color:var(--brand)}
 .pill{display:inline-block;margin-top:36px;background:var(--ink);color:var(--lime);font-size:46px;font-weight:700;border-radius:999px;padding:22px 44px}
+#wipe{position:absolute;inset:0;background:var(--ink);opacity:0;z-index:60}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:61}
 </style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-duration="16">
- <section id="s1" class="clip" data-start="0" data-duration="2.6" data-track-index="1"><div class="bgc" style="background:#1E2B24"></div></section>
+<div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-duration="18">
+ <!-- 1 HOOK: screen push (GX) draws over this -->
+ <section id="s1" class="clip" data-start="0" data-duration="2" data-track-index="1"><div class="bgc" style="background:#1E2B24"></div></section>
 
- <section id="s2" class="clip" data-start="2.6" data-duration="5.2" data-track-index="1">
-  <div class="bgc" style="background:var(--cream)"></div>
-  <div id="cam2" style="position:absolute;inset:0">
-   <div class="phone"><h4>Next 14 days</h4>
-    <div class="r"><b>TUE</b>Midterm<i>25%</i></div><div class="r"><b>WED</b>Lab report<i>10%</i></div>
-    <div class="r"><b>FRI</b>Quiz 3<i>5%</i></div><div class="r"><b>MON</b>Essay<i>20%</i></div><div class="r"><b>THU</b>Reading<i>2%</i></div></div>
-  </div>
-  <div style="position:absolute;left:90px;right:90px;top:1300px;text-align:center;font-size:30px;font-weight:600;color:var(--sec)">Sample courses</div>
+ <!-- 2 WHERE: syllabus page, the line gets highlighted -->
+ <section id="s2" class="clip" data-start="2" data-duration="2" data-track-index="1">
+  <div class="bgc" style="background:var(--sage)"></div><div class="dots" id="d2"></div>
+  <div class="full" id="c2"><div class="full" id="p2">
+   <div class="mid" style="position:absolute;left:90px;right:90px;top:300px"><span class="w" id="t2a">Page</span> <span class="w" id="t2b">7,</span> <span class="w" id="t2c">line</span> <span class="hl" id="t2d">3.</span></div>
+   <div class="page" id="pg"><span class="ptag">PDF</span>
+    <i style="width:60%"></i><i></i><i style="width:85%"></i><i style="width:70%"></i>
+    <div class="line" id="ln"><span class="sw" id="sw"></span><span>Quiz 3 moved to Thursday.</span></div>
+    <i style="width:90%"></i><i style="width:55%"></i><i></i><i style="width:75%"></i><i style="width:65%"></i><i style="width:80%"></i>
+   </div>
+  </div></div>
  </section>
 
- <section id="s3" class="clip" data-start="7.8" data-duration="5.2" data-track-index="1">
-  <div class="bgc" style="background:var(--blush)"></div>
-  <div id="scene3" style="position:absolute;inset:0">
-   <div class="mid" style="position:absolute;left:90px;right:90px;top:300px">Quiz, review, <span class="hl">repeat.</span></div>
-   <div class="rows" style="top:560px">
-    <div class="row"><b>QUIZ 1</b>Week 4 practice<i style="background:var(--blush)">9 / 20</i></div>
-    <div class="row"><b>QUIZ 2</b>Missed parts only<i style="background:var(--sage)">13 / 20</i></div>
-    <div class="row"><b>QUIZ 3</b>Mixed review<i style="background:var(--lime)">17 / 20</i></div>
-    <div class="row"><b>MOCK</b>Timed, no notes<i style="background:var(--lime)">next</i></div>
-    <div class="row"><b>NOTES</b>Week 4 to 7<i style="background:var(--sage)">ready</i></div>
+ <!-- 3 TURN: over-the-shoulder zoom (GX) on a live phone -->
+ <section id="s3" class="clip" data-start="4" data-duration="4" data-track-index="1">
+  <div class="bgc" style="background:var(--cream)"></div><div class="dots" id="d3"></div>
+  <div class="full" id="par3">
+   <div class="chip" style="left:60px;top:330px" id="k1">Lab report <b>due ??</b></div>
+   <div class="chip" style="left:620px;top:300px" id="k2">Quiz 3 <b>moved</b></div>
+   <div class="chip" style="left:90px;top:1290px" id="k3">Essay <b>week 9?</b></div>
+   <div class="chip" style="left:600px;top:1330px" id="k4">Midterm <b>25%</b></div>
+  </div>
+  <div class="full" id="cam3">
+   <div class="phone" id="ph"><span class="notch"></span>
+    <h4>Next 14 days <i>GRIND.</i></h4><small>sorted by date · sample</small>
+    <span class="bar" id="pbar" style="top:124px"></span>
+    <div class="r" id="r1"><b>TUE</b>Midterm<em>25%</em></div>
+    <div class="r" id="r2"><b>THU</b>Quiz 3<em>5%</em></div>
+    <div class="r" id="r3"><b>THU</b>Lab report<em>10%</em></div>
+    <div class="r" id="r4"><b>MON</b>Essay<em>20%</em></div>
+    <div class="r" id="r5"><b>WED</b>Reading<em>2%</em></div>
+    <div class="r" id="r6"><b>FRI</b>Problem set<em>5%</em></div>
    </div>
   </div>
  </section>
 
- <section id="s4" class="clip" data-start="13" data-duration="3" data-track-index="1">
+ <!-- 4 BREAK (blush, music drops out) -->
+ <section id="s4" class="clip" data-start="8" data-duration="2" data-track-index="1">
+  <div class="bgc" style="background:var(--blush)"></div>
+  <div class="full" id="c4"><div class="full" id="p4" style="padding:300px 90px 420px;display:flex;flex-direction:column;justify-content:center">
+   <div class="big"><span class="w" id="t4a">Then</span> <span class="w" id="t4b">test</span><br><span class="w" id="t4c">yourself</span> <span class="w" id="t4d">on</span> <span class="hlk" id="t4e">it.</span></div>
+   <div><span class="stamp" id="st4">Study Studio</span></div>
+  </div></div>
+ </section>
+
+ <!-- 5 DROP: liquid glass graph (GX) over live scrolling quiz rows -->
+ <section id="s5" class="clip" data-start="10" data-duration="4" data-track-index="1">
+  <div class="bgc" style="background:var(--sage)"></div>
+  <div class="blob" id="b1" style="left:-140px;top:820px;width:520px;height:520px;background:var(--lime)"></div>
+  <div class="blob" id="b2" style="left:640px;top:1080px;width:560px;height:560px;background:var(--blush)"></div>
+  <div class="full" id="c5">
+   <div class="mid" id="t5" style="position:absolute;left:90px;right:90px;top:300px"><span class="w" id="t5a">Quiz.</span> <span class="w" id="t5b">Review.</span> <span class="hl" id="t5c">Repeat.</span></div>
+   <div style="position:absolute;left:0;right:0;top:540px;bottom:0;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 90px);mask-image:linear-gradient(180deg,transparent 0,#000 90px)"><div class="feed" id="feed" style="top:60px">
+    <div class="row"><b>QUIZ 1</b>Week 4 practice<em style="background:var(--blush)">9 / 20</em></div>
+    <div class="row"><b>REVIEW</b>The 11 you missed<em style="background:var(--sage)">done</em></div>
+    <div class="row"><b>QUIZ 2</b>Missed parts only<em style="background:var(--sage)">13 / 20</em></div>
+    <div class="row"><b>NOTES</b>Week 4 to 7<em style="background:var(--lime)">ready</em></div>
+    <div class="row"><b>QUIZ 3</b>Mixed review<em style="background:var(--lime)">17 / 20</em></div>
+    <div class="row"><b>MOCK</b>Timed, no notes<em style="background:var(--lime)">next</em></div>
+    <div class="row"><b>QUIZ 4</b>Week 8 practice<em style="background:var(--sage)">soon</em></div>
+    <div class="row"><b>PLAN</b>Essay in 6 steps<em style="background:var(--blush)">day 1</em></div>
+   </div></div>
+  </div>
+ </section>
+
+ <!-- 6 END CARD (calm, lime loops back to the hook's lime words) -->
+ <section id="s6" class="clip" data-start="14" data-duration="4" data-track-index="1">
   <div class="bgc" style="background:var(--lime)"></div>
-  <div style="position:absolute;inset:0;padding:300px 90px 420px;display:flex;flex-direction:column;justify-content:center">
-   <div class="mid" id="e1">Find it before it finds you.</div>
+  <div class="full" style="padding:300px 90px 420px;display:flex;flex-direction:column;justify-content:center">
+   <div class="mid" id="e1">Catch it before it costs you.</div>
    <div class="logo" id="e2">GRIND<i>.</i></div>
    <div><span class="pill" id="e3">Free · link in bio</span></div>
   </div>
  </section>
+
+ <div id="wipe"></div><div id="flash"></div>
 </div>
 <script>
 window.__timelines = window.__timelines || {};
 const tl = gsap.timeline({ paused: true });
-const B = 60 / 120;
-GX.screenPush({ words: [{ text: "Your", t: 0.03 }, { text: "syllabus", t: 0.5 }, { text: "has", t: 1.0 }, { text: "a", t: 1.25 }, { text: "secret.", t: 1.5 }], end: 2.6, color: "#D9F88D" });
-GX.shoulderZoom({ camera: "#cam2", at: 2.7, style: "transition", start: { label: "Before", big: "5 PDFs", small: "per semester" }, end: { label: "After", big: "1 list", small: "sorted by date" } });
-GX.glassGraph({ source: "#s3", at: 8.6, title: "QUIZ SCORE · SAMPLE", startValue: 3, endValue: 17, suffix: "/20", top: 900, shape: [0.15, 0.2, 0.3, 0.32, 0.45, 0.5, 0.62, 0.74, 0.9] });
-tl.fromTo("#e1", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 13);
-tl.fromTo("#e2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 13.35);
-tl.fromTo("#e3", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 13.65);
-GX.attach(tl, 16);
+const B = 0.5, SL = "back.out(2.2)";       // 120 bpm, bar = 2 s: every cut sits on a bar line
+const pump = (el, s, e, amt, strong) => { for (let t = s; t < e - 0.05; t += B) {
+  tl.fromTo(el, { scale: 1 }, { scale: (strong && Math.abs(t - s) < 0.01) ? 1.05 : amt, duration: 0.07, ease: "power2.out", immediateRender: false }, t);
+  tl.to(el, { scale: 1, duration: B - 0.09, ease: "power2.in" }, t + 0.07); } };
+const wipe = (t, dir) => { tl.fromTo("#wipe", { xPercent: -100 * dir, opacity: 1 }, { xPercent: 0, opacity: 1, duration: 0.16, ease: "power3.in", immediateRender: false }, t - 0.16);
+  tl.to("#wipe", { xPercent: 100 * dir, duration: 0.18, ease: "power3.out" }, t); tl.set("#wipe", { opacity: 0 }, t + 0.19); };
+const slamY = (s, t, f) => tl.fromTo(s, { y: f || 220, opacity: 0, scale: 1.25 }, { y: 0, opacity: 1, scale: 1, duration: 0.22, ease: SL, immediateRender: true }, t);
+const slamX = (s, t, f) => tl.fromTo(s, { x: f, opacity: 0 }, { x: 0, opacity: 1, duration: 0.22, ease: SL, immediateRender: true }, t);
+const stamp = (s, t, r) => tl.fromTo(s, { scale: 3, opacity: 0, rotation: r || 0 }, { scale: 1, opacity: 1, rotation: (r || 0) / 3, duration: 0.2, ease: "power4.in", immediateRender: true }, t);
+const shake = (s, t) => tl.to(s, { keyframes: { x: [0, -22, 18, -12, 8, 0], y: [0, 10, -8, 6, -3, 0] }, duration: 0.3, ease: "none" }, t);
+
+// 1 HOOK (GX screen push, one hard cut per beat)
+GX.screenPush({ words: [{ text: "One", t: 0.03 }, { text: "line", t: 0.5 }, { text: "costs", t: 1.0 }, { text: "you", t: 1.25 }, { text: "marks.", t: 1.5 }], end: 2.0, color: "#D9F88D" });
+
+// 2 page: tilt + push, words slam, highlight sweeps, shake
+tl.set("#flash", { opacity: 1 }, 2.0); tl.to("#flash", { opacity: 0, duration: 0.25, ease: "power2.out" }, 2.0);
+tl.fromTo("#d2", { x: 0, y: 0 }, { x: -60, y: -60, duration: 2, ease: "none" }, 2);
+tl.fromTo("#c2", { rotation: -2, scale: 1.0 }, { rotation: 1, scale: 1.08, duration: 2, ease: "none" }, 2);
+slamY("#t2a", 2.02); slamY("#t2b", 2.25); slamY("#t2c", 2.5); stamp("#t2d", 2.75, -6);
+tl.fromTo("#pg", { y: 700, rotation: 6, opacity: 0 }, { y: 0, rotation: 0, opacity: 1, duration: 0.35, ease: SL, immediateRender: true }, 2.1);
+tl.fromTo("#sw", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.inOut", immediateRender: true }, 3.0);
+tl.fromTo("#ln", { scale: 1 }, { scale: 1.08, duration: 0.12, yoyo: true, repeat: 1, immediateRender: false }, 3.35);
+shake("#c2", 3.4); pump("#p2", 2, 4, 1.025);
+
+// 3 TURN (GX over-the-shoulder zoom on #cam3), living background + live phone
+wipe(4.0, 1);
+tl.fromTo("#d3", { x: 0, y: 0 }, { x: 60, y: -90, duration: 4, ease: "none" }, 4);
+[["#k1", -30, 20], ["#k2", 40, -30], ["#k3", -40, -40], ["#k4", 30, 30]].forEach(([s, dx, dy], i) => {
+  tl.fromTo(s, { x: 0, y: 0, rotation: i % 2 ? 4 : -4, opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: true }, 4.05 + i * 0.12);
+  tl.to(s, { x: dx, y: dy, rotation: i % 2 ? -3 : 3, duration: 3.8, ease: "sine.inOut" }, 4.05); });
+["#r1", "#r2", "#r3", "#r4", "#r5", "#r6"].forEach((s, i) => slamX(s, 4.1 + i * 0.125, i % 2 ? 300 : -300));
+tl.fromTo("#pbar", { y: 0 }, { keyframes: [{ y: 58, duration: 0.2 }, { y: 116, duration: 0.2, delay: 0.3 }, { y: 58, duration: 0.2, delay: 0.3 }, { y: 0, duration: 0.2, delay: 0.3 }], ease: "power2.inOut", immediateRender: true }, 5.0);
+tl.to(["#r2", "#r3"], { backgroundColor: "#F3F9DF", duration: 0.2 }, 6.4);
+pump("#par3", 4, 8, 1.03);
+GX.shoulderZoom({ camera: "#cam3", at: 4.0, style: "transition",
+  start: { label: "Before", big: "5 PDFs", small: "to dig through" }, end: { label: "After", big: "1 list", small: "sorted by date" } });
+
+// 4 BREAK: color flip, slams, stamp + shake (music drops out here)
+wipe(8.0, -1);
+tl.fromTo("#c4", { scale: 1.1 }, { scale: 1.0, duration: 2, ease: "power1.out" }, 8);
+slamX("#t4a", 8.02, -900); slamX("#t4b", 8.25, 900); slamX("#t4c", 8.5, -900); slamX("#t4d", 8.75, 900); stamp("#t4e", 9.0, -6);
+stamp("#st4", 9.5, 5); shake("#c4", 9.7);
+
+// 5 DROP: white flash, scrolling rows behind the glass, GX liquid glass graph
+tl.set("#flash", { opacity: 1 }, 10.0); tl.to("#flash", { opacity: 0, duration: 0.3, ease: "power2.out" }, 10.0);
+tl.fromTo("#feed", { y: 0 }, { y: -420, duration: 4, ease: "none" }, 10);
+tl.fromTo("#b1", { x: 0, y: 0 }, { x: 160, y: -260, duration: 4, ease: "sine.inOut" }, 10);
+tl.fromTo("#b2", { x: 0, y: 0 }, { x: -180, y: -200, duration: 4, ease: "sine.inOut" }, 10);
+tl.fromTo("#c5", { scale: 1.0 }, { scale: 1.05, duration: 4, ease: "none" }, 10);
+slamY("#t5a", 10.0); slamY("#t5b", 10.25); stamp("#t5c", 10.5, -5);
+GX.glassGraph({ source: "#s5", at: 10.75, title: "QUIZ SCORE · SAMPLE", startValue: 3, endValue: 17, suffix: "/20", top: 820,
+  shape: [0.12, 0.16, 0.3, 0.28, 0.46, 0.5, 0.66, 0.76, 0.92], draw: 1.1, hold: 1.4 });
+
+// 6 END CARD: calm
+tl.fromTo("#e1", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 14.05);
+tl.fromTo("#e2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 14.4);
+tl.fromTo("#e3", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 14.7);
+
+GX.attach(tl, 18);
 window.__timelines["main"] = tl;
 </script>
 </body>
