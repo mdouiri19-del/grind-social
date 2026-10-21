@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>GRIND reel: GX signature effects example</title>
+<script src="gsap.js"></script>
+<script src="gx.js"></script>
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--rose:#875267;--sage:#E8EFDF;--border:#DFE5D8}
+*{box-sizing:border-box;margin:0}
+body{margin:0;font-family:Inter,sans-serif;color:var(--ink)}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cream)}
+.clip{position:absolute;inset:0;overflow:hidden}
+.bgc{position:absolute;inset:0}
+.mid{font-size:96px;line-height:1.04;letter-spacing:-4px;font-weight:700}
+.hl{display:inline-block;background:var(--lime);border-radius:18px;padding:0 16px 4px}
+.phone{position:absolute;left:390px;top:560px;width:300px;height:600px;border-radius:48px;background:#fff;border:10px solid var(--ink);box-shadow:0 40px 80px rgba(37,77,59,.18);overflow:hidden;padding:56px 18px 18px}
+.phone .r{display:flex;gap:10px;align-items:center;background:var(--sage);border-radius:16px;padding:14px 12px;margin-bottom:12px;font-size:20px;font-weight:600}
+.phone .r b{background:#fff;border-radius:8px;padding:4px 6px;font-size:14px;color:var(--brand)}
+.phone .r i{font-style:normal;margin-left:auto;background:var(--lime);border-radius:99px;padding:2px 8px;font-size:16px;font-weight:700}
+.phone h4{font-size:24px;letter-spacing:-.5px;margin:0 4px 16px}
+.rows{position:absolute;left:90px;right:90px;top:330px}
+.row{display:flex;align-items:center;gap:24px;background:#fff;border:3px solid var(--border);border-radius:28px;padding:26px 30px;margin-bottom:20px;font-size:38px;font-weight:600}
+.row b{background:var(--sage);color:var(--brand);border-radius:12px;padding:8px 12px;font-size:26px}
+.row i{font-style:normal;margin-left:auto;border-radius:99px;padding:6px 18px;font-size:28px;font-weight:700}
+.logo{font-size:110px;font-weight:700;letter-spacing:-5px;margin-top:70px}.logo i{font-style:normal;color:var(--brand)}
+.pill{display:inline-block;margin-top:36px;background:var(--ink);color:var(--lime);font-size:46px;font-weight:700;border-radius:999px;padding:22px 44px}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-duration="16">
+ <section id="s1" class="clip" data-start="0" data-duration="2.6" data-track-index="1"><div class="bgc" style="background:#1E2B24"></div></section>
+
+ <section id="s2" class="clip" data-start="2.6" data-duration="5.2" data-track-index="1">
+  <div class="bgc" style="background:var(--cream)"></div>
+  <div id="cam2" style="position:absolute;inset:0">
+   <div class="phone"><h4>Next 14 days</h4>
+    <div class="r"><b>TUE</b>Midterm<i>25%</i></div><div class="r"><b>WED</b>Lab report<i>10%</i></div>
+    <div class="r"><b>FRI</b>Quiz 3<i>5%</i></div><div class="r"><b>MON</b>Essay<i>20%</i></div><div class="r"><b>THU</b>Reading<i>2%</i></div></div>
+  </div>
+  <div style="position:absolute;left:90px;right:90px;top:1300px;text-align:center;font-size:30px;font-weight:600;color:var(--sec)">Sample courses</div>
+ </section>
+
+ <section id="s3" class="clip" data-start="7.8" data-duration="5.2" data-track-index="1">
+  <div class="bgc" style="background:var(--blush)"></div>
+  <div id="scene3" style="position:absolute;inset:0">
+   <div class="mid" style="position:absolute;left:90px;right:90px;top:300px">Quiz, review, <span class="hl">repeat.</span></div>
+   <div class="rows" style="top:560px">
+    <div class="row"><b>QUIZ 1</b>Week 4 practice<i style="background:var(--blush)">9 / 20</i></div>
+    <div class="row"><b>QUIZ 2</b>Missed parts only<i style="background:var(--sage)">13 / 20</i></div>
+    <div class="row"><b>QUIZ 3</b>Mixed review<i style="background:var(--lime)">17 / 20</i></div>
+    <div class="row"><b>MOCK</b>Timed, no notes<i style="background:var(--lime)">next</i></div>
+    <div class="row"><b>NOTES</b>Week 4 to 7<i style="background:var(--sage)">ready</i></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="s4" class="clip" data-start="13" data-duration="3" data-track-index="1">
+  <div class="bgc" style="background:var(--lime)"></div>
+  <div style="position:absolute;inset:0;padding:300px 90px 420px;display:flex;flex-direction:column;justify-content:center">
+   <div class="mid" id="e1">Find it before it finds you.</div>
+   <div class="logo" id="e2">GRIND<i>.</i></div>
+   <div><span class="pill" id="e3">Free · link in bio</span></div>
+  </div>
+ </section>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const B = 60 / 120;
+GX.screenPush({ words: [{ text: "Your", t: 0.03 }, { text: "syllabus", t: 0.5 }, { text: "has", t: 1.0 }, { text: "a", t: 1.25 }, { text: "secret.", t: 1.5 }], end: 2.6, color: "#D9F88D" });
+GX.shoulderZoom({ camera: "#cam2", at: 2.7, style: "transition", start: { label: "Before", big: "5 PDFs", small: "per semester" }, end: { label: "After", big: "1 list", small: "sorted by date" } });
+GX.glassGraph({ source: "#s3", at: 8.6, title: "QUIZ SCORE · SAMPLE", startValue: 3, endValue: 17, suffix: "/20", top: 900, shape: [0.15, 0.2, 0.3, 0.32, 0.45, 0.5, 0.62, 0.74, 0.9] });
+tl.fromTo("#e1", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 13);
+tl.fromTo("#e2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 13.35);
+tl.fromTo("#e3", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, 13.65);
+GX.attach(tl, 16);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
