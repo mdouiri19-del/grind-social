@@ -47,15 +47,15 @@
   // ================================================================== 1. SCREEN PUSH
   GX_screenPush.defaults = { drift: 0.07, zIndex: 40, color: C.lime, screen: "#1E2B24", zoom: 3.1, pixel: 10, fringe: 3, glow: 0.85, focus: 5 };
   function GX_screenPush(opts) {
-    const o = Object.assign({}, GX_screenPush.defaults, opts);
+    const o = Object.assign({}, GX_screenPush.defaults, opts); const W = o.w || 1080, H = o.h || 1920;
     const SIZE = 150, PAD = 1400, ROWX = 1200, P = o.pixel, k = P / 10;
     const SUB = [["#ff8a7a", 2], ["#9affb0", 6], ["#8aa8ff", 10]].map(([c, x]) =>
       `radial-gradient(ellipse ${1.7 * k}px ${4.3 * k}px at ${x * k}px ${5.5 * k}px, ${c} 70%, transparent 100%)`).join(", ");
     const root = rootOf(o);
     const layer = el("div", `position:absolute;inset:0;overflow:hidden;background:${o.screen};display:none;z-index:${o.zIndex}`, root);
-    const cam = el("div", "position:absolute;left:540px;top:960px;transform-origin:0 0", layer);
+    const cam = el("div", `position:absolute;left:${W / 2}px;top:${H / 2}px;transform-origin:0 0`, layer);
     const rowCss = (color, dx) => `position:absolute;left:${ROWX + dx}px;top:${PAD - SIZE * 0.82}px;font-family:Inter,sans-serif;font-weight:700;font-size:${SIZE}px;line-height:1;letter-spacing:${-0.01 * SIZE}px;white-space:pre;color:${color}`;
-    const rowHtml = o.words.map((w) => `<span>${esc(w.text)}</span>`).join(" ");
+    const rowHtml = o.words.map((w) => `<span style="display:inline-block;text-align:${o.align || "left"}">${esc(w.text)}</span>`).join(" ");
     const makePlane = (parent, extra) => {
       const plane = el("div", `position:absolute;top:0;height:${2 * PAD}px;background:${o.screen};isolation:isolate;overflow:hidden`, parent);
       const inner = el("div", "position:absolute;left:0;top:0", plane);
@@ -70,7 +70,7 @@
     const B = makePlane(glowWrap);
     if (o.focus > 0) el("div", `position:absolute;inset:0;backdrop-filter:blur(${o.focus}px);-webkit-backdrop-filter:blur(${o.focus}px);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 34%,transparent 66%,#000 100%);mask-image:linear-gradient(180deg,#000 0%,transparent 34%,transparent 66%,#000 100%)`, layer);
     let placed = null, measuredReady = false;
-    const measure = () => { measuredReady = fontsReady(); const sp = A.main.querySelectorAll("span"); placed = o.words.map((w, i) => ({ t: w.t, x: ROWX + sp[i].offsetLeft, w: sp[i].offsetWidth })); };
+    const measure = () => { measuredReady = fontsReady(); const sp = A.main.querySelectorAll("span"); placed = o.words.map((w, i) => ({ t: w.t, x: ROWX + sp[i].offsetLeft, w: sp[i].offsetWidth, y: PAD - SIZE * 0.82 + sp[i].offsetTop, h: sp[i].offsetHeight })); };
     FX.push((t) => {
       const on = t >= o.words[0].t && t < o.end;
       layer.style.display = on ? "block" : "none";
@@ -79,9 +79,9 @@
       let i = 0; while (i < placed.length - 1 && t >= placed[i + 1].t) i++;
       const cur = placed[i];
       const jx = ((i * 37) % 11) - 5, jy = ((i * 23) % 9) - 4;
-      const cx = cur.x + cur.w / 2 + jx, cy = PAD - SIZE * 0.36 + jy;
-      const z = Math.min(o.zoom, (0.84 * W) / Math.max(cur.w, 1));
-      const half = W / 2 / z + 4 * P, L = Math.floor((cx - half) / P) * P, span = Math.ceil((2 * half) / P + 2) * P;
+      const cx = cur.x + cur.w / 2 + jx, cy = cur.y + cur.h / 2 - SIZE * 0.04 + jy;
+      const z = Math.min(o.zoom, (0.84 * W) / Math.max(cur.w, 1), (0.8 * H) / Math.max(cur.h, 1));
+      const half = Math.max(W, H) / 2 / z + 4 * P, L = Math.floor((cx - half) / P) * P, span = Math.ceil((2 * half) / P + 2) * P;
       for (const pl of [A, B]) { pl.plane.style.left = L + "px"; pl.plane.style.width = span + "px"; pl.inner.style.left = -L + "px"; }
       // inside each word the camera keeps creeping in (no slide between words: every new word is still a hard cut)
       const nextT = i < placed.length - 1 ? placed[i + 1].t : o.end, u = clamp01((t - cur.t) / Math.max(0.05, nextT - cur.t));
@@ -94,7 +94,7 @@
   // ================================================================== 2. OVER-THE-SHOULDER ZOOM
   GX_shoulderZoom.defaults = { zIndex: 30, style: "normal", accent: C.brand, cardTop: 600, anchorY: 0.42 };
   function GX_shoulderZoom(opts) {
-    const o = Object.assign({}, GX_shoulderZoom.defaults, opts);
+    const o = Object.assign({}, GX_shoulderZoom.defaults, opts); const W = o.w || 1080, H = o.h || 1920;
     const T0 = o.at, root = rootOf(o);
     const camEl = typeof o.camera === "string" ? document.querySelector(o.camera) : o.camera;
     const CURVES = { in: [0, 0.21, 0.43, 0.61, 0.73, 0.83, 0.9, 0.96, 1], out: [0, 0.14, 0.37, 0.57, 0.71, 0.8, 0.87, 0.94, 1] };
@@ -121,7 +121,7 @@
       }
       return { z, x };
     };
-    if (camEl) camEl.style.transformOrigin = `540px ${o.anchorY * H}px`;
+    if (camEl) camEl.style.transformOrigin = `${W / 2}px ${o.anchorY * H}px`;
 
     const CARD = { top: o.cardTop, edge: 70, w: 330, padX: 30, padY: 26, r: 26 };
     const EYE_H = 30, BIG_H = 80, BIG_BASE = 63, SUB_H = 34, INNER = CARD.w - 2 * CARD.padX - 6, RES = 2;
@@ -188,6 +188,27 @@
       c.d.style.filter = flash > 0 ? `brightness(${1 + 0.35 * flash})` : "none";
       c.cv.style.opacity = bigVisible ? 1 : 0;
     };
+    if (o.still) {
+      if (!streak) { streak = el("canvas", `position:absolute;left:0;top:0;width:${W}px;height:${H}px`, layer); streak.width = W; streak.height = H; }
+      FX.push(() => {
+        if (!L.drawn) build();
+        if (!ps) { const A = sample(o.start.big, "l"), G = sample(o.end.big, "r"), n = Math.max(A.length, G.length); ps = [];
+          for (let i = 0; i < n && A.length && G.length; i++) ps.push({ s: A[Math.floor((i * A.length) / n)], g: G[Math.floor((i * G.length) / n)], r: rand(`p${i}`) }); }
+        if (camEl) camEl.style.transform = `scale(${o.stillZoom || 1.12})`;
+        for (const c of [L, R]) { c.d.style.display = "block"; c.d.style.opacity = 1; c.d.style.transform = `rotate(${c.side === "l" ? -4 : 4}deg)`;
+          c.d.style.boxShadow = `0 22px 50px rgba(32,58,45,0.22), 0 0 40px rgba(${rgb(C.lime)},0.6)`; c.cv.style.opacity = 1; }
+        const ctx = streak.getContext("2d"); ctx.clearRect(0, 0, W, H); ctx.lineCap = "round";
+        const glow = new Path2D(), core = new Path2D();
+        for (const p of ps) {
+          const e0 = 0.18 + 0.5 * p.r, e1 = e0 + 0.18, bulge = (e) => Math.sin(Math.PI * e) * (p.r - 0.5) * 110;
+          const at = (e) => [p.s.x + (p.g.x - p.s.x) * e, p.s.y + (p.g.y - p.s.y) * e + bulge(e)];
+          const a = at(e0), b = at(e1); glow.moveTo(a[0], a[1]); glow.lineTo(b[0], b[1]); core.moveTo(a[0], a[1]); core.lineTo(b[0], b[1]);
+        }
+        ctx.strokeStyle = `rgba(${rgb(o.accent)},0.3)`; ctx.lineWidth = 6; ctx.stroke(glow);
+        ctx.strokeStyle = `rgba(${rgb(C.lime)},0.95)`; ctx.lineWidth = 2; ctx.stroke(core);
+      });
+      return;
+    }
     FX.push((t) => {
       if (!L.drawn) build();
       const { z, x } = camAt(t);
@@ -220,7 +241,7 @@
     line: C.lime, node: C.cream, text: C.cream, tint: 0.62, tintColor: C.brand, shape: [0.18, 0.22, 0.26, 0.34, 0.4, 0.52, 0.64, 0.78, 0.92],
     draw: 1.16, hold: 1.5, top: 760, frost: 7, bend: 1.0 };
   function GX_glassGraph(opts) {
-    const o = Object.assign({}, GX_glassGraph.defaults, opts);
+    const o = Object.assign({}, GX_glassGraph.defaults, opts); const W = o.w || 1080, H = o.h || 1920;
     const root = rootOf(o), id = `gx-glass-${glassN++}`;
     const CW = 900, HC = 610, R = 34, GRAPH_H = 420, PAD = 40, MAP = 400;
     const T_RISE = 0.22, T_DRAW = 0.18, T_PUNCH = 0.28, T_EXIT = 0.3;
@@ -282,7 +303,7 @@
       refr.style.display = card.style.display = vis ? "block" : "none";
       if (!vis) return;
       const s = (0.96 + 0.04 * rise) * (1 + 0.035 * punch), dy = (1 - rise) * 60 + exit * 40, op = rise * (1 - exit);
-      const cx = 540, cy = o.top + HC / 2 + dy, rx = cx - (CW * s) / 2, ry = cy - (HC * s) / 2, rw = CW * s, rh = HC * s;
+      const cx = W / 2, cy = o.top + HC / 2 + dy, rx = cx - (CW * s) / 2, ry = cy - (HC * s) / 2, rw = CW * s, rh = HC * s;
       // refract a fresh copy of the live scene behind the card
       const src = source();
       refrIn.textContent = "";

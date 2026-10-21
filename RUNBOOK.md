@@ -59,6 +59,8 @@ When today's reel style uses Grindy:
 2. Render: `python3 tools/render_carousel.py $PWD/work/carousel.html $PWD/work` then `ffmpeg -i work/png_N.png -q:v 2 queue/$DAY/post_0N.jpg` for N=1..6.
 3. Look at every slide. Text must not overflow cards or hit the footer. Fix and re-render.
 
+Optional (owner asked for an example, 2026-10-21): carousels can use the same signature effects as stills. Reference: `templates/carousel-effects-example/carousel.html` (LCD cover with GX.screenPush, before/after with GX.shoulderZoom `still: true`, payoff with GX.glassGraph over a busy scene; pass `w: 1080, h: 1350` and `root: "#sN"`, call GX.render(T) after the fonts load). Same honesty rules: sample data labelled, structural numbers only.
+
 ## 3b. Sign-up post (single image, 1080x1350): ACTIVE, every day
 Make posts it Mon, Wed, Fri at 08:45, but make it daily anyway (cheap, keeps the pipeline uniform).
 1. Write `work/cta.html` (one `<section id="s1">`) styled like `templates/cta-example/cta.html`. Brand green background, one strong headline about ONE real GRIND. feature (rotate: syllabus import, 14-day priority list, weighted average, Study Studio quiz, mock exam, revision notes, assignment plan, calendar export, EN/FR), a small UI card with sample data labeled "sample", a lime "Sign up free" pill and "Link in bio".
