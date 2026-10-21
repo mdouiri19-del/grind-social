@@ -6,8 +6,10 @@
 | 2026-10-18 | study systems | Your highlighter is lying to you. | week-ahead plan | Plan your week before it plans you. |
 | 2026-10-19 | grade math | Your average isn't what you think. | study systems | 3 days until the exam? Here's the real plan. |
 | 2026-10-20 | deadline reality | 11:59 PM is a trap. | study systems | The hardest part is the blank page. | LI: Four deadlines. One Thursday. All at 11:59 PM. |
+| 2026-10-21 | study systems | Nobody studies the way they're tested. | semester moments | 4 midterm mistakes that quietly cost marks. | LI: A 30% paper due in 3 weeks isn't one task. It's 6. |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
 Styles used (reel / carousel): 2026-10-19 math reveal / step-by-step guide (sign-up: syllabus import) music: futurebass/D#m/p4/144bpm/s20261019
 Styles used (reel / carousel): 2026-10-20 notification pile-up / before / after (Study Studio quiz + assignment plan) (sign-up: Study Studio quiz) music: boombap/A#/p10/87bpm/s20261020
+Styles used (reel / carousel): 2026-10-21 fake UI demo (Study Studio mock exam) / mistakes list (sign-up: Study Studio revision notes) music: dnb/D/p9/168bpm/s20261021 (LI detect: own re-run of detect.py formulas, 91.2 PASS)
