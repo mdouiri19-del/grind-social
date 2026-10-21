@@ -1,0 +1,19 @@
+GRIND. reads your syllabus. Then it stops and asks you to check.
+
+That pause is on purpose.
+
+Here's how import works. You upload a syllabus PDF. GRIND. pulls out the dates and the weights: the 10% lab report on page 7, the midterm in week 8, the 30% paper at the very end.
+
+Then, before anything lands in your list, you see what it found and check it against the PDF. Only what you confirm goes into your 14-day view.
+
+We could skip that step. Import would feel faster.
+
+But syllabi are messy. Dates move after week 1. One course writes "Week 9," another writes "Nov 6." And if a student trusts a wrong date, they're the one who pays for it.
+
+So the rule we build by is simple: GRIND. does the digging, you make the call. A quick check beats a missed deadline.
+
+Free for students, link on our page.
+
+If you teach: what's the one line in your syllabus students always miss?
+
+#edtech #highereducation #students

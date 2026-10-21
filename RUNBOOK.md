@@ -7,6 +7,7 @@ Goal: every day, publish ONE reel and ONE 6-slide carousel for GRIND. into `queu
 cd /home/claude && git clone https://github.com/mdouiri19-del/grind-social && cd grind-social
 DAY=$(TZ=America/Toronto date +%F)
 [ -f queue/$DAY/manifest.json ] && echo "already published today" && exit 0
+# If queue/$DAY/PREPARED.md exists, the owner already approved a package made in advance: follow PREPARED.md (verify, publish, log) and skip sections 1 to 4.
 mkdir -p queue/$DAY work
 export HYPERFRAMES_SKIP_SKILLS=1
 export HYPERFRAMES_BROWSER_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome   # or any chromium under /opt/pw-browsers
