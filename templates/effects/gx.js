@@ -345,19 +345,25 @@
   };
   function GX_glassPanel(opts) {
     const o = Object.assign({ zIndex: 35, tint: 0.35, tintColor: C.brand, frost: 4, bend: 1.0, radius: 34, zoomBehind: 1, at: 0, until: 1e9, still: false }, GLASS[opts.variant] || {}, opts);
-    const W = o.w0 || 1080, H = o.h0 || 1920, root = rootOf(o), id = `gx-panel-${panelN++}`, CW = Math.round(o.w), HC = Math.round(o.h), R = o.radius, MAP = 400;
+    const W = o.w0 || 1080, H = o.h0 || 1920, root = rootOf(o), id = `gx-panel-${panelN++}`, CW = Math.round(o.w), HC = Math.round(o.h), R = o.radius;
     const c = document.createElement("canvas"); c.width = CW; c.height = HC;
     const ctx = c.getContext("2d"), img = ctx.createImageData(CW, HC), cx0 = CW / 2, cy0 = HC / 2;
+    // pass 1: offsets in px; pass 2: encode with the finest step that fits (8-bit maps at a fixed 400px scale
+    // step about 1.6px, which shows as jagged text through a clear lens)
+    const OX = new Float32Array(CW * HC), OY = new Float32Array(CW * HC); let maxA = 1;
     for (let y = 0; y < HC; y++) for (let x = 0; x < CW; x++) {
       const qx = Math.abs(x + 0.5 - cx0) - (cx0 - R), qy = Math.abs(y + 0.5 - cy0) - (cy0 - R);
       const out = Math.hypot(Math.max(qx, 0), Math.max(qy, 0)) + Math.min(Math.max(qx, qy), 0) - R, d = Math.max(-out, 0);
       const nx = (x + 0.5 - cx0) / cx0, ny = (y + 0.5 - cy0) / cy0, len = Math.hypot(nx, ny) || 1;
       const k = o.bend * 1920 * Math.min(1, CW / 900);
       const edge = k * (0.045 * Math.exp(-0.05 * d) + 0.06 * Math.exp(-0.35 * d)), mid = k * 0.012 * (1 - Math.exp(-0.1 * d));
-      const ox = (edge * nx) / len + mid * nx, oy = (edge * ny) / len + mid * ny;
-      const i = (y * CW + x) * 4;
-      img.data[i] = Math.round(255 * clamp01(0.5 + ox / MAP)); img.data[i + 1] = Math.round(255 * clamp01(0.5 + oy / MAP));
-      img.data[i + 2] = 128; img.data[i + 3] = 255;
+      const j = y * CW + x; OX[j] = (edge * nx) / len + mid * nx; OY[j] = (edge * ny) / len + mid * ny;
+      maxA = Math.max(maxA, Math.abs(OX[j]), Math.abs(OY[j]));
+    }
+    const MAP = Math.min(400, Math.ceil(2 * maxA + 2));
+    for (let j = 0; j < CW * HC; j++) {
+      img.data[j * 4] = Math.round(255 * clamp01(0.5 + OX[j] / MAP)); img.data[j * 4 + 1] = Math.round(255 * clamp01(0.5 + OY[j] / MAP));
+      img.data[j * 4 + 2] = 128; img.data[j * 4 + 3] = 255;
     }
     ctx.putImageData(img, 0, 0);
     el("div", "position:absolute;width:0;height:0;overflow:hidden", root,
