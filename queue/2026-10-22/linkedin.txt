@@ -8,7 +8,7 @@ Then, before anything lands in your list, you see what it found and check it aga
 
 We could skip that step. Import would feel faster.
 
-But syllabi are messy. Dates move after week 1. One course writes "Week 9," another writes "Nov 6." And if a student trusts a wrong date, they're the one who pays for it.
+But a syllabus is messy. Dates move after week 1. One course writes "Week 9," another writes "Nov 6." And if a student trusts a wrong date, they're the one who pays for it.
 
 So the rule we build by is simple: GRIND. does the digging, you make the call. A quick check beats a missed deadline.
 
