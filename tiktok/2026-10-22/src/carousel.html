@@ -1,0 +1,142 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:500;src:url(../../../assets/fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../../../assets/fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../../../assets/fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--green:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--sec:rgba(32,58,45,.68);--line:rgba(32,58,45,.14)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#888;font-family:Inter,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--cream)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(32,58,45,.16) 2.2px,transparent 2.6px);background-size:60px 60px;background-position:30px 30px}
+.dark{background:var(--ink);color:var(--cream)}
+.dark .dots{background-image:radial-gradient(rgba(217,248,141,.10) 2.2px,transparent 2.6px)}
+.limebg{background:var(--lime)}
+.top{position:absolute;top:64px;left:88px;right:88px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:700;font-size:42px;letter-spacing:-1.5px}.logo i{font-style:normal;color:#7DB33A}.dark .logo i{color:var(--lime)}
+.bars{display:flex;gap:8px}.bars b{width:44px;height:8px;border-radius:4px;background:var(--line)}.bars b.on{background:var(--ink)}
+.dark .bars b{background:rgba(246,247,241,.2)}.dark .bars b.on{background:var(--lime)}
+.foot{position:absolute;bottom:58px;left:88px;right:88px;display:flex;justify-content:space-between;font-size:28px;font-weight:600;color:var(--sec)}
+.dark .foot{color:var(--cream)}
+.kick{position:absolute;left:88px;top:160px;font-size:30px;font-weight:700;letter-spacing:5px;color:var(--green)}
+.dark .kick{color:var(--lime)}
+.h{position:absolute;left:88px;right:70px;top:208px;font-size:92px;line-height:1.04;letter-spacing:-3.8px;font-weight:700}
+.hl{background:var(--lime);border-radius:16px;padding:0 14px;margin-left:-4px}
+.lead{position:absolute;left:88px;right:88px;bottom:128px;font-size:38px;line-height:1.3;font-weight:500;color:var(--sec)}
+.lead b{color:var(--ink);font-weight:700}
+.grid{position:absolute;left:88px;right:88px;display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
+.d{height:148px;border-radius:18px;background:#fff;border:2px solid var(--line);padding:16px 14px;font-size:26px;font-weight:700;color:var(--sec);position:relative}
+.d .p{position:absolute;left:10px;right:10px;bottom:12px;height:40px;border-radius:12px;background:var(--lime);color:var(--ink);font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.d.g{border:3px solid var(--ink);background:#F3FBDD;color:var(--ink)}
+.d.b{border-color:#D9AFC0;background:var(--blush);color:var(--ink)}
+.d.b .p{background:var(--ink);color:var(--blush)}
+.chip{display:inline-flex;align-items:center;background:var(--lime);color:var(--ink);border-radius:999px;font-weight:700}
+</style></head><body>
+
+<!-- 1 cover -->
+<div class="s dark" id="s1"><div class="dots"></div>
+ <div class="top"><div class="logo">GRIND<i>.</i></div><div class="bars"><b class="on"></b><b></b><b></b><b></b><b></b><b></b></div></div>
+ <div style="position:absolute;left:88px;top:360px;font-size:32px;font-weight:700;letter-spacing:6px;color:var(--lime)">STUDY SYSTEMS</div>
+ <div style="position:absolute;left:84px;right:60px;top:430px;font-size:178px;line-height:.98;letter-spacing:-8px;font-weight:700;color:var(--lime)">Study it<br>three<br>times.</div>
+ <div style="position:absolute;left:88px;right:88px;top:1020px;font-size:46px;line-height:1.25;font-weight:600;color:var(--cream)">Not once for four hours.</div>
+ <div class="foot"><span>The 14-day plan</span><span>Swipe →</span></div>
+</div>
+
+<!-- 2 trap -->
+<div class="s" id="s2"><div class="dots"></div>
+ <div class="top"><div class="logo">GRIND<i>.</i></div><div class="bars"><b class="on"></b><b class="on"></b><b></b><b></b><b></b><b></b></div></div>
+ <div class="kick">01 · THE TRAP</div>
+ <div class="h" style="font-size:80px;letter-spacing:-3.2px;top:216px">One long night <span class="hl">before.</span></div>
+ <div class="grid" style="top:420px">
+  <div class="d">MON</div><div class="d">TUE</div><div class="d">WED</div><div class="d">THU</div><div class="d">FRI</div><div class="d">SAT</div><div class="d b">SUN<div class="p">cram</div></div>
+  <div class="d">MON</div><div class="d g">TUE<div class="p">exam</div></div><div class="d">WED</div><div class="d">THU</div><div class="d">FRI</div><div class="d">SAT</div><div class="d">SUN</div>
+ </div>
+ <div style="position:absolute;left:88px;right:88px;top:810px;background:#fff;border:2px solid var(--line);border-radius:28px;box-shadow:0 24px 50px rgba(32,58,45,.12);padding:34px 36px;display:flex;align-items:center;gap:26px">
+  <span style="background:var(--blush);border-radius:12px;padding:10px 16px;font-size:26px;font-weight:700">SUN</span>
+  <span style="font-size:38px;font-weight:600;letter-spacing:-.5px">8 PM to midnight · chapters 1 to 6</span>
+ </div>
+ <div class="chip" style="position:absolute;left:110px;top:780px;padding:8px 20px;font-size:24px;background:var(--ink);color:var(--lime)">the whole plan</div>
+ <div class="lead">Four hours feels serious. <b>Miss that one night and there is no plan B.</b></div>
+ <div class="foot"><span>Example week</span><span>Swipe →</span></div>
+</div>
+
+<!-- 3 fix -->
+<div class="s" id="s3"><div class="dots"></div>
+ <div class="top"><div class="logo">GRIND<i>.</i></div><div class="bars"><b class="on"></b><b class="on"></b><b class="on"></b><b></b><b></b><b></b></div></div>
+ <div class="kick">02 · THE FIX</div>
+ <div class="h">Spread it, <span class="hl">don't cram.</span></div>
+ <div style="position:absolute;left:88px;right:88px;top:420px;display:flex;gap:24px">
+  <div style="flex:1;background:#fff;border:2px solid var(--line);border-radius:28px;padding:30px 34px">
+   <div style="font-size:26px;font-weight:700;letter-spacing:4px;color:var(--sec)">BEFORE</div>
+   <div style="font-size:84px;font-weight:700;letter-spacing:-3px;margin-top:6px">1 x 4h</div>
+   <div style="font-size:30px;font-weight:600;color:var(--sec)">the night before</div>
+  </div>
+  <div style="flex:1;background:var(--ink);color:var(--cream);border-radius:28px;padding:30px 34px">
+   <div style="font-size:26px;font-weight:700;letter-spacing:4px;color:var(--lime)">AFTER</div>
+   <div style="font-size:84px;font-weight:700;letter-spacing:-3px;margin-top:6px;color:var(--lime)">4 x 40m</div>
+   <div style="font-size:30px;font-weight:600;opacity:.85">across the week</div>
+  </div>
+ </div>
+ <div style="position:absolute;left:88px;right:88px;top:690px;background:#fff;border:2px solid var(--line);border-radius:28px;padding:26px 30px;box-shadow:0 24px 50px rgba(32,58,45,.10)">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px"><span style="font-size:30px;font-weight:700">This week</span><span style="font-size:24px;font-weight:600;color:var(--sec)">study plan · sample</span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:27px;font-weight:600">
+   <div class="r">WED · Learn ch 1-3<em>40m</em></div><div class="r">THU · Learn ch 4-6<em>40m</em></div>
+   <div class="r">FRI · Quiz 1-6<em>40m</em></div><div class="r">SAT · Off<em>rest</em></div>
+   <div class="r">SUN · Missed only<em>40m</em></div><div class="r x">TUE · Exam<em>25%</em></div>
+  </div>
+ </div>
+ <style>.r{display:flex;justify-content:space-between;align-items:center;background:#F0F3E6;border-radius:14px;padding:14px 16px}.r em{font-style:normal;background:var(--lime);border-radius:999px;padding:4px 14px;font-size:22px;font-weight:700}.r.x{background:var(--blush)}.r.x em{background:var(--ink);color:var(--blush)}</style>
+ <div class="lead">Learn it, <b>quiz it two days later</b>, then go back only to what you missed.</div>
+ <div class="foot"><span>Example plan</span><span>Swipe →</span></div>
+</div>
+
+<!-- 4 rhythm -->
+<div class="s" id="s4"><div class="dots"></div>
+ <div class="top"><div class="logo">GRIND<i>.</i></div><div class="bars"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b></b><b></b></div></div>
+ <div class="kick">03 · THE RHYTHM</div>
+ <div class="h">Day 1. Day 3. <span class="hl">Day 7.</span></div>
+ <div class="grid" style="top:420px">
+  <div class="d g">D1<div class="p">learn</div></div><div class="d">D2</div><div class="d g">D3<div class="p">quiz</div></div><div class="d">D4</div><div class="d">D5</div><div class="d">D6</div><div class="d g">D7<div class="p">misses</div></div>
+  <div class="d">D8</div><div class="d">D9</div><div class="d">D10</div><div class="d g">D11<div class="p">mock</div></div><div class="d">D12</div><div class="d">D13</div><div class="d b">D14<div class="p">exam</div></div>
+ </div>
+ <div style="position:absolute;left:88px;right:88px;top:790px;background:var(--green);border-radius:30px;padding:30px 32px;color:var(--cream)">
+  <div style="font-size:26px;font-weight:700;letter-spacing:5px;color:var(--lime);margin-bottom:20px">THE RHYTHM</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+   <div class="k"><b>Day 1</b>learn · 40m</div><div class="k"><b>Day 3</b>quiz · 25m</div><div class="k"><b>Day 7</b>misses · 15m</div><div class="k"><b>Day 11</b>mock · 50m</div>
+  </div>
+ </div>
+ <style>.k{border:2px solid rgba(217,248,141,.35);border-radius:18px;padding:18px 16px;font-size:23px;white-space:nowrap;font-weight:600;color:rgba(246,247,241,.85)}.k b{display:block;font-size:40px;letter-spacing:-1.2px;color:var(--cream);margin-bottom:4px}</style>
+ <div class="lead">Each return is shorter than the last. <b>Start 14 days out</b> and it fits around everything else.</div>
+ <div class="foot"><span>Example schedule</span><span>Swipe →</span></div>
+</div>
+
+<!-- 5 shortcut -->
+<div class="s dark" id="s5"><div class="dots"></div>
+ <div class="top"><div class="logo">GRIND<i>.</i></div><div class="bars"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b></b></div></div>
+ <div class="kick">04 · THE SHORTCUT</div>
+ <div style="position:absolute;left:80px;right:60px;top:330px;font-size:290px;line-height:1;letter-spacing:-14px;font-weight:700;color:var(--lime)">Day 3</div>
+ <div style="position:absolute;left:88px;right:88px;top:780px;background:var(--cream);color:var(--ink);border-radius:30px;padding:40px 44px">
+  <div class="chip" style="padding:10px 22px;font-size:26px">Study Studio · practice quiz</div>
+  <div style="font-size:50px;font-weight:700;letter-spacing:-1.6px;line-height:1.1;margin-top:26px">Day 3 needs a quiz. Let it write one.</div>
+  <div style="font-size:33px;font-weight:500;line-height:1.35;color:var(--sec);margin-top:18px">Pick the course and the weeks. Study Studio builds the questions from your own files.</div>
+ </div>
+ <div class="foot"><span></span><span>Swipe →</span></div>
+</div>
+
+<!-- 6 save -->
+<div class="s limebg" id="s6">
+ <div class="top"><div class="logo">GRIND.</div><div class="bars"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b></div></div>
+ <div class="kick" style="color:var(--ink)">THE PLAN, IN 4 LINES</div>
+ <div class="h" style="line-height:1.1">Keep this for <span style="background:var(--ink);color:var(--lime);border-radius:16px;padding:0 14px">exam season.</span></div>
+ <div style="position:absolute;left:88px;right:88px;top:476px;display:flex;flex-direction:column;gap:16px">
+  <div class="L"><span>1</span><div>Start 14 days out<small>look at what is due, not just the exam</small></div></div>
+  <div class="L"><span>2</span><div>Learn it once<small>short session, one topic</small></div></div>
+  <div class="L"><span>3</span><div>Quiz it on day 3 and day 7<small>only re-study what you missed</small></div></div>
+  <div class="L"><span>4</span><div>One timed run before the exam<small>same format, no notes</small></div></div>
+ </div>
+ <style>.L{display:flex;align-items:center;gap:28px;background:#F5FCE0;border-radius:24px;padding:22px 30px;font-size:40px;font-weight:700;letter-spacing:-1px}.L small{display:block;font-size:28px;font-weight:500;letter-spacing:0;color:var(--sec);margin-top:4px}.L span{flex:none;width:64px;height:64px;border-radius:16px;background:var(--ink);color:var(--lime);display:flex;align-items:center;justify-content:center;font-size:32px}</style>
+ <div style="position:absolute;left:88px;right:88px;top:1104px;display:flex;align-items:center;gap:28px">
+  <div style="flex:none;width:76px;height:100px;border-radius:20px;background:var(--ink);display:flex;align-items:center;justify-content:center"><svg width="34" height="44" viewBox="0 0 34 44"><path d="M2 2h30v40L17 31 2 42z" fill="#F6F7F1"/></svg></div>
+  <div style="font-size:36px;font-weight:700;line-height:1.25">Save this.<br><span style="font-weight:600">GRIND. organizes all of it from your syllabus.</span></div>
+ </div>
+ <div class="foot" style="color:var(--ink)"><span>Free for students · link in bio</span><span>Save this ✓</span></div>
+</div>
+</body></html>
