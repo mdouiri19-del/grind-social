@@ -1,0 +1,204 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<script src="../templates/effects/gx.js"></script>
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(../assets/fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../assets/fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../assets/fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--rose:#875267;--sage:#E8EFDF;--border:#DFE5D8}
+*{box-sizing:border-box;margin:0}
+body{background:#999;font-family:Inter,sans-serif}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--cream);color:var(--ink)}
+.full{position:absolute;inset:0}
+.top{position:absolute;z-index:50;top:62px;left:88px;right:88px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:700;font-size:38px;letter-spacing:-1.5px}.logo b{color:#80A258}
+.prog{display:flex;gap:8px}.prog i{width:44px;height:8px;border-radius:4px;background:rgba(32,58,45,.15)}.prog i.on{background:var(--ink)}
+.kick{position:absolute;z-index:50;left:88px;top:160px;font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--rose)}
+h2{position:absolute;z-index:50;left:88px;right:88px;top:204px;font-size:84px;line-height:1.04;letter-spacing:-3.5px;font-weight:700}
+.hl{background:var(--lime);color:var(--ink);padding:0 14px;border-radius:14px}
+.cap{position:absolute;z-index:50;left:88px;right:88px;top:1150px;font-size:34px;line-height:1.35;color:var(--sec);font-weight:500}
+.cap b{color:var(--ink);font-weight:700}
+.foot{position:absolute;z-index:50;bottom:56px;left:88px;right:88px;display:flex;justify-content:space-between;font-size:24px;font-weight:600;color:var(--sec)}
+.dark{background:var(--brand);color:var(--cream)}.dark .logo b{color:var(--lime)}.dark .prog i{background:rgba(246,247,241,.25)}.dark .prog i.on{background:var(--lime)}.dark .foot{color:#C9D8B8}
+.dots{position:absolute;inset:-60px;background-image:radial-gradient(circle,rgba(37,77,59,.14) 3px,transparent 3.5px);background-size:60px 60px}
+.blob{position:absolute;border-radius:50%}
+/* cover: the weekend agenda behind lime glass */
+.ag{position:absolute;left:88px;right:88px;top:640px}
+.ag .d{display:flex;align-items:center;gap:22px;border-radius:24px;padding:22px 26px;margin-bottom:16px;background:rgba(246,247,241,.08);border:2px solid rgba(246,247,241,.14);font-size:34px;font-weight:600;color:rgba(246,247,241,.75);white-space:nowrap}
+.ag .d b{font-size:22px;letter-spacing:2px;color:var(--lime);background:rgba(217,248,141,.12);border-radius:10px;padding:8px 12px;min-width:92px;text-align:center}
+.ag .d em{font-style:normal;margin-left:auto;font-size:24px;color:rgba(246,247,241,.55)}
+.ag .d.due{background:rgba(242,222,229,.16);border-color:rgba(242,222,229,.4);color:var(--blush)}
+.ctitle{position:absolute;z-index:50;left:88px;right:88px;top:200px;font-size:112px;line-height:1.0;letter-spacing:-5px;font-weight:700;color:var(--cream)}
+.gx-in{padding:40px 50px;display:flex;flex-direction:column;justify-content:center;height:100%}
+.gx-in small{font-size:24px;font-weight:700;letter-spacing:4px;opacity:.8}
+.gx-in strong{display:block;font-size:104px;letter-spacing:-4px;line-height:1;margin-top:12px}
+.gx-in span{font-size:32px;font-weight:600;margin-top:16px}
+/* slide 2 */
+.card{position:absolute;left:150px;right:150px;top:480px;background:#fff;border:3px solid var(--border);border-radius:36px;box-shadow:0 40px 90px rgba(37,77,59,.16);padding:44px 50px}
+.card .lab{font-size:24px;font-weight:700;letter-spacing:4px;color:var(--rose)}
+.card .ttl{font-size:60px;font-weight:700;letter-spacing:-2px;margin-top:14px}
+.card .when{font-size:40px;font-weight:600;color:var(--sec);margin-top:10px}
+.card .pill{display:inline-block;margin-top:30px;background:var(--lime);border-radius:999px;padding:12px 26px;font-size:32px;font-weight:700}
+.chip{position:absolute;background:#fff;border:3px solid var(--border);border-radius:24px;padding:16px 24px;font-size:30px;font-weight:600;box-shadow:0 18px 40px rgba(37,77,59,.10);white-space:nowrap}
+/* slide 3: Saturday timeline */
+.tline{position:absolute;left:88px;right:88px;top:420px}
+.tr{display:flex;align-items:center;gap:26px;margin-bottom:14px}
+.tr .h{width:110px;font-size:26px;font-weight:700;color:var(--sec);text-align:right}
+.tr .b{flex:1;border-radius:20px;padding:20px 26px;font-size:32px;font-weight:600;background:#fff;border:3px solid var(--border)}
+.tr .b.sg{background:rgba(255,255,255,.45);border:3px dashed #C9D3BF;color:var(--sec)}
+.tr .b.x{background:var(--blush);border-color:#E8C9D5;color:var(--rose);font-weight:700}
+/* slide 4: the brief */
+.page{position:absolute;left:150px;top:410px;width:780px;height:700px;background:#fff;border-radius:28px;box-shadow:0 40px 90px rgba(37,77,59,.16);padding:52px 56px}
+.page i{display:block;height:18px;border-radius:9px;background:#E4E9DE;margin-bottom:24px}
+.page .line{font-size:34px;font-weight:700;padding:12px 18px;margin:6px -18px 26px;border-radius:12px;background:var(--lime);white-space:nowrap}
+.page .ph{font-size:22px;font-weight:700;color:var(--sec);letter-spacing:2px;margin-bottom:26px}
+.ptag{position:absolute;right:36px;top:36px;background:var(--blush);color:var(--rose);font-weight:700;font-size:24px;border-radius:12px;padding:8px 14px}
+.lenslabel{position:absolute;z-index:60;left:90px;top:575px;background:var(--ink);color:var(--lime);font-size:26px;font-weight:700;border-radius:999px;padding:10px 22px;transform:rotate(-3deg)}
+/* slide 5: phone */
+.phone{position:absolute;left:422px;top:470px;width:236px;height:600px;border-radius:46px;background:#fff;border:10px solid var(--ink);box-shadow:0 40px 90px rgba(37,77,59,.25);overflow:hidden;padding:44px 14px 14px}
+.phone .notch{position:absolute;left:68px;top:10px;width:80px;height:18px;border-radius:9px;background:var(--ink)}
+.phone h4{white-space:nowrap;font-size:18px;letter-spacing:-.5px;margin:0 4px 4px;display:flex;justify-content:space-between}.phone h4 i{font-style:normal;color:#80A258}
+.phone small{display:block;font-size:14px;color:var(--sec);margin:0 4px 12px;font-weight:600}
+.phone .r{display:flex;gap:6px;align-items:center;background:var(--sage);border-radius:14px;padding:12px 8px;margin-bottom:10px;font-size:15px;font-weight:600;white-space:nowrap}
+.phone .r.on{background:#F1FBD9;box-shadow:inset 0 0 0 3px var(--brand)}
+.phone .r b{background:#fff;border-radius:7px;padding:3px 5px;font-size:12px;color:var(--brand)}
+.phone .r em{font-style:normal;margin-left:auto;background:var(--lime);border-radius:99px;padding:2px 8px;font-size:13px;font-weight:700}
+.flow{position:absolute;z-index:40;left:0;top:0}
+/* slide 6 */
+.fri{position:absolute;left:70px;top:150px;font-size:440px;font-weight:700;letter-spacing:-24px;line-height:1;color:var(--rose);opacity:.9}
+.clock{position:absolute;left:96px;top:600px;display:inline-block;background:var(--ink);color:var(--lime);font-size:34px;font-weight:700;border-radius:999px;padding:14px 28px}
+.sv{position:absolute;left:88px;right:88px;top:730px}
+.sv h3{font-size:92px;line-height:1.02;letter-spacing:-4px;font-weight:700}
+.sv p{font-size:34px;line-height:1.38;color:var(--sec);font-weight:500;margin-top:26px}
+.sv p b{color:var(--ink)}
+.url{display:inline-block;margin-top:36px;background:var(--lime);color:var(--ink);font-size:40px;font-weight:700;border-radius:20px;padding:22px 32px;letter-spacing:-1px}
+.saveic{position:absolute;right:88px;top:520px;width:150px;height:150px;border-radius:40px;background:var(--brand);display:flex;align-items:center;justify-content:center;transform:rotate(6deg)}
+</style></head><body>
+
+<!-- 1 COVER: dark green, the weekend agenda under lime glass -->
+<section class="s dark" id="s1">
+ <div class="full" id="scene1">
+  <div class="full" style="background:var(--brand)"></div>
+  <div class="blob" style="left:620px;top:900px;width:560px;height:560px;background:rgba(217,248,141,.18)"></div>
+  <div class="ag">
+   <div class="d"><b>FRI</b>Movie night<em>8 PM</em></div>
+   <div class="d"><b>SAT</b>Brunch, shift, laundry<em>all day</em></div>
+   <div class="d"><b>SUN</b>Groceries<em>noon</em></div>
+   <div class="d due"><b>SUN</b>Start the lab report<em>9 PM</em></div>
+   <div class="d"><b>MON</b>Lab report due<em>11:59 PM</em></div>
+  </div>
+ </div>
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="prog"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div>
+ <div class="ctitle">Every Sunday panic starts on <span class="hl">Friday.</span></div>
+ <div class="foot"><span>Deadline reality · sample week</span><span>Swipe →</span></div>
+</section>
+
+<!-- 2 FRIDAY -->
+<section class="s" id="s2">
+ <div class="dots"></div>
+ <div class="blob" style="left:-180px;top:900px;width:520px;height:520px;background:var(--blush);opacity:.7"></div>
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="prog"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+ <div class="kick">01 · Friday, 5 PM</div>
+ <h2>Due Monday. <span class="hl">Plenty of time.</span></h2>
+ <div class="card">
+  <div class="lab">LAB REPORT · SAMPLE</div>
+  <div class="ttl">Due Monday</div>
+  <div class="when">11:59 PM</div>
+  <span class="pill">3 days away</span>
+ </div>
+ <div class="chip" style="left:120px;top:900px;transform:rotate(-4deg)">Movie night</div>
+ <div class="chip" style="left:600px;top:960px;transform:rotate(3deg)">Brunch on Saturday</div>
+ <div class="cap">Three days feels like forever. <b>It's really one evening and two half days.</b></div>
+ <div class="foot"><span>Sample deadline</span><span>Swipe →</span></div>
+</section>
+
+<!-- 3 SATURDAY -->
+<section class="s" id="s3" style="background:var(--sage)">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div>
+ <div class="kick">02 · Saturday</div>
+ <h2>The weekend <span class="hl">fills up anyway.</span></h2>
+ <div class="tline">
+  <div class="tr"><span class="h">10:00</span><span class="b sg">Sleep in</span></div>
+  <div class="tr"><span class="h">12:00</span><span class="b">Brunch</span></div>
+  <div class="tr"><span class="h">14:00</span><span class="b">Work shift</span></div>
+  <div class="tr"><span class="h">18:00</span><span class="b sg">Laundry</span></div>
+  <div class="tr"><span class="h">20:00</span><span class="b">Friends</span></div>
+  <div class="tr"><span class="h">23:00</span><span class="b x">Lab report → "tomorrow"</span></div>
+ </div>
+ <div class="cap">Nothing on it is wrong. <b>There's just no slot with the lab's name on it.</b></div>
+ <div class="foot"><span>Sample Saturday</span><span>Swipe →</span></div>
+</section>
+
+<!-- 4 SUNDAY: the brief under a glass lens -->
+<section class="s" id="s4">
+ <div class="full" id="scene4">
+  <div class="full" style="background:var(--cream)"></div><div class="dots"></div>
+  <div class="page"><span class="ptag">Brief · p.2</span>
+   <div class="ph">LAB REPORT 3 · INSTRUCTIONS</div>
+   <i style="width:60%"></i><i></i><i style="width:85%"></i>
+   <div class="line">Length: 2,000 words, 4 sources.</div>
+   <i style="width:90%"></i><i style="width:55%"></i><i></i><i style="width:75%"></i><i style="width:65%"></i><i style="width:80%"></i><i style="width:50%"></i>
+  </div>
+ </div>
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
+ <div class="kick">03 · Sunday, 9 PM</div>
+ <h2>Then you <span class="hl">open the brief.</span></h2>
+ <div class="lenslabel">the line you needed on Friday</div>
+ <div class="cap">The brief was there all week. <b>Nobody opened it until Sunday night.</b></div>
+ <div class="foot"><span>Sample brief</span><span>Swipe →</span></div>
+</section>
+
+<!-- 5 THE FIX: over-the-shoulder still -->
+<section class="s" id="s5">
+ <div class="dots"></div>
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div>
+ <div class="kick">04 · The fix</div>
+ <h2>Ten minutes, <span class="hl">on Friday.</span></h2>
+ <svg class="flow" width="1080" height="1350">
+  <defs><marker id="ah" markerWidth="14" markerHeight="14" refX="7" refY="7" orient="auto"><path d="M1,1 L13,7 L1,13 Z" fill="#254D3B"/></marker></defs>
+  <path d="M235,560 C320,410 760,410 845,555" fill="none" stroke="#254D3B" stroke-width="6" stroke-dasharray="2 16" stroke-linecap="round" marker-end="url(#ah)"/>
+  <g transform="translate(540,438)"><rect x="-150" y="-30" width="300" height="56" rx="28" fill="#D9F88D"/><text x="0" y="8" text-anchor="middle" font-family="Inter" font-weight="700" font-size="26" fill="#203A2D">GRIND. shows it first</text></g>
+ </svg>
+ <div class="full" id="cam5">
+  <div class="phone"><span class="notch"></span>
+   <h4>Next 14 days <i>GRIND.</i></h4><small>sorted by date · sample</small>
+   <div class="r on"><b>MON</b>Lab report<em>10%</em></div>
+   <div class="r"><b>WED</b>Quiz 4<em>5%</em></div>
+   <div class="r"><b>FRI</b>Essay<em>20%</em></div>
+   <div class="r"><b>TUE</b>Problem set<em>5%</em></div>
+   <div class="r"><b>THU</b>Midterm<em>25%</em></div>
+   <div class="r"><b>FRI</b>Reading<em>2%</em></div>
+  </div>
+ </div>
+ <div class="cap">Open your next 14 days, spot what's due Monday, <b>and book two short slots</b> before the weekend starts.</div>
+ <div class="foot"><span>Sample courses</span><span>Swipe →</span></div>
+</section>
+
+<!-- 6 SAVE (design e): big day on blush -->
+<section class="s" id="s6" style="background:var(--blush)">
+ <div class="top"><span class="logo">GRIND<b>.</b></span><span class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+ <div class="fri">FRI.</div>
+ <div class="saveic"><svg width="70" height="70" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.5L6 21z" fill="#D9F88D"/></svg></div>
+ <div class="clock">5:00 PM · 10 minutes</div>
+ <div class="sv">
+  <h3>Save this for next Friday.</h3>
+  <p>Check what's due Monday. Book two slots. <b>GRIND. organizes all of it from your syllabus.</b></p>
+  <div class="url">grindstudent.com/welcome</div>
+ </div>
+ <div class="foot" style="color:var(--rose)"><span>Free for students · link in bio</span><span>Save this ✓</span></div>
+</section>
+
+<script>
+const F = { w: 1080, h: 1350 }, T = 10;
+// 1 cover: lime glass over the dark agenda (lime variant only over dark green)
+GX.glassPanel({ root: "#s1", w0: 1080, h0: 1350, source: "#scene1", still: true, variant: "lime", x: 88, y: 760, w: 904, h: 300, zIndex: 30,
+  html: `<div class="gx-in"><small>FRIDAY · 5:00 PM</small><strong>3 days left</strong><span>Lab report due Monday · sample</span></div>` });
+// 4 lens over the one line that matters
+GX.glassPanel({ root: "#s4", w0: 1080, h0: 1350, source: "#scene4", still: true, variant: "lens", x: 70, y: 620, w: 940, h: 160, radius: 80, zIndex: 30 });
+// 5 over-the-shoulder still: cards beside the phone, a clean arrow
+GX.shoulderZoom({ ...F, root: "#s5", camera: "#cam5", still: true, stillZoom: 1.0, anchorY: 0.55, cardTop: 640, zIndex: 20,
+  start: { label: "Before", big: "Sunday", small: "9 PM panic" }, end: { label: "After", big: "2 slots", small: "booked Friday" } });
+const go = () => { GX.render(T); GX.render(T); window.__ready = true; };
+(document.fonts ? Promise.all(["700 150px Inter", "700 64px Inter", "600 30px Inter"].map((f) => document.fonts.load(f))).then(go) : go());
+</script>
+</body></html>
