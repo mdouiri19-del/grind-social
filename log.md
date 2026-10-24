@@ -9,6 +9,7 @@
 | 2026-10-21 | study systems | Nobody studies the way they're tested. | semester moments | 4 midterm mistakes that quietly cost marks. | LI: A 30% paper due in 3 weeks isn't one task. It's 6. |
 | 2026-10-22 | grind in action | Five courses. One list. | study systems | Study it three times. | LI: GRIND. reads your syllabus. Then it stops and asks you to check. |
 | 2026-10-23 | study systems | Your paper isn't one task. | deadline reality | Every Sunday panic starts on Friday. |
+| 2026-10-24 | semester moments | Quiet week? It's a trap. | checklist (study systems) | Got your midterm back? Do this next. |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
@@ -17,3 +18,4 @@ Styles used (reel / carousel): 2026-10-20 notification pile-up / before / after 
 Styles used (reel / carousel): 2026-10-21 fake UI demo (Study Studio mock exam) / mistakes list (sign-up: Study Studio revision notes) music: dnb/D/p9/168bpm/s20261021 (LI detect: own re-run of detect.py formulas, 91.2 PASS)
 Styles used (reel / carousel): 2026-10-22 syllabus zoom + gx (zoom transition, graph DEADLINES FOUND · SAMPLE) / structured gx, save: c (sign-up: calendar export) music: deephouse/D/p1/120bpm/s20261022 (prepared in advance; LI detect: own re-run of detect.py formulas, 92.4 PASS)
 Styles used (reel / carousel): 2026-10-23 speedrun list + gx (zoom normal, graph STEPS DONE · SAMPLE) / timeline of a weekend (lime glass cover, glass lens, shoulder still), save: e (sign-up: 14-day priority list) music: pop/Eb/p4/100bpm/s20261023 (prepared and published the evening before)
+Styles used (reel / carousel): 2026-10-24 countdown + gx (zoom transition, graph PAPER PREP · SAMPLE) / checklist (LCD cover, glass lens x2, glass graph CURRENT AVERAGE · SAMPLE, shoulder still), save: b (sign-up: Study Studio mock exam) end card: Use the quiet week. music: lofi/A/p6/90bpm/s20261024 (evening run, published the evening before)
