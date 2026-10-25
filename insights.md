@@ -28,3 +28,9 @@ Steering for this week
 - Too much grade weights / average math lately (10-18 to 10-20). Don't do weights or grade calculations more than about once a week across reels and carousels, even on grade math days. Swap in other angles instead.
 - Show Study Studio more often, with concrete screens: practice quizzes from course files, assignment plans broken into dated steps, mock exams, revision notes.
 - Keep topics varied day to day so the feed doesn't get repetitive.
+
+## 2026-10-25: What works (weekly check)
+Data: GRIND stats sheet still holds only the 4 posts from 2026-10-17 (newest snapshot 2026-10-18). No metrics for posts from 10-18 onward yet, so no new ranking this week.
+- Top stays: contrarian "X is a trap" reel (reach 40, views 63). Reels still reach far more than feed posts.
+- Saves and shares still 0 everywhere: keep strong save asks on carousels.
+- Steering unchanged: about 60% open-loop contrarian hooks, 40% new formats. Check the Make.com stats collection, it has not written rows since 2026-10-18.
