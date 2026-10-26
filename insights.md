@@ -34,3 +34,34 @@ Data: GRIND stats sheet still holds only the 4 posts from 2026-10-17 (newest sna
 - Top stays: contrarian "X is a trap" reel (reach 40, views 63). Reels still reach far more than feed posts.
 - Saves and shares still 0 everywhere: keep strong save asks on carousels.
 - Steering unchanged: about 60% open-loop contrarian hooks, 40% new formats. Check the Make.com stats collection, it has not written rows since 2026-10-18.
+
+## 2026-10-26: What works (owner's Instagram export, posts 10-17 to 10-25)
+Data: Meta export uploaded by the owner, lifetime numbers, 23 posts. Saves, shares and follows are 0 on every post, so the ranking falls back to reach, then views. Posts from 10-24 and 10-25 are only 1 to 2 days old.
+
+| format | posts | avg reach | avg views |
+|---|---|---|---|
+| reel | 10 | 63 | 75 |
+| carousel | 9 | 4 | 15 |
+| sign-up image | 4 | 3 | 13 |
+
+Top 3 (all reels)
+1. Nobody studies the way they're tested. (reach 121, views 131)
+2. Your paper isn't one task. (107 / 117)
+3. 11:59 PM is a trap. (106 / 122)
+Also strong: Your practice is too easy. (96), Quiet week? It's a trap. (94). Since 10-20, every reel with a relatable problem hook reached about 95 to 120.
+Pattern: the hook names a familiar study or deadline habit and says it fails you ("Nobody...", "X is a trap", "Your X isn't..."). No product in the hook.
+
+Bottom 3 reels
+1. Five courses. One list. (reach 6): product-led hook, the only GRIND in action reel. Biggest miss.
+2. Your highlighter is lying to you. (12): early account days, weak signal.
+3. Your average isn't what you think. (17): the only grade math reel, early days, weak signal.
+
+Feed posts (carousels, sign-up images): reach 2 to 5 each, so almost only current followers see them. No saves or shares yet anywhere. Can't tell which carousel topics work until reach grows.
+Engagement: reels reach about 100 but get 0 to 1 likes and 0 comments. The hooks earn distribution, the endings don't earn action yet.
+
+Steering for the week of 10-26
+- About 60%: reels with habit-callout hooks in the top-3 pattern (study habits, deadlines, assignments). Keep the product to the last beat.
+- GRIND in action days (Thursday): lead with the student problem, never the feature. Show the feature only after the problem lands.
+- Grade math reels: only 1 data point, keep at most 1 a week and always with a contrarian hook.
+- About 40% experiments: (a) a caption question that takes a one-word answer ("A or B?") to test comments; (b) on-screen "Send this to your study group" on the payoff beat of one reel to test shares; (c) carousels that continue a reel topic from 1 to 2 days earlier, to test whether reel viewers come to the feed.
+- Keep strong save asks on carousels. Judge carousels again once reach grows.
