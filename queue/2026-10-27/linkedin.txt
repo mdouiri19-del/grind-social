@@ -1,0 +1,19 @@
+Most students find out where they stand in a course on the one day they can't change it.
+
+It's the day the final grade gets posted.
+
+Here's how it usually goes. In week 1 you skim the syllabus PDF. Quizzes 10%, lab report 15%, midterm 25%, final exam 50%. Then the file sits in a downloads folder until December.
+
+Marks come back one at a time, each on a different page. An 82 on a quiz feels great. A 68 on the midterm feels like a disaster. Neither tells you much on its own.
+
+What you need is one number: your weighted average so far, and how much of the course is still left to earn. The math isn't hard. Almost nobody does it in October, because the weights live in a PDF and the marks live somewhere else.
+
+So students guess. Some panic over a course they're doing fine in. Others relax in one that's slipping, and find out when there's nothing left to fix.
+
+That's the gap we built GRIND. for. You import your syllabus, check the weights it pulls out, and every mark you enter updates your current average. Mid-semester, while it still matters.
+
+You still do the work. You just see the score before the game ends.
+
+Mid-semester right now? Do the weighted math for one course this week, with or without us. Link on our page.
+
+#Students #StudyTips #HigherEducation
