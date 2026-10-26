@@ -65,3 +65,28 @@ Steering for the week of 10-26
 - Grade math reels: only 1 data point, keep at most 1 a week and always with a contrarian hook.
 - About 40% experiments: (a) a caption question that takes a one-word answer ("A or B?") to test comments; (b) on-screen "Send this to your study group" on the payoff beat of one reel to test shares; (c) carousels that continue a reel topic from 1 to 2 days earlier, to test whether reel viewers come to the feed.
 - Keep strong save asks on carousels. Judge carousels again once reach grows.
+
+## 2026-10-26: Facebook export (same reels cross-posted, 10-17 to 10-25)
+Data: Meta export uploaded by the owner, lifetime numbers. Facebook adds watch-time data Instagram's export doesn't have.
+
+| reel | FB reach | 3 s viewers | avg seconds watched |
+|---|---|---|---|
+| Your paper isn't one task. | 217 | 44 (20%) | 2.0 |
+| Quiet week? It's a trap. | 206 | 35 (17%) | 2.1 |
+| Your average isn't what you think. | 190 | 21 (11%) | 2.5 |
+| Nobody studies the way they're tested. | 149 | 11 (7%) | 1.5 |
+| Your highlighter is lying to you. | 131 | 15 (11%) | 2.0 |
+| Midterms next week? Do this tonight. | 38 | 4 (11%) | 1.9 |
+| Five courses. One list. | 20 | 2 (10%) | 1.4 |
+| 11:59 PM is a trap. | 19 | 4 (21%) | 1.9 |
+| Your practice is too easy. | 0 | 0 | 0 (no data yet) |
+Facebook photo posts (carousels): reach 0 to 5, no reactions.
+
+What this adds
+- Biggest problem is the first 2 seconds: people watch about 2 s of a 20 s reel on average, and only 7 to 20% stay past 3 s. On every reel, the hook has to be readable in the first second.
+- Reach differs by platform: the grade math and highlighter reels did poorly on Instagram but well on Facebook (190 and 131), and the grade math reel had the longest average watch (2.5 s). Read the Instagram "bottom" list above as weak signal. Grade math stays in rotation, at most once a week.
+- Confirmed on both platforms: "Your paper isn't one task." and "Quiet week? It's a trap." are winners. "Five courses. One list." (product-led hook) is last on both.
+
+Steering added for the week of 10-26
+- Hook speed experiment (every reel this week): 3 or 4 short words in the screen push, one cut per half beat, so the whole hook has been on screen by about 1.2 s. The first word itself should hook (a number, "Nobody", "Your", "Stop").
+- Put the most surprising visual (the tension, a number) right after the hook, by about 2.5 s, not later.
