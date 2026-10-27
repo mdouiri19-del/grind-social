@@ -25,7 +25,7 @@ export HYPERFRAMES_BROWSER_PATH=$(ls -d /opt/pw-browsers/chromium-*/chrome-linux
 ```
 
 ## 1. The 3 posts (2 photo posts + 1 short video, updated 2026-10-26)
-- Slot A: DAY's Instagram carousel `queue/$DAY/post_01.jpg..post_06.jpg`, upscaled to `tiktok/$DAY/photo_01.jpg..photo_06.jpg` (2160x2700, lanczos), posted as a TikTok PHOTO post.
+- Slot A: UPDATE 2026-10-28: the Instagram carousel is PAUSED (owner decision), so from 2026-10-28 there is no `post_0N.jpg` in queue/$DAY. Slot A is then always a second TikTok-only photo post (`photo_a_01..06.jpg`, a different idea from slot B, made the same way as slot B), and the wait for the manifest below is not needed for slot A. Old rule, only if `post_01.jpg` exists: DAY's Instagram carousel `queue/$DAY/post_01.jpg..post_06.jpg`, upscaled to `tiktok/$DAY/photo_01.jpg..photo_06.jpg` (2160x2700, lanczos), posted as a TikTok PHOTO post.
 - Slot B: a TikTok-only PHOTO post you make, `tiktok/$DAY/photo_b_01.jpg..photo_b_06.jpg` (section 2). Part of the running series (section 4).
 - Slot C: a TikTok-only SHORT VIDEO you make, `tiktok/$DAY/tiktok_video.mp4` (section 3).
 - The Instagram reel `queue/$DAY/reel.mp4` is NOT posted on TikTok during the test. It is only the fallback for slot C if your video breaks and you cannot fix it (say so in plan.txt and the final message).
