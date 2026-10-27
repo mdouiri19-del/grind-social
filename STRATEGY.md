@@ -42,7 +42,7 @@ Mix target per week: 2 grade math, 1 deadline reality, 2 study systems, 1 GRIND 
 - Visual style: kinetic typography on cream/green, lime highlights, UI-card motifs (deadline rows, weight %, progress bars) that echo the GRIND. dashboard. Motion every 0.5 to 1 s.
 - One reel = one idea. If it needs two, it's two reels.
 
-## 5. Carousel formula (6 slides, 1080x1350) (updated 2026-10-21, owner feedback: more structured, use the signature effects, never the same last slide)
+## 5. Carousel formula: PAUSED since 2026-10-28 (owner: about 5 views each, Instagram is reels only for now; see RUNBOOK section 3) (6 slides, 1080x1350) (updated 2026-10-21, owner feedback: more structured, use the signature effects, never the same last slide)
 - Exactly 6 slides, told as one story: 1 hook, 2 to 5 one step each (the trap, the fix, the loop or proof, the tip), 6 save.
 - One layout system on every slide: top bar (GRIND. wordmark left, 6-segment progress bar right, current segments filled), a numbered kicker ("01 · The trap"), the headline under it (max about 8 words, lime highlight on 1 to 2 words), ONE visual in the middle zone (y 400 to 1130), a one-line caption at y 1150 (bold the key phrase), small footer (sample label left, "Swipe →" right). Nothing else floating around.
 - Use the signature effects (templates/effects/gx.js) as the main visual on at least 3 slides, each where it means something: LCD screen push for the hook or a big number, liquid glass as a magnifier over the one line that matters (GX.glassPanel, frost 0, zoomBehind about 1.1) or a glass card over a busy scene, a big plain number slammed into its UI row for a sample progress number (the glass graph is retired, owner 2026-10-27), over-the-shoulder still for before / after (cards beside a central phone, an arrow labelled with what GRIND. does; never frozen light streaks in a still).
@@ -89,7 +89,7 @@ Folder `queue/YYYY-MM-DD/` in this repo (mdouiri19-del/grind-social, public):
 - `post_01.jpg ... post_06.jpg` (1080x1350). Carousel is ALWAYS exactly 6 slides (Make.com maps 6 fixed slots).
 - `meta.json`: {"pillars":{"reel":..,"post":..},"hooks":{"reel":..,"post":..}}
 - `manifest.json` written LAST by `tools/publish.py` (URLs pinned to the media commit).
-Make.com reads `queue/<today Toronto>/manifest.json`: carousel 12:45 and reel 19:30 (daily), sign-up photo 08:45 (Mon/Wed/Fri), LinkedIn 08:30 (Tue/Wed/Thu).
+Make.com reads `queue/<today Toronto>/manifest.json`: reel 19:30 (daily; the 12:45 carousel is PAUSED since 2026-10-28), sign-up photo 08:45 (Mon/Wed/Fri), LinkedIn 08:30 (Tue/Wed/Thu).
 
 ## 10. Learning loop
 - Log each day in `log.md` (this repo): date, pillar, hook, format.

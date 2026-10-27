@@ -1,7 +1,9 @@
 """Push one day's media to GitHub and write the manifest Make.com reads.
 
 Usage: python3 tools/publish.py YYYY-MM-DD
-Expects in queue/YYYY-MM-DD/: reel.mp4, reel_caption.txt, post_01.jpg..post_06.jpg, post_caption.txt, meta.json (pillars, hooks)
+Expects in queue/YYYY-MM-DD/: reel.mp4, reel_caption.txt, meta.json (pillars, hooks).
+Carousel (post_01.jpg..post_06.jpg + post_caption.txt) is optional: PAUSED since 2026-10-28, owner decision.
+If any carousel file is present, all 7 must be.
 Step 1 commits + pushes media, step 2 writes manifest.json with URLs pinned to that commit, commits + pushes.
 """
 import json, os, subprocess, sys
@@ -16,7 +18,11 @@ def main(day):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(root)
     d = f"queue/{day}"
-    need = ["reel.mp4", "reel_caption.txt", "post_caption.txt"] + [f"post_0{i}.jpg" for i in range(1, 7)]
+    need = ["reel.mp4", "reel_caption.txt"]
+    car = ["post_caption.txt"] + [f"post_0{i}.jpg" for i in range(1, 7)]
+    has_car = any(os.path.exists(f"{d}/{f}") for f in car)
+    if has_car:
+        need += car
     missing = [f for f in need if not os.path.exists(f"{d}/{f}")]
     if missing:
         sys.exit(f"missing: {missing}")
@@ -38,7 +44,6 @@ def main(day):
         "reel_url": cdn + "reel.mp4",
         "reel_url_raw": raw + "reel.mp4",
         "reel_caption": open(f"{d}/reel_caption.txt").read().strip(),
-        "post_caption": open(f"{d}/post_caption.txt").read().strip(),
         **meta,
     }
     m.setdefault("cover_ms", 1900)
@@ -54,7 +59,9 @@ def main(day):
         m["cta_url"] = cdn + "cta.jpg"
         m["cta_url_raw"] = raw + "cta.jpg"
         m["cta_caption"] = open(f"{d}/cta_caption.txt").read().strip() if os.path.exists(f"{d}/cta_caption.txt") else ""
-    for i in range(1, 7):
+    if has_car:
+        m["post_caption"] = open(f"{d}/post_caption.txt").read().strip()
+    for i in (range(1, 7) if has_car else []):
         m[f"post_{i}"] = cdn + f"post_0{i}.jpg"
         m[f"post_{i}_raw"] = raw + f"post_0{i}.jpg"
     json.dump(m, open(f"{d}/manifest.json", "w"), indent=1, ensure_ascii=False)
