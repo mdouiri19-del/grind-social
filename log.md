@@ -12,6 +12,7 @@
 | 2026-10-24 | semester moments | Quiet week? It's a trap. | checklist (study systems) | Got your midterm back? Do this next. |
 | 2026-10-25 | study systems | Your practice is too easy. | week-ahead plan | Plan your whole week in 10 minutes. |
 | 2026-10-26 | grade math | That 58 isn't your grade. | study systems | Which one actually sticks? |
+| 2026-10-27 | deadline reality | Your group deadline lies. | grade math | Stop aiming for 90 on your final. | LI: Most students find out where they stand in a course on the one day they can't change it. |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
@@ -23,3 +24,4 @@ Styles used (reel / carousel): 2026-10-23 speedrun list + gx (zoom normal, graph
 Styles used (reel / carousel): 2026-10-24 countdown + gx (zoom transition, graph PAPER PREP · SAMPLE) / checklist (LCD cover, glass lens x2, glass graph CURRENT AVERAGE · SAMPLE, shoulder still), save: b (sign-up: Study Studio mock exam) end card: Use the quiet week. music: lofi/A/p6/90bpm/s20261024 (evening run, published the evening before)
 Styles used (reel / carousel): 2026-10-25 myth / fact + gx (zoom normal, graph MIXED QUIZ · SAMPLE) / step-by-step guide (frost glass cover on blush, glass lens, shoulder still, ink glass over calendar, LCD), save: d (sign-up: assignment plan) end card: Shuffle your practice. music: deephouse/D/p7/124bpm/s20268944 (evening run, published the evening before)
 Styles used (reel / carousel): 2026-10-26 plan vs reality + gx (zoom transition, graph STILL TO EARN · SAMPLE) / mini-quiz (lime glass cover, option cards, shoulder still, glass lens over answers), save: a (sign-up: EN/FR) end card: Math first. Panic later. music: pop/A/p4/99bpm/s20261026 (evening run, published the evening before)
+Styles used (reel / carousel): 2026-10-27 notification pile-up + gx (screen push 4 words on half beats, zoom normal, graph PARTS MERGED · SAMPLE, on-screen share ask "Send this to your group chat") / big-number cover (green LCD cover, glass graph CURRENT POINTS · SAMPLE, glass lens, shoulder still), save: e (sign-up: weighted average) end card: Finish early. Submit calm. music: lofi/Bb/p5/90bpm/s20261027 (prepared in advance; experiments from insights 10-26: hook speed, share ask, one-word caption question, carousel continues the 10-26 grade math reel; LI detect: 80.2 PASS)
