@@ -1,0 +1,23 @@
+GRIND. doesn't open on your whole semester. On purpose.
+
+It opens on the next 14 days.
+
+Here's the build note behind that. When you import your syllabi, GRIND. pulls every dated item out of the PDFs (quizzes, labs, papers, midterms) along with the weight each one carries, and by week 8 that adds up to a long list.
+
+Accurate? Yes. Useful at 11 PM on a Tuesday? No.
+
+So the home view answers one question: what's due in the next 14 days? Every course sits in one list, sorted by date, with the weight next to each item, because a 4% problem set and a 25% midterm in the same week shouldn't look the same.
+
+Why not 7 days?
+
+Seven is often too late to start a paper, and thirty feels too far away to act on, so two weeks is the window where starting early still changes the outcome.
+
+Everything else stays in your schedule. We just don't lead with it.
+
+Less on screen. Better plans.
+
+Free for students, link on our page.
+
+Students: how far ahead do you actually look when you plan your week?
+
+#edtech #students #highereducation
