@@ -1,0 +1,22 @@
+{
+ "date": "2026-10-30",
+ "reel_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@8ea8e1fa5cb051e6e317683ff2975b59fd79e341/queue/2026-10-30/reel.mp4",
+ "reel_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/8ea8e1fa5cb051e6e317683ff2975b59fd79e341/queue/2026-10-30/reel.mp4",
+ "reel_caption": "Late isn't free. ⏰\n\nOne minute past 11:59 PM can turn an 82 into a 72 (sample late policy: 10% per day).\nThe work was done. The mark still drops.\nThe fix isn't working faster. It's seeing the due date days before it hits.\n\nEver lost marks to a late penalty? Yes or no?\n\nFree for students: grindstudent.com/welcome\n\n#studytips #universitylife #studentlife #collegetips #studentorganization",
+ "pillars": {
+  "reel": "grade math"
+ },
+ "hooks": {
+  "reel": "Late isn't free."
+ },
+ "styles": {
+  "reel": "countdown + gx (screen push 3 words on half beats, clock flips past 11:59 PM, zoom transition on the 14-day list, plain payoff: 82 count-up kept · sample)"
+ },
+ "cover_ms": 5000,
+ "music": "lofi/F/p6/90bpm/s20261030",
+ "cover_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@8ea8e1fa5cb051e6e317683ff2975b59fd79e341/queue/2026-10-30/cover.jpg",
+ "cover_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/8ea8e1fa5cb051e6e317683ff2975b59fd79e341/queue/2026-10-30/cover.jpg",
+ "cta_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@8ea8e1fa5cb051e6e317683ff2975b59fd79e341/queue/2026-10-30/cta.jpg",
+ "cta_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/8ea8e1fa5cb051e6e317683ff2975b59fd79e341/queue/2026-10-30/cta.jpg",
+ "cta_caption": "Never find a deadline late. 📅\nGRIND. puts everything due in the next 14 days in one list, sorted by date and weight.\nFree for students, link in bio.\nSign up and see your next two weeks in one screen.\n\n#studytips #universitylife #studentlife #studentorganization"
+}
