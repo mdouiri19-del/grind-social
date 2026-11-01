@@ -90,3 +90,9 @@ What this adds
 Steering added for the week of 10-26
 - Hook speed experiment (every reel this week): 3 or 4 short words in the screen push, one cut per half beat, so the whole hook has been on screen by about 1.2 s. The first word itself should hook (a number, "Nobody", "Your", "Stop").
 - Put the most surprising visual (the tension, a number) right after the hook, by about 2.5 s, not later.
+
+## 2026-11-01: What works (weekly check)
+Data: GRIND stats sheet read via Drive. The connector returns only part of the 187 rows; the newest rows visible are the 2026-10-25 snapshot (Quiet week? It's a trap: reach 21, views 26; Got your midterm back? carousel: reach 4, views 9; Your paper isn't one task: partial). Saves and shares still 0 everywhere. No full metrics for posts after 10-25 here, so no new ranking this week.
+- Ranking stands from the 10-26 exports: habit-callout hooks ("Nobody...", "X is a trap", "Your X isn't...") lead; product-led hooks trail.
+- Steering for the week of 11-01: keep about 60% habit-callout hooks with a strong first word, product only in the last beats; keep about 40% experiments (one-word or A/B caption questions, plan-style payoffs from Study Studio).
+- Check the Make.com stats collection: the sheet seems to get only a weekly Saturday 23:00 snapshot, and posts from 10-26 onward are not visible yet.
