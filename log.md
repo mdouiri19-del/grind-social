@@ -18,7 +18,7 @@
 | 2026-10-30 | grade math | Late isn't free. | - | - |
 | 2026-10-31 | semester moments | Tonight isn't the scary part. | - | - |
 | 2026-11-01 | study systems | Nobody plans past Wednesday. | - | - |
-| 2026-11-02 | grade math | Stop guessing your final. | - | - |
+| 2026-11-02 | deadline reality (series: pause challenge) | Find the 30%. | - | - |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
@@ -37,3 +37,5 @@ Styles used (reel / carousel): 2026-10-30 countdown + gx (screen push 3 words on
 Styles used (reel / carousel): 2026-10-31 kinetic slam + gx (screen push 5 words on half beats, blush on ink, November grid fills with sample deadlines, zoom normal on the 14-day phone, blush break, plain payoff: 5 count-up due the same week · SAMPLE, glass lens over the Midterm 2 row) / - (carousel paused) (sign-up: calendar export) end card: See November coming. music: deephouse/Eb/p7/120bpm/s20261031 (evening run, published the evening before; Halloween timing for the 19:30 reel; caption yes/no question)
 Styles used (reel / carousel): 2026-11-01 plan vs reality + gx (screen push 4 words on half beats, cream on dark green, plan vs reality split week, zoom normal on the 14-day phone, blush break, plain payoff: 14-day grid 10 count-up · SAMPLE, Study Studio essay plan in 5 dated steps, glass lens over the draft row) / - (carousel paused) (sign-up: Study Studio revision notes) end card: Plan past Wednesday. music: pop/G/p4/102bpm/s20261101 (evening run, published the evening before; habit-callout hook per insights; caption A/B question)
 Styles used (reel / carousel): 2026-11-02 math reveal + gx (screen push 4 words on half beats, lime on ink, grade card with blurred final row, zoom transition on the grades phone, blush break "Want a 70? Work backwards.", plain payoff: 64% count-up on the final · SAMPLE, glass lens over the still-to-earn row) / - (carousel paused) (sign-up: Study Studio assignment plan) end card: Know the number. Then study. music: lofi/Ab/p5/83bpm/s20261102 (evening run, published the evening before; weekly weighted-average reel, last one 10-26; caption yes/no question)
+
+Styles used (reel / carousel): 2026-11-02 REPLACED the same evening at the owner's request (views down to about 40, feed too repetitive): series system starts (STRATEGY 15). Pause challenge: 3 s countdown over a dense sample syllabus, dim + lime reveal of the 30% row, satisfying sort into a GRIND. list, loop back to the challenge; 10.8 s, no GX, 1 hashtag, yes/no question + send ask. music: pop/Ab/p5/100bpm/s20261102. The 'Stop guessing your final.' reel was never posted.

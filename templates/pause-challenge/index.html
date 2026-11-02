@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>GRIND reel: Find the 30% (pause challenge)</title>
+<script src="gsap.js"></script>
+<script src="gx.js"></script>
+<style>
+@font-face{font-family:Inter;font-weight:500;src:url(fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts/inter-latin-700-normal.woff2)}
+:root{--cream:#F6F7F1;--ink:#203A2D;--sec:#586650;--brand:#254D3B;--lime:#D9F88D;--blush:#F2DEE5;--rose:#875267;--sage:#E8EFDF;--border:#DFE5D8}
+*{box-sizing:border-box;margin:0}
+body{margin:0;font-family:Inter,sans-serif;color:var(--ink)}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cream)}
+.clip{position:absolute;inset:0;overflow:hidden}
+.bgc{position:absolute;inset:0}
+.full{position:absolute;inset:0}
+.dots{position:absolute;left:-120px;top:-120px;width:1320px;height:2160px;background-image:radial-gradient(circle,rgba(37,77,59,.15) 3px,transparent 3.5px);background-size:60px 60px}
+.w{display:inline-block}
+.hl{display:inline-block;background:var(--lime);border-radius:22px;padding:0 20px 8px}
+/* header */
+.head{position:absolute;left:70px;right:70px;top:250px;z-index:6}
+.h1{font-size:150px;line-height:1;letter-spacing:-7px;font-weight:700}
+.sub{font-size:46px;font-weight:600;color:var(--sec);margin-top:18px;letter-spacing:-1px}
+/* timer */
+.timer{position:absolute;right:70px;top:250px;width:190px;height:190px;border-radius:50%;background:var(--ink);color:var(--lime);display:flex;align-items:center;justify-content:center;font-size:120px;font-weight:700;letter-spacing:-4px;z-index:7;box-shadow:0 20px 50px rgba(32,58,45,.3)}
+.timer svg{position:absolute;inset:-14px}
+.timer span{position:absolute}
+/* syllabus page */
+.page{position:absolute;left:70px;top:655px;width:940px;background:#fff;border-radius:30px;box-shadow:0 40px 90px rgba(37,77,59,.18);padding:22px 34px 22px}
+.ph{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--ink);padding-bottom:8px;margin-bottom:4px}
+.ph b{font-size:30px;letter-spacing:.5px}.ph i{font-style:normal;font-size:22px;font-weight:700;color:var(--rose);background:var(--blush);border-radius:8px;padding:3px 10px}
+.th,.row{display:grid;grid-template-columns:90px 1fr 150px 90px;gap:10px;font-size:22px;padding:4px 6px;line-height:1.25;border-bottom:1.5px solid #EEF1EA;align-items:center}
+.th{font-size:19px;font-weight:700;color:var(--sec);letter-spacing:1px}
+.row{font-weight:500;color:#33463B;border-radius:8px}
+.row span:last-child{text-align:right;font-weight:600}
+.row span:nth-child(3){color:var(--sec)}
+.sticky{position:absolute;width:200px;height:170px;background:#F7EFA8;padding:20px;font-size:28px;font-weight:600;line-height:1.15;box-shadow:0 12px 26px rgba(0,0,0,.12);z-index:3;color:#5a5320}
+.stain{position:absolute;width:190px;height:190px;border-radius:50%;border:12px solid rgba(135,82,103,.12);z-index:2}
+#dim{position:absolute;inset:0;background:rgba(32,58,45,.55);opacity:0;z-index:4;border-radius:30px}
+#hot{position:relative;z-index:5}
+/* reveal text */
+.rev{position:absolute;left:70px;right:70px;top:250px;z-index:8}
+.rev .h2{font-size:120px;line-height:1;letter-spacing:-5px;font-weight:700;color:var(--cream)}
+.tag{position:absolute;left:70px;right:70px;top:420px;z-index:8;font-size:52px;font-weight:700;color:var(--cream)}
+.tag b{background:var(--lime);color:var(--ink);border-radius:14px;padding:2px 14px}
+/* sort scene */
+.card{position:absolute;left:150px;width:780px;height:120px;background:#fff;border-radius:28px;display:flex;align-items:center;gap:26px;padding:0 34px;font-size:44px;font-weight:600;box-shadow:0 20px 44px rgba(0,0,0,.18)}
+.card em{font-style:normal;margin-left:auto;font-weight:700;border-radius:99px;padding:6px 22px;font-size:40px;background:var(--sage)}
+.card.top em{background:var(--lime)}
+.card small{font-size:26px;color:var(--sec);font-weight:600;background:var(--sage);border-radius:10px;padding:6px 12px}
+.logo{font-size:96px;font-weight:700;letter-spacing:-4px;color:var(--cream)}.logo i{font-style:normal;color:var(--lime)}
+.pill{display:inline-block;background:var(--lime);color:var(--ink);font-size:40px;font-weight:700;border-radius:999px;padding:18px 36px;margin-left:24px;vertical-align:middle}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:61}
+#wipe{position:absolute;inset:0;background:var(--ink);opacity:0;z-index:60}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-duration="10.8">
+
+ <!-- 1+2 CHALLENGE + REVEAL: one living page, 0 to 7.2 -->
+ <section id="s1" class="clip" data-start="0" data-duration="7.2" data-track-index="1">
+  <div class="bgc" id="bg1" style="background:var(--cream)"></div><div class="dots" id="d1"></div>
+  <div class="full" id="cam1"><div class="full" id="pump1">
+   <div class="page" id="page">
+    <div class="ph"><b>COURSE OUTLINE · FALL</b><i>sample</i></div>
+    <div class="th"><span>WEEK</span><span>WHAT</span><span>DUE</span><span>WEIGHT</span></div>
+    <div id="rows"></div>
+    <div id="dim"></div>
+   </div>
+   <div class="sticky" id="st1" style="left:800px;top:1480px">don't forget the lab!!</div>
+   <div class="stain" style="left:30px;top:1500px"></div>
+  </div></div>
+  <div class="head" id="head"><div class="h1"><span class="w" id="h1a">Find</span> <span class="w" id="h1b">the</span><br><span class="hl" id="h1c">30%.</span></div><div class="sub" id="sub">3 seconds. Go.</div></div>
+  <div class="timer" id="timer"><svg width="218" height="218" viewBox="0 0 218 218"><circle cx="109" cy="109" r="100" fill="none" stroke="rgba(217,248,141,.25)" stroke-width="10"/><circle id="ring" cx="109" cy="109" r="100" fill="none" stroke="#D9F88D" stroke-width="10" stroke-linecap="round" stroke-dasharray="628.3" stroke-dashoffset="0" transform="rotate(-90 109 109)"/></svg><span id="tn">3</span></div>
+  <div class="rev" id="rev"><div class="h2"><span class="w" id="r1">Found</span> <span class="w" id="r2">it?</span></div></div>
+  <div class="tag" id="tag">Week 13. Row 18. <b>30%.</b></div>
+ </section>
+
+ <!-- 3 SATISFYING SORT -->
+ <section id="s3" class="clip" data-start="7.2" data-duration="2.4" data-track-index="1">
+  <div class="bgc" style="background:var(--brand)"></div>
+  <div class="dots" id="d3" style="background-image:radial-gradient(circle,rgba(217,248,141,.14) 3px,transparent 3.5px)"></div>
+  <div class="full" id="c3">
+   <div style="position:absolute;left:70px;right:70px;top:270px;font-size:96px;line-height:1.02;letter-spacing:-4px;font-weight:700;color:var(--cream)"><span class="w" id="o1">Or</span> <span class="w" id="o2">let</span> <span class="w" id="o3">GRIND.</span><br><span class="w" id="o4" style="color:var(--lime)">sort</span> <span class="w" id="o5" style="color:var(--lime)">it.</span></div>
+   <div class="card top" id="k1" style="top:620px"><small>NOV 27</small>Final paper<em>30%</em></div>
+   <div class="card" id="k2" style="top:760px"><small>NOV 19</small>Midterm 2<em>20%</em></div>
+   <div class="card" id="k3" style="top:900px"><small>NOV 12</small>Lab report<em>13%</em></div>
+   <div class="card" id="k4" style="top:1040px"><small>NOV 6</small>Problem set<em>5%</em></div>
+   <div class="card" id="k5" style="top:1180px"><small>NOV 4</small>Quiz 6<em>3%</em></div>
+   <div style="position:absolute;left:70px;right:70px;top:1360px;display:flex;align-items:center;justify-content:center" id="brand"><span class="logo">GRIND<i>.</i></span><span class="pill">Free · link in bio</span></div>
+  </div>
+ </section>
+
+ <!-- 4 LOOP BACK: the challenge frame returns -->
+ <section id="s4" class="clip" data-start="9.6" data-duration="1.2" data-track-index="1">
+  <div class="bgc" style="background:var(--cream)"></div><div class="dots"></div>
+  <div class="head"><div class="h1"><span class="w" id="l1">Find</span> <span class="w" id="l2">the</span><br><span class="hl" id="l3">30%.</span></div><div class="sub" id="l4">Try again. 3 seconds.</div></div>
+ </section>
+
+ <div id="wipe"></div><div id="flash"></div>
+</div>
+<script>
+// syllabus rows (sample data, deterministic). Only ONE row is 30%; decoys 3%, 13%, 20%, 3.0.
+const R = [
+ ["1","Intro + syllabus","Sep 4","0%"],["1","Reading: ch. 1","Sep 6","2%"],["2","Quiz 1","Sep 11","3%"],["2","Lab 1: setup","Sep 13","5%"],
+ ["3","Problem set 1","Sep 20","5%"],["4","Quiz 2","Sep 25","3%"],["5","Lab 2 report","Oct 2","13%"],
+ ["6","Quiz 3","Oct 9","3%"],["7","Midterm 1","Oct 16","20%"],["8","Problem set 2","Oct 23","5%"],
+ ["9","Quiz 4","Oct 30","3%"],["9","Lab 3 check-in","Nov 1","3%"],["10","Quiz 5","Nov 4","3%"],["10","Problem set 3","Nov 6","5%"],
+ ["11","Lab 4 report","Nov 12","13%"],["12","Midterm 2","Nov 19","20%"],["12","Quiz 6","Nov 21","3%"],["13","Final paper","Nov 27","30%"],
+ ["13","Reading: ch. 9","Nov 28","2%"],["14","Participation","Dec 4","3%"]];
+document.getElementById("rows").innerHTML = R.map((r, i) => `<div class="row" ${r[3] === "30%" ? 'id="hot"' : ""}><span>W${r[0]}</span><span>${r[1]}</span><span>${r[2]}</span><span>${r[3]}</span></div>`).join("");
+
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const B = 0.6, SL = "back.out(2.2)", D = 10.8;
+const pump = (el, s, e, amt) => { for (let t = s; t < e - 0.05; t += B) {
+  tl.fromTo(el, { scale: 1 }, { scale: amt, duration: 0.07, ease: "power2.out", immediateRender: false }, t);
+  tl.to(el, { scale: 1, duration: B - 0.09, ease: "power2.in" }, t + 0.07); } };
+const flash = (t) => { tl.set("#flash", { opacity: 1 }, t); tl.to("#flash", { opacity: 0, duration: 0.25, ease: "power2.out" }, t); };
+const slamY = (s, t, f) => tl.fromTo(s, { y: f || 200, opacity: 0, scale: 1.3 }, { y: 0, opacity: 1, scale: 1, duration: 0.2, ease: SL, immediateRender: true }, t);
+const stamp = (s, t, r) => tl.fromTo(s, { scale: 3, opacity: 0, rotation: r || 0 }, { scale: 1, opacity: 1, rotation: (r || 0) / 3, duration: 0.18, ease: "power4.in", immediateRender: true }, t);
+const shake = (s, t) => tl.to(s, { keyframes: { x: [0, -24, 20, -12, 8, 0], y: [0, 10, -8, 6, -3, 0] }, duration: 0.3, ease: "none" }, t);
+
+// 0 to 1.2: hook, motion from frame 0
+tl.fromTo("#page", { y: 900, rotation: 4 }, { y: 0, rotation: 0, duration: 0.45, ease: SL, immediateRender: true }, 0);
+slamY("#h1a", 0.0); slamY("#h1b", 0.15); stamp("#h1c", 0.3, -6);
+tl.fromTo("#sub", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.2, immediateRender: true }, 0.6);
+tl.fromTo("#timer", { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: 0.3, ease: SL, immediateRender: true }, 0.6);
+// 1.2 to 4.8: timer 3,2,1 (two beats each), ring drains, page pans slowly so the eye has to scan
+const tn = document.getElementById("tn");
+const drv = { v: 0 };
+tl.fromTo(drv, { v: 0 }, { v: 1, duration: D, ease: "none", immediateRender: false, onUpdate: () => {
+  const t = tl.time(); tn.textContent = t < 2.4 ? "3" : t < 3.6 ? "2" : t < 4.8 ? "1" : "0"; } }, 0);
+tl.fromTo("#ring", { attr: { "stroke-dashoffset": 0 } }, { attr: { "stroke-dashoffset": 628.3 }, duration: 3.6, ease: "none", immediateRender: true }, 1.2);
+[1.2, 2.4, 3.6].forEach((t) => tl.fromTo("#tn", { scale: 1.6 }, { scale: 1, duration: 0.25, ease: "power3.out", immediateRender: false }, t));
+tl.set("#cam1", { transformOrigin: "50% 0%" }, 0);
+tl.fromTo("#cam1", { scale: 1, y: 0, x: 0 }, { scale: 1.05, y: 0, x: -10, duration: 3.6, ease: "sine.inOut", immediateRender: true }, 1.2);
+tl.fromTo("#d1", { x: 0, y: 0 }, { x: -60, y: -90, duration: 7.2, ease: "none" }, 0);
+tl.fromTo("#st1", { rotation: 6, y: 0 }, { rotation: -2, y: -30, duration: 4.8, ease: "sine.inOut", immediateRender: true }, 0);
+tl.to("#timer", { backgroundColor: "#875267", duration: 0.2 }, 3.6);
+shake("#timer", 3.6); shake("#timer", 4.2);
+pump("#pump1", 1.2, 4.8, 1.015);
+// 4.8: TIME. Flash, everything dims except the 30% row, lens over it
+flash(4.8); shake("#cam1", 4.82);
+tl.to("#cam1", { scale: 1, y: 0, x: 0, duration: 0.3, ease: "power3.out" }, 4.8);
+tl.to(["#head", "#timer"], { opacity: 0, duration: 0.15 }, 4.8);
+tl.to("#bg1", { backgroundColor: "#203A2D", duration: 0.2 }, 4.8);
+tl.fromTo("#dim", { opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: true }, 4.85);
+tl.fromTo("#hot", { backgroundColor: "rgba(217,248,141,0)" }, { backgroundColor: "rgba(217,248,141,1)", duration: 0.2, immediateRender: true }, 5.1);
+tl.fromTo("#hot", { scale: 1 }, { scale: 1.12, duration: 0.14, yoyo: true, repeat: 1, immediateRender: false }, 5.4);
+slamY("#r1", 4.85); stamp("#r2", 5.1, -6);
+tl.fromTo("#tag", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.22, ease: SL, immediateRender: true }, 5.7);
+tl.fromTo("#hot", { boxShadow: "0 0 0 0px rgba(217,248,141,0)" }, { boxShadow: "0 0 0 10px rgba(217,248,141,.45)", duration: 0.2, immediateRender: true }, 5.3);
+
+// 7.2 SORT: wipe, cards fly in scattered then snap into a sorted stack
+tl.fromTo("#wipe", { yPercent: 100, opacity: 1 }, { yPercent: 0, opacity: 1, duration: 0.15, ease: "power3.in", immediateRender: false }, 7.05);
+tl.to("#wipe", { yPercent: -100, duration: 0.18, ease: "power3.out" }, 7.2); tl.set("#wipe", { opacity: 0 }, 7.39);
+tl.fromTo("#d3", { y: 0 }, { y: -80, duration: 2.4, ease: "none" }, 7.2);
+const scat = [[-500, 600, -24], [520, 300, 18], [-420, -380, 14], [480, -520, -20], [-60, 700, 30]];
+["#k5", "#k4", "#k3", "#k2", "#k1"].forEach((s, i) => {
+  const [x, y, r] = scat[i];
+  tl.fromTo(s, { x, y, rotation: r, opacity: 0, scale: 0.8 }, { opacity: 1, duration: 0.1, immediateRender: true }, 7.25 + i * 0.1);
+  tl.to(s, { x: 0, y: 0, rotation: 0, scale: 1, duration: 0.32, ease: "back.out(1.6)" }, 7.6 + i * 0.12); });
+slamY("#o1", 7.22); slamY("#o2", 7.37); slamY("#o3", 7.52); stamp("#o4", 7.8, -4); stamp("#o5", 8.0, -4);
+tl.fromTo("#k1", { scale: 1 }, { scale: 1.07, duration: 0.12, yoyo: true, repeat: 1, immediateRender: false }, 8.4);
+tl.fromTo("#brand", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, ease: SL, immediateRender: true }, 8.6);
+tl.fromTo("#c3", { scale: 1.04 }, { scale: 1, duration: 2.4, ease: "power1.out", immediateRender: true }, 7.2);
+
+// 9.6 LOOP BACK: the challenge returns
+flash(9.6);
+slamY("#l1", 9.6); slamY("#l2", 9.72); stamp("#l3", 9.84, -6);
+tl.fromTo("#l4", { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: true }, 10.1);
+
+GX.attach(tl, D);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

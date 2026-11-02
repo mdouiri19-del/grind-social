@@ -96,3 +96,9 @@ Data: GRIND stats sheet read via Drive. The connector returns only part of the 1
 - Ranking stands from the 10-26 exports: habit-callout hooks ("Nobody...", "X is a trap", "Your X isn't...") lead; product-led hooks trail.
 - Steering for the week of 11-01: keep about 60% habit-callout hooks with a strong first word, product only in the last beats; keep about 40% experiments (one-word or A/B caption questions, plan-style payoffs from Study Studio).
 - Check the Make.com stats collection: the sheet seems to get only a weekly Saturday 23:00 snapshot, and posts from 10-26 onward are not visible yet.
+
+## 2026-11-02: Owner feedback + reset (standing)
+- Owner: reels stuck around 40 views and declining; the feed looks like the same reel every day. Old skeleton (LCD screen push hook, phone shoulder zoom, number payoff, green end card) is retired as a default.
+- New series system in STRATEGY section 15 (pause challenge, POV loop, Grindy unhinged, satisfying sort), 7 to 12 s, loopable, product soft, 0 to 2 hashtags.
+- Owner chose to keep everything animated (no filmed footage).
+- Next weekly check: compare views and replays per series; double down on the best series, drop the worst after 2 weeks.
