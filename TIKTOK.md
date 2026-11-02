@@ -1,5 +1,21 @@
 # TikTok daily pack (for the scheduled "GRIND TikTok daily" agent)
 
+## NEW CREATIVE SYSTEM (owner decision 2026-11-02, OVERRIDES sections 1 to 3 below where they conflict)
+Why: the owner found the content repetitive and ad-like (Instagram reels fell to about 40 views). TikTok week 1 already showed product-led posts were the bottom three and photo posts beat videos. From DAY 2026-11-02 every post must feel like something a student would post: a meme, a relatable slideshow, honest advice. Never a brand ad: no UI cards, dashboards or tables as the main visual, no feature talk except one small line on the last slide. Same brand rules (STRATEGY section 0: Inter only, palette, real features only, no fake stats, no real people).
+
+The 3 daily posts are now:
+- SLOT A (12:30 weekdays / 11:00 weekends): GRINDY MEME SLIDESHOW, 6 slides, written to `tiktok/$DAY/photo_a_01..06.jpg`. Grindy the mascot (STRATEGY section 13) is the star. Formats, rotate, never the same two days running:
+  1. "Tag yourself: students during <season moment>" (one student type per slide: the coffee one, the 11:58 PM one, the "it's not on the exam" believer, the color-coded planner who never opens it, the one who studies by rereading). Each slide = a Grindy pose + a short label.
+  2. "The 5 stages of <a student moment>" (a 30% paper, a group project, finals week, getting a midterm back).
+  3. "Things that hit different in <month>" / "Unspoken rules of <exam season>".
+  4. "Me vs. <the syllabus / the 8 AM / the group chat>" two-panel meme slides.
+  5. "POV:" slides, one relatable line per slide.
+  Layout of every slide (1080x1350): a white meme caption band on top (about y 0 to 330, Inter 700, 64 to 84 px, lowercase meme voice allowed), under it a Grindy still on a bright stage (rotate lime #D9F88D, blush #F2DEE5, sage #E8EFDF, cream, brand green with a cream caption). Slide 1 is the hook (title + Grindy reacting). Slide 6: the comment question ("which one are you? comment the number") + "follow for part 2", plus at most a tiny "GRIND." corner tag. No product sentence in slot A at all.
+  Grindy stills: write a shots JSON and run `python3 tiktok/tools/grindy_still.py work/shots.json work/grindy` (needs `(cd assets/grindy && npm i three@0.169.0 --silent)`), then place the PNGs in the slide HTML and render with `python3 tiktok/tools/render_photos.py work/photos_a/slides.html work/out_a` and rename photo_b_0N.jpg to `tiktok/$DAY/photo_a_0N.jpg`. Vary pose, expression, props (coffee, glasses, cap), camera distance and stage colour on EVERY slide; no two slides with the same pose.
+- SLOT B (16:30 weekdays / 15:30 weekends): the ADVICE LIST SERIES stays (week 1 winner, section 2 and 4 still apply: list formats, series pill, numbered points, honest advice) but RESTYLED to look native, not branded: a "notes app" page, a sticky-note wall, a torn notebook page or a phone lock screen look, with Grindy reacting in a small corner on slides 1 and 6. No UI cards, deadline rows or weight pills as the visual. The only product line stays on slide 6, short and soft.
+- SLOT C (20:30 weekdays / 20:00 weekends): a TikTok-only SHORT VIDEO in the Instagram SERIES SYSTEM (STRATEGY section 15: Grindy unhinged, POV loop or satisfying sort), 7 to 12 s, hook readable on frame 0, loops, entertainment first. Use a DIFFERENT series than DAY's Instagram reel (meta.json "series") and a different idea. Grindy videos: RUNBOOK 2b engine (tools/render_threejs_reel.py). The old "answer by 3 s grade math video" rule (section 3) is retired; grade math can still be the topic of a POV or meme.
+- Captions: section 5 unchanged (hook first line, no product, one-word question, 4 hashtags, pin comment). Slot A first line = the meme title ("tag yourself: students in finals season").
+
 The owner posts 3 TikToks per day MANUALLY from TikTok Studio and schedules all 3 from this pack. Nothing here goes through Make.com. This pack never changes the Instagram pipeline: do not edit RUNBOOK.md, log.md, insights.md, or anything under `queue/`. Write only under `tiktok/` (and `work/`, never committed).
 
 Brand, hook and intrigue rules come from STRATEGY.md (read it). TikTok captions follow section 5 below, NOT STRATEGY section 7. Account: personal TikTok account, no clickable link, so captions say "link in bio" at most and never contain a URL.
