@@ -18,7 +18,7 @@
 | 2026-10-30 | grade math | Late isn't free. | - | - |
 | 2026-10-31 | semester moments | Tonight isn't the scary part. | - | - |
 | 2026-11-01 | study systems | Nobody plans past Wednesday. | - | - |
-| 2026-11-02 | deadline reality (series: pause challenge) | Find the 30%. | - | - |
+| 2026-11-02 | deadline reality (series: grindy unhinged) | prof: "this part won't be on the exam" | - | - |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
@@ -39,3 +39,4 @@ Styles used (reel / carousel): 2026-11-01 plan vs reality + gx (screen push 4 wo
 Styles used (reel / carousel): 2026-11-02 math reveal + gx (screen push 4 words on half beats, lime on ink, grade card with blurred final row, zoom transition on the grades phone, blush break "Want a 70? Work backwards.", plain payoff: 64% count-up on the final · SAMPLE, glass lens over the still-to-earn row) / - (carousel paused) (sign-up: Study Studio assignment plan) end card: Know the number. Then study. music: lofi/Ab/p5/83bpm/s20261102 (evening run, published the evening before; weekly weighted-average reel, last one 10-26; caption yes/no question)
 
 Styles used (reel / carousel): 2026-11-02 REPLACED the same evening at the owner's request (views down to about 40, feed too repetitive): series system starts (STRATEGY 15). Pause challenge: 3 s countdown over a dense sample syllabus, dim + lime reveal of the 30% row, satisfying sort into a GRIND. list, loop back to the challenge; 10.8 s, no GX, 1 hashtag, yes/no question + send ask. music: pop/Ab/p5/100bpm/s20261102. The 'Stop guessing your final.' reel was never posted.
+Styles used (reel / carousel): 2026-11-02 REPLACED AGAIN: owner judged the pause challenge boring, ugly, ad-like and not fun. Final Monday reel: grindy unhinged meme, 9.6 s (white meme band, chill with coffee, 'the exam:' paper slam, lime/blush strobe panic, silent deadpan, loop). music: pop/Ab/p5/100bpm/s20261102, drop at 3.6, break 6.0 to 8.4.

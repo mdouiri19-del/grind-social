@@ -156,13 +156,15 @@ Why: two weeks of the same reel skeleton (LCD hook, phone zoom, UI card, number,
 Every reel is now one of 4 SERIES, rotated by DAY's weekday (Toronto). Never the same series two days in a row.
 | Day | Series |
 |---|---|
-| Mon | Pause challenge |
+| Mon | Grindy unhinged |
 | Tue | POV loop |
-| Wed | Grindy unhinged |
-| Thu | Satisfying sort |
-| Fri | Pause challenge |
+| Wed | Satisfying sort |
+| Thu | Grindy unhinged |
+| Fri | POV loop |
 | Sat | Grindy unhinged |
-| Sun | POV loop |
+| Sun | Satisfying sort |
+
+OWNER FEEDBACK 2026-11-02 (standing): the first pause challenge reel ("Find the 30%", a beige table of small text) was judged boring, ugly, still an ad, and not fun. Pause challenge is DROPPED from the rotation. Anti-ad rules for every reel: no UI cards, tables or dashboards as the main visual; no brand-ad look; it should look like a meme or a piece of entertainment a student would post. Reference that replaced it: the Grindy meme reel of 2026-11-02 (white meme caption band on top, Grindy chilling with coffee, hard cut "the exam:" with an exam paper slam, lime/blush strobe panic, silent deadpan push-in, loop back). Bright stage colours (lime, blush) and big character moments over text.
 
 Rules for every series
 - Length 7 to 12 s (15 s max). Short reels get replayed; replays are the main signal.
@@ -175,7 +177,7 @@ Rules for every series
 - Caption: line 1 = the hook; 1 to 2 short lines; one easy question (yes/no, A/B, one word, a number); a send ask ("Send this to the friend who..."); "Free for students: grindstudent.com/welcome"; 0 to 2 hashtags only.
 - Log the series in meta.json ("series") and in the log row.
 
-1. PAUSE CHALLENGE (interactive, replays + comments). A dense, rich visual and a task: "Find the 30%. 3 seconds.", "Spot the two deadlines on the same day.", "Count the deadlines. Pause.", "Which matters more: A or B?". A countdown ring (3, 2, 1, two beats each), the page drifts so the eye must scan, then TIME: dim everything, the answer row glows lime, "Found it?" + where it was. Then a 2 s satisfying GRIND. sort, then loop back to the challenge frame ("Try again."). Reference: templates/pause-challenge/index.html (mechanics only; change the task, the visual and the answer every time).
+1. PAUSE CHALLENGE: DROPPED 2026-11-02 (owner: boring, ugly, ad-like). Kept only as notes. (interactive, replays + comments). A dense, rich visual and a task: "Find the 30%. 3 seconds.", "Spot the two deadlines on the same day.", "Count the deadlines. Pause.", "Which matters more: A or B?". A countdown ring (3, 2, 1, two beats each), the page drifts so the eye must scan, then TIME: dim everything, the answer row glows lime, "Found it?" + where it was. Then a 2 s satisfying GRIND. sort, then loop back to the challenge frame ("Try again."). Reference: templates/pause-challenge/index.html (mechanics only; change the task, the visual and the answer every time).
 2. POV LOOP (relatable, sends). One line on screen from frame 0: "POV: the prof says 'it's in the syllabus'", "Tell me you're in week 10 without telling me", "Things that hit different in November". Under it a living animated scene that SHOWS the feeling (a notes app filling up, a phone lock screen stacking "due 11:59 PM" banners, a calendar where every day turns red, a to-do list that keeps growing, a laptop with 34 tabs). One twist beat near the end. 6 to 9 s. Product only in the bio, or one tiny "GRIND." corner tag.
 3. GRINDY UNHINGED (personality, like a brand mascot account). Grindy (section 13) reacts to a student moment, deadpan, meme captions at the top: "Grindy when the prof says 'this won't be on the exam'", "Grindy watching you open the syllabus in week 10", "Grindy at 11:58 PM". Pose changes, camera punches, antenna flashes on the punchline beat. 7 to 10 s. Grindy never sells; at most a tiny GRIND. corner. Engine: RUNBOOK 2b.
 4. SATISFYING SORT (calm, ASMR-like, replays). Chaos to order with almost no text: scattered syllabus pages, sticky notes and notification banners fly in, then snap one by one into one clean list or calendar, sorted by date or weight, with a final click into place. One line at the top ("5 syllabi. Watch."). 8 to 12 s, slow and smooth, loop to the chaos.
