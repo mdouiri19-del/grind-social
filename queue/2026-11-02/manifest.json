@@ -1,23 +1,23 @@
 {
  "date": "2026-11-02",
- "reel_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@28bb3121715b00d035363839e0cd6523290338cb/queue/2026-11-02/reel.mp4",
- "reel_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/28bb3121715b00d035363839e0cd6523290338cb/queue/2026-11-02/reel.mp4",
- "reel_caption": "Find the 30% in 3 seconds. Go. ⏱️\n\nMost syllabi bury the one assignment that decides your grade.\n\nDid you find it in time? Yes or no 👇\nSend this to the friend who never reads the syllabus.\n\nFree for students: grindstudent.com/welcome\n#studytips",
+ "reel_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b192a81e77e4da3eb901892db6c759e2e70b7efa/queue/2026-11-02/reel.mp4",
+ "reel_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b192a81e77e4da3eb901892db6c759e2e70b7efa/queue/2026-11-02/reel.mp4",
+ "reel_caption": "\"this won't be on the exam\" 🙃\n\nGrindy has trust issues now.\nHas a prof ever done this to you? Yes or no 👇\nSend this to your study group.\n\nFree for students: grindstudent.com/welcome\n#studentlife",
  "pillars": {
   "reel": "deadline reality"
  },
  "hooks": {
-  "reel": "Find the 30%."
+  "reel": "prof: \"this part won't be on the exam\""
  },
- "series": "pause challenge",
+ "series": "grindy unhinged",
  "styles": {
-  "reel": "pause challenge (new series system 2026-11-02): 3 s countdown over a dense sample syllabus, dim + lime row reveal, satisfying sort into a GRIND. list, loop back to the challenge; 10.8 s"
+  "reel": "grindy unhinged meme (white meme caption band, Grindy chilling with coffee, hard cut 'the exam:' with exam paper slam, lime/blush strobe panic, silent deadpan push-in, loop back); 9.6 s; replaced the pause challenge after owner feedback"
  },
- "cover_ms": 1000,
+ "cover_ms": 300,
  "music": "pop/Ab/p5/100bpm/s20261102",
- "cover_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@28bb3121715b00d035363839e0cd6523290338cb/queue/2026-11-02/cover.jpg",
- "cover_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/28bb3121715b00d035363839e0cd6523290338cb/queue/2026-11-02/cover.jpg",
- "cta_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@28bb3121715b00d035363839e0cd6523290338cb/queue/2026-11-02/cta.jpg",
- "cta_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/28bb3121715b00d035363839e0cd6523290338cb/queue/2026-11-02/cta.jpg",
+ "cover_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b192a81e77e4da3eb901892db6c759e2e70b7efa/queue/2026-11-02/cover.jpg",
+ "cover_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b192a81e77e4da3eb901892db6c759e2e70b7efa/queue/2026-11-02/cover.jpg",
+ "cta_url": "https://cdn.jsdelivr.net/gh/mdouiri19-del/grind-social@b192a81e77e4da3eb901892db6c759e2e70b7efa/queue/2026-11-02/cta.jpg",
+ "cta_url_raw": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/b192a81e77e4da3eb901892db6c759e2e70b7efa/queue/2026-11-02/cta.jpg",
  "cta_caption": "Big paper? Get it in dated steps. 📝\nStudy Studio turns your assignment into a plan: topic, outline, draft, done.\nFree for students, link in bio.\nSign up and plan your next paper tonight.\n\n#studytips #universitylife #studentlife #essaywriting"
 }
