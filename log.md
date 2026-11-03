@@ -19,6 +19,7 @@
 | 2026-10-31 | semester moments | Tonight isn't the scary part. | - | - |
 | 2026-11-01 | study systems | Nobody plans past Wednesday. | - | - |
 | 2026-11-02 | deadline reality (series: grindy unhinged) | prof: "this part won't be on the exam" | - | - |
+| 2026-11-03 | deadline reality (series: pov loop) | POV: you cross one thing off your to-do list | - | - | LI: "It was in the syllabus." |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
@@ -40,3 +41,4 @@ Styles used (reel / carousel): 2026-11-02 math reveal + gx (screen push 4 words 
 
 Styles used (reel / carousel): 2026-11-02 REPLACED the same evening at the owner's request (views down to about 40, feed too repetitive): series system starts (STRATEGY 15). Pause challenge: 3 s countdown over a dense sample syllabus, dim + lime reveal of the 30% row, satisfying sort into a GRIND. list, loop back to the challenge; 10.8 s, no GX, 1 hashtag, yes/no question + send ask. music: pop/Ab/p5/100bpm/s20261102. The 'Stop guessing your final.' reel was never posted.
 Styles used (reel / carousel): 2026-11-02 REPLACED AGAIN: owner judged the pause challenge boring, ugly, ad-like and not fun. Final Monday reel: grindy unhinged meme, 9.6 s (white meme band, chill with coffee, 'the exam:' paper slam, lime/blush strobe panic, silent deadpan, loop). music: pop/Ab/p5/100bpm/s20261102, drop at 3.6, break 6.0 to 8.4.
+Styles used (reel / carousel): 2026-11-03 pov loop: white meme band, notes-app to-do list on blush, each check-off spawns more items (counter 1 to 23), lime/blush strobe flood, ink dim twist 'midterm 2 tomorrow??' + 'it was in the syllabus.', tiny GRIND. syllabus tag, loop back to one item; 8.7 s, no GX, 1 hashtag, number question + send ask / - (carousel paused) (sign-up: Study Studio mock exam) music: deephouse/A/p1/124bpm/s20261103 (evening run, published the evening before; LI why we build: to-do list starts from memory, own re-run of detect.py formulas 83.5 PASS)
