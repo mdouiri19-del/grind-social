@@ -1,3 +1,14 @@
+# GLASS STYLE (owner decision 2026-11-04, overrides the visual rules below)
+The owner approved a new look for every TikTok: the GRIND. liquid glass style. Content rules stay (slot A Grindy memes, slot B advice series, slot C video, captions, no ads feel); only the visual changes.
+- Background: deep green radial (#14513a top to #0b2a1f), 3 big blurred blobs (#2fbf71, #D9F88D at low opacity, #0e6b4a) placed differently on every slide, a faint 90 px grid. Never the old flat lime/blush/sage/cream stages.
+- Text sits in frosted glass panels (white 16% to 4% gradient, backdrop blur 34 px, 2 px white 22% border, inner top highlight, soft shadow, diagonal sheen). Cream text #F6F7F1, highlight words in lime #D9F88D with a soft glow (no highlighter boxes). Inter only, 800 for headlines, body 44 px min.
+- Pills: lime pill with dark text for the series pill and the follow ask, frosted pill for secondary labels. Top row: pill left, n/6 right. Bottom row: "GRIND." (lime dot) left, "Swipe →" right on slides 1 to 5.
+- Grindy: rendered with a TRANSPARENT background via `python3 tiktok/tools/grindy_still_t.py shots.json work/grindy` (uses assets/grindy/sheet_t.html, needs `(cd assets/grindy && npm i three@0.169.0 --silent)`), placed big (about 1170 px wide on meme slides) over a lime radial glow and a glass floor disc. Vary pose, expression and props on every slide.
+- Slot B: big number in a lime-bordered glass square, "SIGN" (or the list word) frosted pill, 100 px headline, the advice in a glass panel.
+- Slot C video: same background, glass panels and lime highlights for any text card or caption.
+- References: tiktok/templates/glass-a-meme.html, glass-b-advice.html (copy them, change words and blob/pose positions; they load Grindy PNGs from work/grindy), glass-shots-example.json, glass-ref.jpg. First pack in this style: tiktok/2026-11-04/glass/.
+- Product line (slot B slide 6): never say "Free" (GRIND. has a paywall now); name one real feature + "Link in bio."
+
 # TikTok daily pack (for the scheduled "GRIND TikTok daily" agent)
 
 ## NEW CREATIVE SYSTEM (owner decision 2026-11-02, OVERRIDES sections 1 to 3 below where they conflict)

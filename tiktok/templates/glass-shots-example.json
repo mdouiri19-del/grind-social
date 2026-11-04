@@ -1,0 +1,8 @@
+[{"name":"a1","pose":{"expression":"shocked","armL":2.6,"armR":2.6,"glow":2.4}},
+ {"name":"a2","pose":{"expression":"sad","armL":-0.2,"armR":-0.2,"tilt":0.08,"glow":0.8}},
+ {"name":"a3","pose":{"expression":"sleepy","armL":0.3,"armR":1.2,"props":{"coffee":true},"tilt":-0.12,"glow":0.6}},
+ {"name":"a4","pose":{"expression":"alert","armL":1.4,"armR":1.4,"look":[0,0.2],"glow":2.0}},
+ {"name":"a5","pose":{"expression":"proud","armL":0.6,"armR":0.6,"props":{"cap":true},"glow":1.8}},
+ {"name":"a6","pose":{"expression":"happy","armL":0.2,"armR":2.4,"props":{"glasses":true},"glow":1.6}},
+ {"name":"b1","pose":{"expression":"focused","armL":0.4,"armR":0.9,"props":{"glasses":true},"glow":1.2}},
+ {"name":"b6","pose":{"expression":"happy","armL":2.4,"armR":2.4,"glow":2.2}}]
