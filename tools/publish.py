@@ -1,7 +1,9 @@
 """Push one day's media to GitHub and write the manifest Make.com reads.
 
 Usage: python3 tools/publish.py YYYY-MM-DD
-Expects in queue/YYYY-MM-DD/: reel.mp4, reel_caption.txt, meta.json (pillars, hooks).
+Expects in queue/YYYY-MM-DD/: meta.json, and linkedin.txt + linkedin.jpg (LinkedIn, posted by Make).
+UPDATE 2026-11-04 (owner decision): Instagram is posted MANUALLY by the owner, Make only posts LinkedIn.
+reel.mp4 + reel_caption.txt are now OPTIONAL and normally absent, so no reel_url is written and Make posts no reel.
 Carousel (post_01.jpg..post_06.jpg + post_caption.txt) is optional: PAUSED since 2026-10-28, owner decision.
 If any carousel file is present, all 7 must be.
 Step 1 commits + pushes media, step 2 writes manifest.json with URLs pinned to that commit, commits + pushes.
@@ -18,7 +20,7 @@ def main(day):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(root)
     d = f"queue/{day}"
-    need = ["reel.mp4", "reel_caption.txt"]
+    need = ["reel_caption.txt"] if os.path.exists(f"{d}/reel.mp4") else []
     car = ["post_caption.txt"] + [f"post_0{i}.jpg" for i in range(1, 7)]
     has_car = any(os.path.exists(f"{d}/{f}") for f in car)
     if has_car:
@@ -26,7 +28,7 @@ def main(day):
     missing = [f for f in need if not os.path.exists(f"{d}/{f}")]
     if missing:
         sys.exit(f"missing: {missing}")
-    if os.path.getsize(f"{d}/reel.mp4") > 19_000_000:
+    if os.path.exists(f"{d}/reel.mp4") and os.path.getsize(f"{d}/reel.mp4") > 19_000_000:
         sys.exit("reel.mp4 over 19 MB, re-encode smaller")
     sh("git", "config", "user.name", "GRIND.")
     sh("git", "config", "user.email", "bot@grindstudent.com")
@@ -39,14 +41,11 @@ def main(day):
     raw = f"https://raw.githubusercontent.com/{REPO}/{sha}/{d}/"
     cdn = f"https://cdn.jsdelivr.net/gh/{REPO}@{sha}/{d}/"
     meta = json.load(open(f"{d}/meta.json")) if os.path.exists(f"{d}/meta.json") else {}
-    m = {
-        "date": day,
-        "reel_url": cdn + "reel.mp4",
-        "reel_url_raw": raw + "reel.mp4",
-        "reel_caption": open(f"{d}/reel_caption.txt").read().strip(),
-        **meta,
-    }
-    m.setdefault("cover_ms", 1900)
+    m = {"date": day, **meta}
+    if os.path.exists(f"{d}/reel.mp4"):
+        m.update(reel_url=cdn + "reel.mp4", reel_url_raw=raw + "reel.mp4",
+                 reel_caption=open(f"{d}/reel_caption.txt").read().strip())
+        m.setdefault("cover_ms", 1900)
     if os.path.exists(f"{d}/cover.jpg"):
         m["cover_url"] = cdn + "cover.jpg"
         m["cover_url_raw"] = raw + "cover.jpg"
