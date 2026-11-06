@@ -1,0 +1,53 @@
+TikTok + Instagram pack for Friday 2026-11-06 (Toronto)
+Settings for every TikTok: Everyone, comments on, Disclose post content > Your brand, AI-generated off.
+After posting: pin the comment below on each post, and reply to the first comments with a video reply when one asks a question.
+No music in any file (owner decision 2026-11-04): every video has a silent track. Add a trending sound yourself on every post.
+
+12:30 TIKTOK A: PHOTO POST, MEME SLIDESHOW (POV slides, Grindy: yes)
+Files: tiktok/2026-11-06/photo_a_01.jpg to photo_a_06.jpg (in order)
+Title: POV: you planned 4 study hours on friday
+Caption:
+POV: you planned 4 study hours on friday 😭
+4 PM plan, 11:58 PM panic. Every single week.
+Which slide are you right now? Comment 2, 3, 4 or 5.
+#studytok #studentlife #universitylife #collegetips
+Pin comment: Comment your slide number 👇
+Sound: add a trending sound
+Writing: score_script 95/100, 0 hard fails (soft length only, short meme exception). Hook: "POV: you planned 4 study hours on friday". Rejected: "POV: you said you'd study on friday" (no number, scored 85), "friday me at 4 PM vs 11:58 PM" (me vs. format was yesterday).
+
+16:30 TIKTOK B: PHOTO POST, SERIES (Study smarter 4/7, the plan day by day, Grindy: no, glass day chips)
+Files: tiktok/2026-11-06/photo_b_01.jpg to photo_b_06.jpg (in order)
+Title: Study smarter 4/7: a 4-step weekend study plan you'll keep
+Caption:
+Study smarter 4/7: how to make a weekend study plan
+Make the list on Friday, do the hard task Saturday morning, take the night off, quiz on Sunday.
+Which step do you always skip? Comment 1, 2, 3 or 4.
+#studytok #studytips #studyplan #universitylife
+Pin comment: Comment the step you always skip 👇
+Sound: add a trending sound
+Writing: score_script 100/100, 0 hard fails. Hook: "A 4-step weekend study plan you'll keep." Rejected: "A weekend study plan you'll actually keep" (no number, 95), "Your weekend is where your week is won" (metaphor, no number).
+Product line (slide 6 only): GRIND. shows everything due in the next 14 days, straight from your syllabus. Link in bio.
+
+19:30 INSTAGRAM REEL (POV loop, Friday series, 9.0 s loop, Grindy: no, glass to-do card)
+Files: tiktok/2026-11-06/ig_reel.mp4, cover tiktok/2026-11-06/ig_cover.jpg
+Caption:
+POV: you finish 1 task on friday
+Check off one thing and 5 more show up. Send this to the friend whose list only grows.
+How many are left on yours? Comment the number.
+link in bio
+#studentlife
+Sound: add a trending sound
+Writing: score_script 95/100, 0 hard fails (soft length only, short meme exception). Hook: "POV: you finish 1 task on friday". Rejected: "POV: your friday to-do list" (no contrast), "tell me it's friday without telling me" (no number, vague).
+Product: bio only (tiny GRIND. corner tag).
+
+20:30 TIKTOK C: VIDEO (Satisfying sort, 10.2 s, sticky notes snap into one list by date, Grindy: no)
+File: tiktok/2026-11-06/tiktok_video.mp4 (cover at 1 s)
+Caption:
+6 deadlines, 1 list. watch the sort
+Write every deadline on one list, in date order, the day you get the syllabus.
+Comment how many deadlines you have next week.
+#studytok #studytips #deadlines #studentlife
+Pin comment: Drop your number below 👇
+Sound: add a trending sound
+Writing: score_script 95/100, 0 hard fails (soft length only, short meme exception). Hook: "6 deadlines, 1 list. watch." Rejected: "watch 6 sticky notes sort themselves" (no contrast), "my desk vs my to-do list" (unclear on mute).
+Product: last 2.2 s, soft line in the top panel: "or let GRIND. sort it from your syllabus. link in bio".
