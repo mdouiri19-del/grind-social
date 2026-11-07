@@ -1,0 +1,55 @@
+TikTok + Instagram pack for Saturday 2026-11-07 (Toronto)
+Settings for every TikTok: Everyone, comments on, Disclose post content > Your brand, AI-generated off.
+After posting: pin the comment below on each post, and reply to the first comments with a video reply when one asks a question.
+No music in any file (owner decision 2026-11-04): every video has a silent track. Add a trending sound yourself on every post.
+
+11:00 TIKTOK A: PHOTO POST, MEME SLIDESHOW (tag yourself, Grindy: no, glass objects: number cards, notes page, browser tabs, file stack, voice memo, empty note)
+Files: tiktok/2026-11-07/photo_a_01.jpg to photo_a_06.jpg (in order)
+Title: tag yourself: 5 ways students take notes
+Caption:
+tag yourself: 5 ways students take notes 📝
+The fix for all 5: close your notes and write down what you remember.
+Which one are you? Comment 1 to 5.
+#studytok #notetaking #studytips #universitylife
+Pin comment: Comment your number 👇
+Sound: add a trending sound
+Writing: score_script 95/100, 0 hard fails (soft length only, short meme exception). Hook: "tag yourself: 5 ways students take notes". Rejected: "tag yourself: how students take notes" (no number, soft fail), "5 types of note takers, which one are you?" (question hook, weaker on mute).
+
+15:30 TIKTOK B: PHOTO POST, SERIES (Study smarter 5/7, X things to do now, Grindy: yes, small on slides 1 and 6)
+Files: tiktok/2026-11-07/photo_b_01.jpg to photo_b_06.jpg (in order)
+Title: Study smarter 5/7: 5 weeks until finals? Do these 4 now.
+Caption:
+Study smarter 5/7: how to study for finals with 5 weeks left
+List every final, rank by weight, make one page per week, book a practice exam.
+Which step have you done already? Comment 1, 2, 3 or 4.
+#studytok #finals #studytips #examprep
+Pin comment: Comment the step you'll start tonight 👇
+Sound: add a trending sound
+Writing: score_script 100/100, 0 hard fails. Hook: "5 weeks until finals? Do these 4 now." Rejected: "Finals are closer than they look" (no number, vague), "4 things I'd do with 5 weeks left" (weaker contrast, slower to read).
+Product line (slide 6 only): GRIND. pulls every exam date and weight from your syllabus into one list. Link in bio.
+
+19:00 INSTAGRAM REEL (Grindy unhinged, Saturday series, 9.2 s loop, Grindy: yes)
+Files: tiktok/2026-11-07/ig_reel.mp4, cover tiktok/2026-11-07/ig_cover.jpg
+Story: Grindy with coffee at 2:58 PM, "i'll start at 3". 3:00 PM "okay, 4 is better". 4:00 PM "5 is a round number" (smug, glasses). Clock rolls to 9:47 PM, lime/blush strobe, Grindy panics. Deadpan push-in "fine. tomorrow at 3 then." Loops back to 2:58 PM.
+Caption:
+grindy on saturday: "i'll start at 3"
+3 turns into 4, and 4 turns into 9:47 PM. Send this to the friend who starts "at 3" every weekend.
+What time do you really start? Comment the time.
+link in bio
+#studentlife
+Sound: add a trending sound
+Writing: score_script 95/100, 0 hard fails (soft length only, short meme exception). Hook: "grindy on saturday: 'i'll start at 3'". Rejected: "grindy when he says 'just 5 more minutes'" (no clear payoff), "saturday study plan vs saturday" (plan vs reality, used often).
+Product: bio only (tiny GRIND. corner tag).
+
+20:00 TIKTOK C: VIDEO (POV loop, 9.6 s, glass lock screen, to-do list, syllabus, Grindy: no)
+File: tiktok/2026-11-07/tiktok_video.mp4 (cover at 1 s)
+Story: lock screen 9:02 PM, email "Quick reminder: Assignment 3 is due tomorrow at 9 AM." "you: there's an assignment 3??" Your to-do list: Assignment 1, 2, laundry checked, Assignment 3 "?". Sample syllabus, lime ring on "Assignment 3 · 10% · Nov 8": "it was in the syllabus since september". Loops to the lock screen.
+Caption:
+POV: the prof emails "quick reminder" at 9 PM 😭
+Put every syllabus date on one list in week 1, so a reminder is never news.
+Comment yes if this was you, no if you're lying.
+#studytok #studentlife #universitylife #deadlines
+Pin comment: Yes or no 👇
+Sound: add a trending sound
+Writing: score_script 95/100, 0 hard fails (soft length only, short meme exception). Hook: "POV: the prof emails 'quick reminder' at 9 PM". Rejected: "POV: you find out about assignment 3" (no tension on frame 0), "the prof's 'quick reminder' email" (no POV, flat).
+Product: none, tiny GRIND. corner tag only.
