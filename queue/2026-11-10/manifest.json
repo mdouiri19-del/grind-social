@@ -1,0 +1,20 @@
+{
+ "date": "2026-11-10",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "why we build: the quiet course (few deliverables, big weights) loses evenings to the loud one; GRIND. 14-day list with weights",
+ "hooks": {
+  "linkedin": "One course pings you every week. The other stays quiet until a 60% final."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (first pass 95, soft length, trimmed)",
+  "detect": "82.8 PASS (own re-run of detect.py formulas with slop.json, external script blocked)",
+  "hook": "One course pings you every week. The other stays quiet until a 60% final.",
+  "rejected_hooks": [
+   "Your loudest course gets your evenings. Your quietest one decides your term.",
+   "Some courses ask for nothing until they ask for everything."
+  ]
+ },
+ "linkedin_text": "One course pings you every week. The other stays quiet until a 60% final.\n\nMost weeks, the loud one wins your evenings.\n\nSay you're taking two courses this term. Course A has a 2% quiz every Friday and a lab report every other week and inbox reminders. Course B has a midterm worth 40% and a final worth 60%, and nothing else.\n\nFor six weeks, Course B asks for nothing, so it gets nothing. You care about it. There's just nothing on your list telling you it's time.\n\nThen the midterm is 9 days out, and you're opening the week 1 slides for the first time since September.\n\nThe Friday quizzes still count. But one 2% quiz and a 40% midterm shouldn't get the same evening.\n\nWe kept running into this while building GRIND. A list sorted by date alone rewards whatever course is loudest.\n\nSo GRIND. reads the weights from your syllabus and shows what's due in the next 14 days, with the weight next to each item. The 40% midterm appears two weeks out, right beside Friday's 2% quiz, and you can see which one deserves tonight.\n\nQuiet courses still need a plan. They just don't send reminders.\n\nStudents: which of your courses is the quiet one this term?\n\nGRIND. puts every course on one list. Link on our page.\n\n#Students #StudyTips #EdTech",
+ "linkedin_image_url": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/136f87f51f1e075281ff2b9e20e3ea8d865b3ec6/queue/2026-11-10/linkedin.jpg"
+}
