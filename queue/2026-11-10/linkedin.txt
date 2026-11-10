@@ -1,0 +1,23 @@
+One course pings you every week. The other stays quiet until a 60% final.
+
+Most weeks, the loud one wins your evenings.
+
+Say you're taking two courses this term. Course A has a 2% quiz every Friday and a lab report every other week and inbox reminders. Course B has a midterm worth 40% and a final worth 60%, and nothing else.
+
+For six weeks, Course B asks for nothing, so it gets nothing. You care about it. There's just nothing on your list telling you it's time.
+
+Then the midterm is 9 days out, and you're opening the week 1 slides for the first time since September.
+
+The Friday quizzes still count. But one 2% quiz and a 40% midterm shouldn't get the same evening.
+
+We kept running into this while building GRIND. A list sorted by date alone rewards whatever course is loudest.
+
+So GRIND. reads the weights from your syllabus and shows what's due in the next 14 days, with the weight next to each item. The 40% midterm appears two weeks out, right beside Friday's 2% quiz, and you can see which one deserves tonight.
+
+Quiet courses still need a plan. They just don't send reminders.
+
+Students: which of your courses is the quiet one this term?
+
+GRIND. puts every course on one list. Link on our page.
+
+#Students #StudyTips #EdTech
