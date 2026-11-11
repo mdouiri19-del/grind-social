@@ -23,6 +23,7 @@
 | 2026-11-04 | study systems (series: satisfying sort) | sorting november so i can finally sleep | - | - | LI: A 20% midterm and a 5% problem set, due the same week. Which one gets your evening? |
 | 2026-11-05 | - (LinkedIn only, Instagram manual) | - | - | - | LI: Your midterm doesn't cover all 12 weeks. Your practice quiz shouldn't either. |
 | 2026-11-10 | - (LinkedIn only, Instagram manual) | - | - | - | LI: One course pings you every week. The other stays quiet until a 60% final. |
+| 2026-11-11 | - (LinkedIn only, Instagram manual) | - | - | - | LI: Same 3 hours of studying. Spread over a week, they stick. Crammed into one night, they fade fast. |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
@@ -48,3 +49,5 @@ Styles used (reel / carousel): 2026-11-03 pov loop: white meme band, notes-app t
 Styles used (reel / carousel): 2026-11-04 satisfying sort: white meme band, chaos of 8 sample deadline notes + 3 notification banners + 2 syllabus pages on brand green, banners flicked off and pages cleared on beats, notes snap one per beat into a date-sorted list, final click (all date chips lime), soft 'Or let GRIND. sort it.' + Free pill, drift back to chaos for the loop; 11.2 s, no GX, 1 hashtag, yes/no replay question + send ask / - (carousel paused) (sign-up: weighted average) music: lofi/Ab/p6/90bpm/s20261104 (evening run, published the evening before; LI study insight: weight x points still to gain, detect 96.1 PASS)
 Styles used: 2026-11-05 LinkedIn only (Make posts LinkedIn only since 11-04). LI build notes: Study Studio week picker + own course files, glass style image 1080x1350 (week chips 6 to 9 lime, SAMPLE), score_script 100, detect 75.7 PASS (own re-run of detect.py formulas), no music
 Styles used: 2026-11-10 LinkedIn only. LI why we build: the quiet course (2% weekly quizzes vs 40% midterm + 60% final), glass style image 1080x1350 (14-day list with weight pills, 40% row lime, SAMPLE), score_script 100, detect 82.8 PASS (own re-run of detect.py formulas), no music
+
+Styles used: 2026-11-11 LinkedIn only. LI study insight: spacing effect + 14-day rule (3 h crammed vs 3 evenings x 1 h), glass style image 1080x1350 (two 14-day strips, crammed 3h blush vs spread 1h lime), score_script 100, detect 84.6 PASS (own re-run of detect.py formulas), no music
