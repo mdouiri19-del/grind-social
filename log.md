@@ -24,6 +24,7 @@
 | 2026-11-05 | - (LinkedIn only, Instagram manual) | - | - | - | LI: Your midterm doesn't cover all 12 weeks. Your practice quiz shouldn't either. |
 | 2026-11-10 | - (LinkedIn only, Instagram manual) | - | - | - | LI: One course pings you every week. The other stays quiet until a 60% final. |
 | 2026-11-11 | - (LinkedIn only, Instagram manual) | - | - | - | LI: Same 3 hours of studying. Spread over a week, they stick. Crammed into one night, they fade fast. |
+| 2026-11-12 | - (LinkedIn only, Instagram manual) | - | - | - | LI: We built a dashboard to keep 5 courses of deadlines in one place. Then we added a button that sends them out of it. |
 
 Styles used (reel / carousel): 2026-10-17 kinetic slam / checklist
 Styles used (reel / carousel): 2026-10-18 myth / fact / timeline of a week (sign-up: weighted average)
@@ -51,3 +52,4 @@ Styles used: 2026-11-05 LinkedIn only (Make posts LinkedIn only since 11-04). LI
 Styles used: 2026-11-10 LinkedIn only. LI why we build: the quiet course (2% weekly quizzes vs 40% midterm + 60% final), glass style image 1080x1350 (14-day list with weight pills, 40% row lime, SAMPLE), score_script 100, detect 82.8 PASS (own re-run of detect.py formulas), no music
 
 Styles used: 2026-11-11 LinkedIn only. LI study insight: spacing effect + 14-day rule (3 h crammed vs 3 evenings x 1 h), glass style image 1080x1350 (two 14-day strips, crammed 3h blush vs spread 1h lime), score_script 100, detect 84.6 PASS (own re-run of detect.py formulas), no music
+Styles used: 2026-11-12 LinkedIn only. LI build notes: calendar .ics export (syllabus import, then one .ics file into the calendar you already open), glass style image 1080x1350 (glass week calendar Mon to Fri, lime deadline chips Quiz 5% + Lab report 20%, + deadlines.ics pill, SAMPLE), score_script 100, detect 74.4 PASS, no music
