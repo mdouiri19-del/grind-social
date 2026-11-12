@@ -1,0 +1,23 @@
+We built a dashboard to keep 5 courses of deadlines in one place. Then we added a button that sends them out of it.
+
+That button is calendar export.
+
+Most students already have one place they look every morning: the calendar on their phone. Classes, work shifts, practice and plans with friends are all in there.
+
+Deadlines usually aren't. They sit in 5 syllabus PDFs, a course page and a note someone posted in the group chat.
+
+So the calendar says Thursday night is free, and a 20% lab report due Friday says otherwise.
+
+How it works. You import your syllabus PDF, GRIND. pulls out the dates and the weights, and you check them.
+
+Then you export your deadlines as one .ics file. That's the standard calendar file, so Google Calendar, Apple Calendar and Outlook can all open it.
+
+Now your deadlines show up next to everything else you already planned for the week, in the app you open anyway.
+
+We still think the GRIND. dashboard is the best place to pick what to work on next. It lists what's due in the next 14 days, with the weight next to each item. But most people plan their week in a calendar, so the deadlines belong there too.
+
+Students: where do your deadlines live right now?
+
+Link on our page.
+
+#Students #EdTech #BuildInPublic
