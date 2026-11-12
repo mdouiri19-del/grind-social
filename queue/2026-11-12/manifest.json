@@ -1,0 +1,20 @@
+{
+ "date": "2026-11-12",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "build notes: calendar .ics export (syllabus import, then one .ics file into the calendar students already use); glass week calendar with lime deadline chips, SAMPLE",
+ "hooks": {
+  "linkedin": "We built a dashboard to keep 5 courses of deadlines in one place. Then we added a button that sends them out of it."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (passes: 90 hook no number + long sentence, 95 rehook stretch, 95 length 233, then 100)",
+  "detect": "74.4 PASS (li-human detect.py, humanize.py found 0 artefacts; its output was not used because it broke the '.ics' spacing)",
+  "hook": "We built a dashboard to keep 5 courses of deadlines in one place. Then we added a button that sends them out of it.",
+  "rejected_hooks": [
+   "Your 25% essay is in a PDF. Your dentist appointment is in your calendar. Guess which one you'll remember.",
+   "One file, every deadline from your syllabus, in your own calendar."
+  ]
+ },
+ "linkedin_text": "We built a dashboard to keep 5 courses of deadlines in one place. Then we added a button that sends them out of it.\n\nThat button is calendar export.\n\nMost students already have one place they look every morning: the calendar on their phone. Classes, work shifts, practice and plans with friends are all in there.\n\nDeadlines usually aren't. They sit in 5 syllabus PDFs, a course page and a note someone posted in the group chat.\n\nSo the calendar says Thursday night is free, and a 20% lab report due Friday says otherwise.\n\nHow it works. You import your syllabus PDF, GRIND. pulls out the dates and the weights, and you check them.\n\nThen you export your deadlines as one .ics file. That's the standard calendar file, so Google Calendar, Apple Calendar and Outlook can all open it.\n\nNow your deadlines show up next to everything else you already planned for the week, in the app you open anyway.\n\nWe still think the GRIND. dashboard is the best place to pick what to work on next. It lists what's due in the next 14 days, with the weight next to each item. But most people plan their week in a calendar, so the deadlines belong there too.\n\nStudents: where do your deadlines live right now?\n\nLink on our page.\n\n#Students #EdTech #BuildInPublic",
+ "linkedin_image_url": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/e1049765c9f727a01c6c2cb674239fc04fcca685/queue/2026-11-12/linkedin.jpg"
+}
