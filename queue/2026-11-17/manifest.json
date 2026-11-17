@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-17",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "why we build: a bad midterm feels like the whole course, but a 58 on a 25% midterm leaves 75% of the grade open (weighted current average); glass grade-by-weight panel, SAMPLE",
+ "hooks": {
+  "linkedin": "A 58 on a midterm feels like the whole course is gone. That midterm was worth 25%."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 95, soft no rehook stretch 52; added re-hooks and the 25% line, then 100)",
+  "detect": "92.2 PASS (li-human detect.py, humanize.py found 0 artefacts)",
+  "hook": "A 58 on a midterm feels like the whole course is gone. That midterm was worth 25%.",
+  "rejected_hooks": [
+   "Everyone checks the mark on a midterm. Almost nobody checks what it was worth.",
+   "A bad midterm costs fewer points than it feels like."
+  ],
+  "facts": "Sample math only: 58% x 25 = 14.5 of 25 points; 75 points left; 70 overall needs 55.5/75 = 74%. Feature: weighted current average from syllabus weights, upcoming items with weights."
+ },
+ "linkedin_text": "A 58 on a midterm feels like the whole course is gone. That midterm was worth 25%.\n\nSo 75% of your grade hasn't happened yet.\n\nBut that's not how it feels on the day the mark comes back. You see one low number on the course page and you do the rest of the math in your head, late at night, and it always comes out worse.\n\nHere's the real math. A 58 on something worth 25% gives you 14.5 points out of 25. There are still 75 points left to earn.\n\nIf you want to finish at 70, you need 55.5 of those 75. That's about 74% on everything left. Hard, but very doable.\n\nBut most of the panic comes from not knowing where you stand. That's the part we wanted to fix.\n\nGRIND. reads the weights from your syllabus and shows your current average based only on what's been graded so far. After one midterm, that's the 25% you've done, not 100%. Next to it, you see what's still coming and what each item is worth.\n\nWe can't change the 58. We'd rather you spend the next 2 weeks on the 75 points that are still open.\n\nStudents: what's the first thing you do when a midterm mark comes back lower than you hoped?\n\nLink on our page.\n\n#Students #EdTech #StudyTips",
+ "linkedin_image_url": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/96b50954e353412b46052498a186249d59b740f2/queue/2026-11-17/linkedin.jpg"
+}
