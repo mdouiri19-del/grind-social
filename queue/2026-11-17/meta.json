@@ -1,0 +1,19 @@
+{
+ "date": "2026-11-17",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "why we build: a bad midterm feels like the whole course, but a 58 on a 25% midterm leaves 75% of the grade open (weighted current average); glass grade-by-weight panel, SAMPLE",
+ "hooks": {
+  "linkedin": "A 58 on a midterm feels like the whole course is gone. That midterm was worth 25%."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 95, soft no rehook stretch 52; added re-hooks and the 25% line, then 100)",
+  "detect": "92.2 PASS (li-human detect.py, humanize.py found 0 artefacts)",
+  "hook": "A 58 on a midterm feels like the whole course is gone. That midterm was worth 25%.",
+  "rejected_hooks": [
+   "Everyone checks the mark on a midterm. Almost nobody checks what it was worth.",
+   "A bad midterm costs fewer points than it feels like."
+  ],
+  "facts": "Sample math only: 58% x 25 = 14.5 of 25 points; 75 points left; 70 overall needs 55.5/75 = 74%. Feature: weighted current average from syllabus weights, upcoming items with weights."
+ }
+}
