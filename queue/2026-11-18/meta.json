@@ -1,0 +1,19 @@
+{
+ "date": "2026-11-18",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "study insight: interleaving (mixed practice) vs blocked practice; 3 topics x 3 problems shuffled, name the method first; Study Studio quiz over weeks 6 to 9; glass image 1080x1350 (in blocks vs mixed chapter chips, mixed row lime)",
+ "hooks": {
+  "linkedin": "Doing 10 problems from the same chapter in a row feels like progress. Then the exam mixes every chapter together."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 100; then hand-fixed one 'isn't X, it's Y' line and a softer Study Studio claim, still 100)",
+  "detect": "80.3 PASS (li-human detect.py, humanize.py found 0 artefacts, 0 structural tells)",
+  "hook": "Doing 10 problems from the same chapter in a row feels like progress. Then the exam mixes every chapter together.",
+  "rejected_hooks": [
+   "Mixed practice feels worse while you do it. That's part of why it works.",
+   "Your exam won't tell you which chapter a question is from."
+  ],
+  "facts": "Interleaving: mixing problem types in one session; learning research on math practice found mixed practice feels harder and slower but gives better scores on a later test (no specific numbers claimed). Feature: Study Studio week picker, a quiz on the chosen weeks from the student's own course files."
+ }
+}
