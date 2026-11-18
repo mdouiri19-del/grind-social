@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-18",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "study insight: interleaving (mixed practice) vs blocked practice; 3 topics x 3 problems shuffled, name the method first; Study Studio quiz over weeks 6 to 9; glass image 1080x1350 (in blocks vs mixed chapter chips, mixed row lime)",
+ "hooks": {
+  "linkedin": "Doing 10 problems from the same chapter in a row feels like progress. Then the exam mixes every chapter together."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 100; then hand-fixed one 'isn't X, it's Y' line and a softer Study Studio claim, still 100)",
+  "detect": "80.3 PASS (li-human detect.py, humanize.py found 0 artefacts, 0 structural tells)",
+  "hook": "Doing 10 problems from the same chapter in a row feels like progress. Then the exam mixes every chapter together.",
+  "rejected_hooks": [
+   "Mixed practice feels worse while you do it. That's part of why it works.",
+   "Your exam won't tell you which chapter a question is from."
+  ],
+  "facts": "Interleaving: mixing problem types in one session; learning research on math practice found mixed practice feels harder and slower but gives better scores on a later test (no specific numbers claimed). Feature: Study Studio week picker, a quiz on the chosen weeks from the student's own course files."
+ },
+ "linkedin_text": "Doing 10 problems from the same chapter in a row feels like progress. Then the exam mixes every chapter together.\n\nWhen all your practice questions come from one topic, you know the method before you read the question. Question 3 is a chain rule question because questions 1 and 2 were.\n\nThe exam takes that clue away. Now the hard part is knowing which method each question needs.\n\nLearning researchers call the fix interleaving. You mix problem types in one session instead of doing them in blocks.\n\nIt feels worse while you do it. You get more wrong and you go slower. But in studies on math practice, students who mixed did better on the test that came later, because they had practised the choosing step.\n\nA way to try it this week:\n\nTake 3 topics from your next exam and write 3 problems from each. Shuffle all 9. Before you solve one, write down the method you think it needs.\n\nEvery time you pick the wrong method, you've found the topic to review first.\n\nIf you use GRIND., a Study Studio quiz on weeks 6 to 9 covers all four weeks in one quiz, so you get a mixed set without writing it yourself.\n\nStudents: do you practise one chapter at a time, or do you mix them?\n\nLink on our page.\n\n#Students #StudyTips #EdTech",
+ "linkedin_image_url": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/f016245ada4f20b682786e0f55ccadc861a55d29/queue/2026-11-18/linkedin.jpg"
+}
