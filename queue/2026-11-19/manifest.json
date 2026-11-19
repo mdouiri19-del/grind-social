@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-19",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "build notes: EN/FR (GRIND. works in English and French; same weights and weighted average in both, the 14-day home list in the language you think in); glass image 1080x1350 (EN vs FR 14-day panels, same Lab report 20% / Quiz 4 5% rows, FR panel lime, SAMPLE data)",
+ "hooks": {
+  "linkedin": "A 20% lab report: deadline or échéance? In GRIND., you choose which word you see every morning."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 90, soft 'hook no number' + 'no rehook stretch 42'; pass 2: number moved into the hook sentence, 95; pass 3: 11 PM callback in the closing paragraph and 30% final in the math line, 100)",
+  "detect": "85.1 PASS (li-human detect.py, humanize.py found 0 artefacts, 0 structural tells)",
+  "hook": "A 20% lab report: deadline or échéance? In GRIND., you choose which word you see every morning.",
+  "rejected_hooks": [
+   "Canada has 2 official languages. Your study app should handle both.",
+   "Some students read their syllabus in French and their study app in English."
+  ],
+  "facts": "Feature: GRIND. available in English and French (STRATEGY section 0 real features: EN/FR). Weighted current average and 'what's due in 14 days' list sorted by date with weights (STRATEGY section 0). Canada has 2 official languages (public fact). No user numbers claimed; 20% lab report, 30% final, Quiz 4 5% are illustrative sample values."
+ },
+ "linkedin_text": "A 20% lab report: deadline or échéance? In GRIND., you choose which word you see every morning.\n\nGRIND. works in English and French. That's this week's build note.\n\nCanada has 2 official languages, and a lot of students here study in French. Some take courses in both languages in the same term.\n\nFor them, a study app in the wrong language is one more thing to translate in their head. It's a small thing, until it's 11 PM and a 20% lab report is due tomorrow.\n\nNow you pick English or French, and GRIND. shows your dashboard in that language.\n\nThe math doesn't change. A 30% final is 30% in both languages, and your weighted average is the same number. What changes is how fast you read it when you're tired.\n\nThat matters most on the home screen, the list of what's due in the next 14 days, sorted by date with the weight next to each item. It's the screen you check at 11 PM, so it should be in the language you think in.\n\nStudents who study in French: what part of your semester still only shows up in English?\n\nLink on our page.\n\n#Students #EdTech #BuildInPublic",
+ "linkedin_image_url": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/9bf9e0340a1f90d8b4bb00a93862c6adedeb6502/queue/2026-11-19/linkedin.jpg"
+}
