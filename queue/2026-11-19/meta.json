@@ -1,0 +1,19 @@
+{
+ "date": "2026-11-19",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "build notes: EN/FR (GRIND. works in English and French; same weights and weighted average in both, the 14-day home list in the language you think in); glass image 1080x1350 (EN vs FR 14-day panels, same Lab report 20% / Quiz 4 5% rows, FR panel lime, SAMPLE data)",
+ "hooks": {
+  "linkedin": "A 20% lab report: deadline or échéance? In GRIND., you choose which word you see every morning."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 90, soft 'hook no number' + 'no rehook stretch 42'; pass 2: number moved into the hook sentence, 95; pass 3: 11 PM callback in the closing paragraph and 30% final in the math line, 100)",
+  "detect": "85.1 PASS (li-human detect.py, humanize.py found 0 artefacts, 0 structural tells)",
+  "hook": "A 20% lab report: deadline or échéance? In GRIND., you choose which word you see every morning.",
+  "rejected_hooks": [
+   "Canada has 2 official languages. Your study app should handle both.",
+   "Some students read their syllabus in French and their study app in English."
+  ],
+  "facts": "Feature: GRIND. available in English and French (STRATEGY section 0 real features: EN/FR). Weighted current average and 'what's due in 14 days' list sorted by date with weights (STRATEGY section 0). Canada has 2 official languages (public fact). No user numbers claimed; 20% lab report, 30% final, Quiz 4 5% are illustrative sample values."
+ }
+}

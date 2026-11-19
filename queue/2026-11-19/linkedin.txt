@@ -1,0 +1,19 @@
+A 20% lab report: deadline or échéance? In GRIND., you choose which word you see every morning.
+
+GRIND. works in English and French. That's this week's build note.
+
+Canada has 2 official languages, and a lot of students here study in French. Some take courses in both languages in the same term.
+
+For them, a study app in the wrong language is one more thing to translate in their head. It's a small thing, until it's 11 PM and a 20% lab report is due tomorrow.
+
+Now you pick English or French, and GRIND. shows your dashboard in that language.
+
+The math doesn't change. A 30% final is 30% in both languages, and your weighted average is the same number. What changes is how fast you read it when you're tired.
+
+That matters most on the home screen, the list of what's due in the next 14 days, sorted by date with the weight next to each item. It's the screen you check at 11 PM, so it should be in the language you think in.
+
+Students who study in French: what part of your semester still only shows up in English?
+
+Link on our page.
+
+#Students #EdTech #BuildInPublic
