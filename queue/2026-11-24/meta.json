@@ -1,0 +1,19 @@
+{
+ "date": "2026-11-24",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "why we build: course files scattered across the course site, email and Downloads before a 12-week final; GRIND. keeps files inside each course next to its deadlines and weights, Study Studio quizzes from your own slides; glass image 1080x1350 (scattered source chips vs Course A panel: 40% final Fri lime row + file rows, SAMPLE)",
+ "hooks": {
+  "linkedin": "Your final covers 12 weeks. Your slides live in 3 different places."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 95, soft 'no rehook stretch 57'; pass 2: 40% final callback in the GRIND. paragraph, 95, stretch 48; pass 3: 'But' and 'Now' re-hooks, 100)",
+  "detect": "82.3 PASS (li-human detect.py, humanize.py found 0 artefacts, 0 structural tells)",
+  "hook": "Your final covers 12 weeks. Your slides live in 3 different places.",
+  "rejected_hooks": [
+   "lecture7_FINAL (2).pdf is not a study system.",
+   "\"Where did the prof post the week 9 slides?\""
+  ],
+  "facts": "Features: files per course, deadlines and weights from syllabus PDF import, Study Studio builds practice quizzes from your own course files for chosen weeks (STRATEGY section 0, earlier build note 2026-11-05). 12-week term, 40% final, weeks 6 to 9, lecture7 (2).pdf and file counts are illustrative sample values; '3 places' are the named course site, email and Downloads. No user numbers claimed."
+ }
+}
