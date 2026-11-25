@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-25",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "study insight: mistake log before the final (one line per wrong answer on every quiz and midterm, sort reasons into 3 piles: didn't know it, misread it, ran out of time; redo weekly with answers covered, off after 2 right in a row; Study Studio practice quizzes from own course files for chosen weeks); glass image 1080x1350 (mistake log panel, Q3 didn't know it row lime, Q5 crossed off, SAMPLE)",
+ "hooks": {
+  "linkedin": "Your final is worth 40%. The best study guide for it is the midterm you'd rather forget."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 85, soft length/hook no number/rehook stretch 75; pass 2: 40% final in hook, 90; passes 3 to 5: shorter, 'Now'/'But' re-hooks, 95; pass 6: closing question calls back the 3 piles, 100)",
+  "detect": "82.3 PASS (li-human detect.py; humanize.py found 0 artefacts, 0 structural tells)",
+  "hook": "Your final is worth 40%. The best study guide for it is the midterm you'd rather forget.",
+  "rejected_hooks": [
+   "Your midterm already told you what to study for the final. Most students only read it once.",
+   "Before you make new notes for the final, open your old quizzes."
+  ],
+  "facts": "Feature: Study Studio makes practice quizzes from your own course files for the weeks you pick (STRATEGY section 0, build note 2026-11-05). 40% final, chapter 4, 2 weeks, Q numbers and log rows are illustrative sample values; the 3 piles and the 2-in-a-row rule are a suggested method, not a claim. No user numbers claimed."
+ },
+ "linkedin_text": "Your final is worth 40%. The best study guide for it is the midterm you'd rather forget.\n\nMost of us check the mark once, close the tab and never look at it again.\n\nBut a marked midterm is a list of what you don't know yet, written the way your prof tests. Nothing you write in the last 2 weeks will be that specific.\n\nSo before new notes, start a mistake log. 1 line for every wrong answer on every quiz and midterm this term: the question in your own words, and why you missed it.\n\nThen sort the reasons. Most land in 3 piles: didn't know it, misread it, ran out of time. Each pile needs its own fix, and rereading chapter 4 only fixes the first.\n\nNow the habit. Once a week until the final, cover the answers and redo every line. 2 right in a row and it's gone.\n\nThe list shrinks. That's the point.\n\nAnd when the final mixes those topics with new ones, you've already handled the old mistakes.\n\nBut redoing it all by hand is slow. So we built Study Studio in GRIND. to make practice quizzes from your own course files, for the weeks you pick. A notebook still works.\n\nStudents: which of those 3 piles is the biggest on your list?\n\nLink on our page.\n\n#Students #StudyTips #EdTech",
+ "linkedin_image_url": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/44bc3e4d8247f8e695f998b5a0e4549d8e257701/queue/2026-11-25/linkedin.jpg"
+}
