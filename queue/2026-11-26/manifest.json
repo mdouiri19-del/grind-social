@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-26",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "build notes: Study Studio assignment plans (a 30% paper split into dated steps from your own course files: read the brief, pick a question, find sources, outline, draft, edit; tick each step off); glass image 1080x1350 (assignment plan panel, steps 1 to 2 crossed off, step 3 Find sources Sat Nov 28 lime, due Dec 8, SAMPLE)",
+ "hooks": {
+  "linkedin": "A 30% paper due in 2 weeks sits on your list as 1 line. So no evening ever feels like the right one to start it."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 95, soft rehook stretch 49; pass 2: 'First it reads' re-hook, 100; pass 3: 'The paper doesn't.' added for sentence-length variety, 100)",
+  "detect": "li-human repo clone was blocked in this run, so checks were applied by hand: 0 invisible or non-ASCII characters, 0 em dashes, 0 slop words, no structural tells; own burstiness 0.59, about 2 contractions and 5 you/we per 100 words (estimated PASS, not the official detect.py score)",
+  "hook": "A 30% paper due in 2 weeks sits on your list as 1 line. So no evening ever feels like the right one to start it.",
+  "rejected_hooks": [
+   "Your final paper isn't one task. Study Studio now treats it like 6.",
+   "Due in 2 weeks feels like plenty of time. Then it's due in 4 days."
+  ],
+  "facts": "Feature: Study Studio assignment plans, a big assignment broken into dated steps, built from your own course files, ticked off as you go (STRATEGY section 0, insights 2026-10-20 owner note, 2026-10-23 caption). Deadlines from syllabus sorted by date with weights (STRATEGY section 0). 30% paper, 5% quiz, 2 weeks, the 6 step names and all dates are illustrative sample values. No user numbers claimed."
+ },
+ "linkedin_text": "A 30% paper due in 2 weeks sits on your list as 1 line. So no evening ever feels like the right one to start it.\n\nThis week's build note is about that line.\n\nIn GRIND., your deadlines come from your syllabus, sorted by date with the weight next to each one. A 5% quiz and a 30% paper take the same space on that list. The quiz takes 1 evening. The paper doesn't. It takes 2 weeks of small pieces.\n\nSo Study Studio makes assignment plans. First it reads your own course files, like the brief, and splits the paper into steps: read the brief, pick a question, find sources, outline, draft, edit.\n\nEach step gets its own date before the deadline, and you tick it off when it's done.\n\nNow on a Tuesday night, the list doesn't say \"final paper.\" It says \"find sources, due Saturday.\" That fits in 1 evening, so you start.\n\nWe built it for the end of term, when papers and finals land in the same 2 weeks and every big one looks too big to open.\n\nStudents: which step of a paper do you always leave for the last night?\n\nLink on our page.\n\n#Students #EdTech #BuildInPublic",
+ "linkedin_image_url": "https://raw.githubusercontent.com/mdouiri19-del/grind-social/77636077f300e76ce4bb69d08937e1a0169b5ab3/queue/2026-11-26/linkedin.jpg"
+}
