@@ -1,0 +1,19 @@
+A 30% paper due in 2 weeks sits on your list as 1 line. So no evening ever feels like the right one to start it.
+
+This week's build note is about that line.
+
+In GRIND., your deadlines come from your syllabus, sorted by date with the weight next to each one. A 5% quiz and a 30% paper take the same space on that list. The quiz takes 1 evening. The paper doesn't. It takes 2 weeks of small pieces.
+
+So Study Studio makes assignment plans. First it reads your own course files, like the brief, and splits the paper into steps: read the brief, pick a question, find sources, outline, draft, edit.
+
+Each step gets its own date before the deadline, and you tick it off when it's done.
+
+Now on a Tuesday night, the list doesn't say "final paper." It says "find sources, due Saturday." That fits in 1 evening, so you start.
+
+We built it for the end of term, when papers and finals land in the same 2 weeks and every big one looks too big to open.
+
+Students: which step of a paper do you always leave for the last night?
+
+Link on our page.
+
+#Students #EdTech #BuildInPublic

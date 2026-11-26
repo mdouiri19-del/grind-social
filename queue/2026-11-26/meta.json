@@ -1,0 +1,19 @@
+{
+ "date": "2026-11-26",
+ "series": "linkedin",
+ "music": "none",
+ "theme": "build notes: Study Studio assignment plans (a 30% paper split into dated steps from your own course files: read the brief, pick a question, find sources, outline, draft, edit; tick each step off); glass image 1080x1350 (assignment plan panel, steps 1 to 2 crossed off, step 3 Find sources Sat Nov 28 lime, due Dec 8, SAMPLE)",
+ "hooks": {
+  "linkedin": "A 30% paper due in 2 weeks sits on your list as 1 line. So no evening ever feels like the right one to start it."
+ },
+ "writing": {
+  "score_script": "100/100, 0 hard fails (pass 1: 95, soft rehook stretch 49; pass 2: 'First it reads' re-hook, 100; pass 3: 'The paper doesn't.' added for sentence-length variety, 100)",
+  "detect": "li-human repo clone was blocked in this run, so checks were applied by hand: 0 invisible or non-ASCII characters, 0 em dashes, 0 slop words, no structural tells; own burstiness 0.59, about 2 contractions and 5 you/we per 100 words (estimated PASS, not the official detect.py score)",
+  "hook": "A 30% paper due in 2 weeks sits on your list as 1 line. So no evening ever feels like the right one to start it.",
+  "rejected_hooks": [
+   "Your final paper isn't one task. Study Studio now treats it like 6.",
+   "Due in 2 weeks feels like plenty of time. Then it's due in 4 days."
+  ],
+  "facts": "Feature: Study Studio assignment plans, a big assignment broken into dated steps, built from your own course files, ticked off as you go (STRATEGY section 0, insights 2026-10-20 owner note, 2026-10-23 caption). Deadlines from syllabus sorted by date with weights (STRATEGY section 0). 30% paper, 5% quiz, 2 weeks, the 6 step names and all dates are illustrative sample values. No user numbers claimed."
+ }
+}
